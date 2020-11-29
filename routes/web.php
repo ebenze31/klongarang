@@ -32,12 +32,14 @@ Route::get('all_goods', function () {
     return view('goods/all');
 });
 
-Route::get('/travel/{id}', 'TravelController@show');
 
 Auth::routes();
 
-Route::middleware(['auth', 'role:admin'])->group(function () {
+
+Route::middleware(['auth', 'role:คนดูแล'])->group(function () {
 
 	Route::resource('travel', 'TravelController');
+
 });
 
+Route::resource('travel', 'TravelController')->except(['create' , 'edit']);
