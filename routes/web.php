@@ -14,5 +14,30 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+Route::get('home', function () {
+    return view('home');
+});
+
+Route::get('about', function () {
+    return view('About/about');
+});
+
+Route::get('travel_pool', function () {
+    return view('travel/สระหลวง');
+});
+
+Route::get('all_goods', function () {
+    return view('goods/all');
+});
+
+Route::get('/travel/{id}', 'TravelController@show');
+
+Auth::routes();
+
+Route::middleware(['auth', 'role:admin'])->group(function () {
+
+	Route::resource('travel', 'TravelController');
+});
+
