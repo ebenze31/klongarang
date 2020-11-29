@@ -1,0 +1,34 @@
+{
+    "fields": [
+        {
+            "name": "category",
+            "type": "select",
+            "options": {
+                "อาหาร": "อาหาร",
+                "ของที่ระลึก": "ของที่ระลึก",
+                "สินค้าทางการเกษตร": "สินค้าทางการเกษตร",
+                "ผลิตภัณฑ์จากไผ่": "ผลิตภัณฑ์จากไผ่"
+            }
+        },
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "detail",
+            "type": "text"
+        },
+        {
+            "name": "benefit",
+            "type": "text"
+        },
+        {
+            "name": "how_to_use",
+            "type": "text"
+        },
+        {
+            "name": "photo",
+            "type": "file"
+        }
+    ]
+}

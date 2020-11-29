@@ -36,7 +36,7 @@
                                           <li><a href="{{ url('/home') }}"><i class="fas fa-home"></i> หน้าแรก</a></li>
                                           <li><a href="{{ url('/about') }}"><i class="fas fa-address-card"></i> เกี่ยวกับโครงการ</a></li>
                                           <li><a href="about.html"><i class="far fa-address-card"></i> เกี่ยวกับหมู่บ้าน</a></li>
-                                          <li><a href="{{ url('/all_goods') }}"><i class="fas fa-shopping-basket"></i> สินค้าและของที่ระลึก</a></li>
+                                          <li><a href="{{ url('/products') }}"><i class="fas fa-shopping-basket"></i> สินค้าและของที่ระลึก</a></li>
                                           <li><a >ติดต่อ <i class="fas fa-caret-down"></i> </a>
                                               <ul class="submenu">
                                                   <li><a href="https://www.facebook.com/%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87-470519779751019"><i class="fab fa-facebook"></i> : บ้านคลองอาราง</a></li>

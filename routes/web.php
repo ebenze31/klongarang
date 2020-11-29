@@ -39,7 +39,9 @@ Auth::routes();
 Route::middleware(['auth', 'role:คนดูแล'])->group(function () {
 
 	Route::resource('travel', 'TravelController');
+	Route::resource('products', 'ProductsController');
 
 });
 
 Route::resource('travel', 'TravelController')->except(['create' , 'edit']);
+Route::resource('products', 'ProductsController')->except(['create' , 'edit']);

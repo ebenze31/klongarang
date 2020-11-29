@@ -33,13 +33,13 @@
                             @if(Auth::user()->profile->role == "คนดูแล" )
 
                             <a href="{{ url('/travel/create') }}" class="btn-success btn-sm" title="Add New Travel">
-                                <i class="fa fa-plus" aria-hidden="true"></i> Add New
+                                <i class="fa fa-plus" aria-hidden="true"></i> เพิ่มข้อมูล
                             </a>
                             @endif
                         @endif
                         <form method="GET" action="{{ url('/travel') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
                             <div class="input-group">
-                                <input type="text" class="form-control" name="search" placeholder="Search..." value="{{ request('search') }}">
+                                <input type="text" class="form-control" name="search" placeholder="ค้นหา..." value="{{ request('search') }}">
                                 <span class="input-group-append">
                                     <button class="btn-info" type="submit">
                                         <i class="fa fa-search"></i>
@@ -81,20 +81,21 @@
                                                 @endif
 
                                                         &nbsp;&nbsp;&nbsp;{{ $item->category }}&nbsp;&nbsp;&nbsp;</span>
-                                                    <h4><br><a style="color: #fc3f00 !important" href="#">"{{ $item->name }}"</a></h4>
-                                                    <p>{{ $item->detail }}</p>
+                                                    <h4><br><a style="color: #fc3f00 !important" href="{{ url('/travel/' . $item->id) }}">"{{ $item->name }}"</a></h4>
+                                                    <!-- <p>{{ $item->detail }}</p> -->
+                                                    <br>
                                                 </div>
                                                 <div>
-                                                    <a href="{{ url('/travel/' . $item->id) }}" title="View Travel"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                                                    <a href="{{ url('/travel/' . $item->id) }}" title="View Travel"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
                                                     @if(Auth::check())
                                                         @if(Auth::user()->profile->role == "คนดูแล" )
                                                             
-                                                            <a href="{{ url('/travel/' . $item->id . '/edit') }}" title="Edit Travel"><button class="btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                                                            <a href="{{ url('/travel/' . $item->id . '/edit') }}" title="Edit Travel"><button class="btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> แก้ไขข้อมูล</button></a>
 
                                                             <form method="POST" action="{{ url('/travel' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                                 {{ method_field('DELETE') }}
                                                                 {{ csrf_field() }}
-                                                                <button type="submit" class="btn-danger btn-sm" title="Delete Travel" onclick="return confirm(&quot;ยืนยันการลบ ?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                                                                <button type="submit" class="btn-danger btn-sm" title="Delete Travel" onclick="return confirm(&quot;ยืนยันการลบ ?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> ลบ</button>
                                                             </form>
                                                         @endif
                                                     @endif
@@ -104,7 +105,7 @@
                                     </div>
                                     @endforeach
                                 </div> 
-                                
+                                <div class="pagination-wrapper"> {!! $travel->appends(['search' => Request::get('search')])->render() !!} </div>
                             </div>
                         </div>
 
@@ -123,19 +124,20 @@
                                                 <br>
                                                 <span class="color2">&nbsp;&nbsp;&nbsp;{{ $item->category }}&nbsp;&nbsp;&nbsp;</span>
                                                 <h4><br><a style="color: #fc3f00 !important" href="#">"{{ $item->name }}"</a></h4>
-                                                <p>{{ $item->detail }}</p>
+                                                <!-- <p>{{ $item->detail }}</p> -->
+                                                <br>
                                             </div>
                                             <div>
-                                                <a href="{{ url('/travel/' . $item->id) }}" title="View Travel"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                                                <a href="{{ url('/travel/' . $item->id) }}" title="View Travel"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
                                                 @if(Auth::check())
                                                     @if(Auth::user()->profile->role == "คนดูแล" )
                                                         
-                                                        <a href="{{ url('/travel/' . $item->id . '/edit') }}" title="Edit Travel"><button class="btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                                                        <a href="{{ url('/travel/' . $item->id . '/edit') }}" title="Edit Travel"><button class="btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> แก้ไขข้อมูล</button></a>
 
                                                         <form method="POST" action="{{ url('/travel' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                             {{ method_field('DELETE') }}
                                                             {{ csrf_field() }}
-                                                            <button type="submit" class="btn-danger btn-sm" title="Delete Travel" onclick="return confirm(&quot;ยืนยันการลบ ?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                                                            <button type="submit" class="btn-danger btn-sm" title="Delete Travel" onclick="return confirm(&quot;ยืนยันการลบ ?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> ลบ</button>
                                                         </form>
                                                     @endif
                                                 @endif
@@ -145,7 +147,7 @@
                                     @endif
                                     @endforeach
                                 </div> 
-                                
+                                <div class="pagination-wrapper"> {!! $travel->appends(['search' => Request::get('search')])->render() !!} </div>
                             </div>
                         </div>
 
@@ -164,19 +166,20 @@
                                                 <br>
                                                 <span class="color1">&nbsp;&nbsp;&nbsp;{{ $item->category }}&nbsp;&nbsp;&nbsp;</span>
                                                 <h4><br><a style="color: #fc3f00 !important" href="#">"{{ $item->name }}"</a></h4>
-                                                <p>{{ $item->detail }}</p>
+                                                <!-- <p>{{ $item->detail }}</p> -->
+                                                <br>
                                             </div>
                                             <div>
-                                                <a href="{{ url('/travel/' . $item->id) }}" title="View Travel"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                                                <a href="{{ url('/travel/' . $item->id) }}" title="View Travel"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
                                                 @if(Auth::check())
                                                     @if(Auth::user()->profile->role == "คนดูแล" )
                                                         
-                                                        <a href="{{ url('/travel/' . $item->id . '/edit') }}" title="Edit Travel"><button class="btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                                                        <a href="{{ url('/travel/' . $item->id . '/edit') }}" title="Edit Travel"><button class="btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> แก้ไขข้อมูล</button></a>
 
                                                         <form method="POST" action="{{ url('/travel' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                             {{ method_field('DELETE') }}
                                                             {{ csrf_field() }}
-                                                            <button type="submit" class="btn-danger btn-sm" title="Delete Travel" onclick="return confirm(&quot;ยืนยันการลบ ?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                                                            <button type="submit" class="btn-danger btn-sm" title="Delete Travel" onclick="return confirm(&quot;ยืนยันการลบ ?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> ลบ</button>
                                                         </form>
                                                     @endif
                                                 @endif
@@ -186,6 +189,7 @@
                                     @endif
                                     @endforeach
                                 </div>
+                                <div class="pagination-wrapper"> {!! $travel->appends(['search' => Request::get('search')])->render() !!} </div>
                             </div>
                         </div>
                         <!-- card fure -->
@@ -203,19 +207,20 @@
                                                 <br>
                                                 <span class="color3">&nbsp;&nbsp;&nbsp;{{ $item->category }}&nbsp;&nbsp;&nbsp;</span>
                                                 <h4><br><a style="color: #fc3f00 !important" href="#">"{{ $item->name }}"</a></h4>
-                                                <p>{{ $item->detail }}</p>
+                                                <!-- <p>{{ $item->detail }}</p> -->
+                                                <br>
                                             </div>
                                             <div>
-                                                <a href="{{ url('/travel/' . $item->id) }}" title="View Travel"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                                                <a href="{{ url('/travel/' . $item->id) }}" title="View Travel"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
                                                 @if(Auth::check())
                                                     @if(Auth::user()->profile->role == "คนดูแล" )
                                                         
-                                                        <a href="{{ url('/travel/' . $item->id . '/edit') }}" title="Edit Travel"><button class="btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                                                        <a href="{{ url('/travel/' . $item->id . '/edit') }}" title="Edit Travel"><button class="btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> แก้ไขข้อมูล</button></a>
 
                                                         <form method="POST" action="{{ url('/travel' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                             {{ method_field('DELETE') }}
                                                             {{ csrf_field() }}
-                                                            <button type="submit" class="btn-danger btn-sm" title="Delete Travel" onclick="return confirm(&quot;ยืนยันการลบ ?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                                                            <button type="submit" class="btn-danger btn-sm" title="Delete Travel" onclick="return confirm(&quot;ยืนยันการลบ ?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> ลบ</button>
                                                         </form>
                                                     @endif
                                                 @endif
@@ -225,6 +230,7 @@
                                     @endif
                                     @endforeach
                                 </div>
+                                <div class="pagination-wrapper"> {!! $travel->appends(['search' => Request::get('search')])->render() !!} </div>
                             </div>
                         </div>
                 <!-- End Nav Card -->

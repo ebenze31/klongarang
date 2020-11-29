@@ -21,7 +21,7 @@
         </div>
         <div class="form-group {{ $errors->has('detail') ? 'has-error' : ''}}">
             <label for="detail" class="control-label">{{ 'รายละเอียดของสถานที่' }}</label><span style="color: #FF0033"> *</span>
-            <input class="form-control" name="detail" type="text" id="detail" value="{{ isset($travel->detail) ? $travel->detail : ''}}" required >
+            <textarea class="form-control" rows="5" name="detail" type="textarea" id="detail" required>{{ isset($travel->detail) ? $travel->detail : ''}}</textarea>
             {!! $errors->first('detail', '<p class="help-block">:message</p>') !!}
         </div>
 

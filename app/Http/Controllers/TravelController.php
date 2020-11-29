@@ -18,7 +18,7 @@ class TravelController extends Controller
     public function index(Request $request)
     {
         $keyword = $request->get('search');
-        $perPage = 25;
+        $perPage = 9;
 
         if (!empty($keyword)) {
             $travel = Travel::where('category', 'LIKE', "%$keyword%")

@@ -183,7 +183,7 @@
                 <div class="row d-flex justify-content-between">
                     <div class="col-lg-4 col-md-4">
                         <div class="section-tittle mb-30">
-                            <h3>สินค้าและของที่ระลึก</h3>
+                            <h3><a href="{{ url('/products') }}">สินค้าและของที่ระลึก</a></h3>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-8">
