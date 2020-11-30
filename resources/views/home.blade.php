@@ -34,7 +34,7 @@
                                     </div>
                                     <div class="trend-bottom-cap">
                                         <span class="color1">กิจกรรม , แหล่งท่องเที่ยว</span>
-                                        <h4><a href="details.html">กิจกรรมการบวชป่าชุมชน</a></h4>
+                                        <h4><a href="details.html">บวชป่า</a></h4>
                                     </div>
                                 </div>
                                 </div>
@@ -249,7 +249,7 @@
                                                     <h4><br><a style="color: #fc3f00 !important" href="#">"ผลิตภัณฑ์จากไผ่"</a></h4>
                                                 </div>
                                                 <div>
-                                                    <p style="text-align: right;"><a style="color: #666666 ;" href="all_goods">ดูเพิ่มเติม</a></p>
+                                                    <p style="text-align: right;"><a style="color: #666666 ;" href="{{ url('/products') }}">ดูเพิ่มเติม</a></p>
                                                 </div>
                                             </div>
                                         </div> 
