@@ -1,7 +1,35 @@
 @extends('layout.main')
 
 @section('content')
-<?php
+
+
+@php
+
+    $id_travel_1 = " ";
+    $name_travel_1 = " ";
+    $category_travel_1 = " ";
+    $photo_1_travel_1 = " ";
+
+    $id_travel_2 = " ";
+    $name_travel_2 = " ";
+    $category_travel_2 = " ";
+    $photo_1_travel_2 = " ";
+
+    $id_travel_3 = " ";
+    $name_travel_3 = " ";
+    $category_travel_3 = " ";
+    $photo_1_travel_3 = " ";
+
+    $id_travel_4 = " ";
+    $name_travel_4 = " ";
+    $category_travel_4 = " ";
+    $photo_1_travel_4 = " ";
+
+    $id_travel_5 = " ";
+    $name_travel_5 = " ";
+    $category_travel_5 = " ";
+    $photo_1_travel_5 = " ";
+
 $servername = "127.0.0.1";
 $username = "root";
 $password = "";
@@ -15,20 +43,91 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "SELECT name, category, photo_1 FROM travel ORDER BY RAND() LIMIT 0,1";
+$sql = "SELECT id ,name, category, photo_1 FROM travel ORDER BY RAND() LIMIT 0,1";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "name: " . $row["name"]. " " . $row["category"]. " " . $row["photo_1"]. "<br>";
-    $name_travel1 = $row["name"];
+    // echo "name: " . $row["name"]. " " . $row["category"]. " " . $row["photo_1"];
+    $id_travel_1 = $row["id"];
+    $name_travel_1 = $row["name"];
+    $category_travel_1 = $row["category"];
+    $photo_1_travel_1 = $row["photo_1"];
+    // echo $name_travel_1;
   }
 } else {
-  echo "0 results";
+  // echo "0 results";
 }
 
-?>
+$sql2 = "SELECT id ,name, category, photo_1 FROM travel ORDER BY RAND() LIMIT 0,1";
+$result2 = $conn->query($sql);
+
+if ($result2->num_rows > 0) {
+  // output data of each row
+  while($row = $result2->fetch_assoc()) {
+    // echo "name: " . $row["name"]. " " . $row["category"]. " " . $row["photo_1"];
+    $id_travel_2 = $row["id"];
+    $name_travel_2 = $row["name"];
+    $category_travel_2 = $row["category"];
+    $photo_1_travel_2 = $row["photo_1"];
+    // echo $name_travel_2;
+  }
+} else {
+  // echo "0 results";
+}
+
+$sql3 = "SELECT id ,name, category, photo_1 FROM travel ORDER BY RAND() LIMIT 0,1";
+$result3 = $conn->query($sql);
+
+if ($result3->num_rows > 0) {
+  // output data of each row
+  while($row = $result3->fetch_assoc()) {
+    // echo "name: " . $row["name"]. " " . $row["category"]. " " . $row["photo_1"];
+    $id_travel_3 = $row["id"];
+    $name_travel_3 = $row["name"];
+    $category_travel_3 = $row["category"];
+    $photo_1_travel_3 = $row["photo_1"];
+    // echo $name_travel_3;
+  }
+} else {
+  // echo "0 results";
+}
+
+$sql4 = "SELECT id ,name, category, photo_1 FROM travel ORDER BY RAND() LIMIT 0,1";
+$result4 = $conn->query($sql);
+
+if ($result4->num_rows > 0) {
+  // output data of each row
+  while($row = $result4->fetch_assoc()) {
+    // echo "name: " . $row["name"]. " " . $row["category"]. " " . $row["photo_1"];
+    $id_travel_4 = $row["id"];
+    $name_travel_4 = $row["name"];
+    $category_travel_4 = $row["category"];
+    $photo_1_travel_4 = $row["photo_1"];
+    // echo $name_travel_4;
+  }
+} else {
+  // echo "0 results";
+}
+
+$sql5 = "SELECT id ,name, category, photo_1 FROM travel ORDER BY RAND() LIMIT 0,1";
+$result5 = $conn->query($sql);
+
+if ($result5->num_rows > 0) {
+  // output data of each row
+  while($row = $result5->fetch_assoc()) {
+    // echo "name: " . $row["name"]. " " . $row["category"]. " " . $row["photo_1"];
+    $id_travel_5 = $row["id"];
+    $name_travel_5 = $row["name"];
+    $category_travel_5 = $row["category"];
+    $photo_1_travel_5 = $row["photo_1"];
+    // echo $name_travel_5;
+  }
+} else {
+  // echo "0 results";
+}
+@endphp
 
     <!-- Trending Area Start -->
     <div class="trending-area fix">
@@ -59,35 +158,34 @@ if ($result->num_rows > 0) {
                                 <div class="col-lg-4">
                                 <div class="single-bottom mb-35">
                                     <div class="trend-bottom-img mb-30">
-                                        <img width="100%" height="150" src="{{ asset('/img/klongarang/P1010044.JPG') }}" alt="">
+                                        <img width="100%" height="150" src="{{ url('storage')}}/{{ $photo_1_travel_1 }}" >
                                     </div>
                                     <div class="trend-bottom-cap">
-                                        <span class="color1">กิจกรรม , แหล่งท่องเที่ยว</span>
-                                        <h4><a href="details.html"><?php echo $name_travel1; ?></a></h4>
+                                        <h4><a href="{{ url('/travel/' . $id_travel_1) }}">"{{ $name_travel_1 }}"</a></h4>
                                     </div>
                                 </div>
                                 </div>
+
                                 <div class="col-lg-4">
-                                    <div class="single-bottom mb-35">
-                                        <div class="trend-bottom-img mb-30">
-                                            <img width="100%" height="150" src="{{ asset('/img/klongarang/บ่อทอง.JPG') }}" alt="">
-                                        </div>
-                                        <div class="trend-bottom-cap">
-                                            <span class="color2">แหล่งท่องเที่ยว</span>
-                                            <h4><a href="details.html">บ่อทอง</a></h4>
-                                        </div>
+                                <div class="single-bottom mb-35">
+                                    <div class="trend-bottom-img mb-30">
+                                        <img width="100%" height="150" src="{{ url('storage')}}/{{ $photo_1_travel_2 }}" >
+                                    </div>
+                                    <div class="trend-bottom-cap">
+                                        <h4><a href="{{ url('/travel/' . $id_travel_2) }}">"{{ $name_travel_2 }}"</a></h4>
                                     </div>
                                 </div>
+                                </div>
+
                                 <div class="col-lg-4">
-                                    <div class="single-bottom mb-35">
-                                        <div class="trend-bottom-img mb-30">
-                                            <img width="100%" height="150" src="{{ asset('/img/klongarang/P1010100.JPG') }}" alt="">
-                                        </div>
-                                        <div class="trend-bottom-cap">
-                                            <span class="color3">แหล่งท่องเที่ยว</span>
-                                            <h4><a href="details.html">ป่าข่าและสวนสมุนไพร</a></h4>
-                                        </div>
+                                <div class="single-bottom mb-35">
+                                    <div class="trend-bottom-img mb-30">
+                                        <img width="100%" height="150" src="{{ url('storage')}}/{{ $photo_1_travel_3 }}" >
                                     </div>
+                                    <div class="trend-bottom-cap">
+                                        <h4><a href="{{ url('/travel/' . $id_travel_3) }}">"{{ $name_travel_3 }}"</a></h4>
+                                    </div>
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -154,50 +252,46 @@ if ($result->num_rows > 0) {
                         <div class="weekly-news-active dot-style d-flex dot-style">
                             <div class="weekly-single active">
                                 <div class="weekly-img">
-                                    <img height="220" src="{{ asset('/img/klongarang/สระหลวง.png') }}" alt="">
+                                    <img height="220" src="{{ url('storage')}}/{{ $photo_1_travel_1 }}" alt="">
                                 </div>
                                 <div class="weekly-caption">
-                                    <span class="color1">แหล่งท่องเที่ยว</span>
-                                    <h4><a href="travel_pool"><b>"สระหลวง"</b> ดูข้อมูลเพิ่มเติม</a></h4>
+                                    <h4><a href="{{ url('/travel/' . $id_travel_1) }}"><b>"{{ $name_travel_1 }}"</b> ดูข้อมูลเพิ่มเติม</a></h4>
                                 </div>
                             </div> 
                             <div class="weekly-single">
                                 <div class="weekly-img">
-                                        <img height="220" src="{{ asset('/img/klongarang/P1010100.JPG') }}" alt="">
+                                        <img height="220" src="{{ url('storage')}}/{{ $photo_1_travel_2 }}" alt="">
                                 </div>
                                 <div class="weekly-caption">
-                                    <span class="color1">แหล่งท่องเที่ยว</span>
-                                    <h4><a href="#"><b>"ป่าข่า"</b> ดูข้อมูลเพิ่มเติม</a></h4>
+                                    <h4><a href="{{ url('/travel/' . $id_travel_2) }}"><b>"{{ $name_travel_2 }}"</b> ดูข้อมูลเพิ่มเติม</a></h4>
                                 </div>
                             </div>
                             <div class="weekly-single">
                                 <div class="weekly-img">
-                                    <img height="220" src="{{ asset('/img/klongarang/สระหลวง.png') }}" alt="">
+                                        <img height="220" src="{{ url('storage')}}/{{ $photo_1_travel_3 }}" alt="">
                                 </div>
                                 <div class="weekly-caption">
-                                    <span class="color1">แหล่งท่องเที่ยว</span>
-                                    <h4><a href="travel_pool"><b>"สระหลวง"</b> ดูข้อมูลเพิ่มเติม</a></h4>
+                                    <h4><a href="{{ url('/travel/' . $id_travel_3) }}"><b>"{{ $name_travel_3 }}"</b> ดูข้อมูลเพิ่มเติม</a></h4>
                                 </div>
                             </div> 
                             <div class="weekly-single">
                                 <div class="weekly-img">
-                                    <img height="220" src="{{ asset('/img/klongarang/P1010044.JPG') }}" alt="">
+                                        <img height="220" src="{{ url('storage')}}/{{ $photo_1_travel_4 }}" alt="">
                                 </div>
                                 <div class="weekly-caption">
-                                    <span class="color1">แหล่งท่องเที่ยวและกิจกรรม</span>
-                                    <h4><a href="#"><b>"บวชป่าชุมชน"</b> ดูข้อมูลเพิ่มเติม</a></h4>
+                                    <h4><a href="{{ url('/travel/' . $id_travel_4) }}"><b>"{{ $name_travel_4 }}"</b> ดูข้อมูลเพิ่มเติม</a></h4>
                                 </div>
-                            </div> 
+                            </div>
                             <div class="weekly-single">
                                 <div class="weekly-img">
-                                    <img height="220" src="{{ asset('/img/klongarang/บ่อทอง.JPG') }}" alt="">
+                                        <img height="220" src="{{ url('storage')}}/{{ $photo_1_travel_5 }}" alt="">
                                 </div>
                                 <div class="weekly-caption">
-                                    <span class="color1">แหล่งท่องเที่ยว</span>
-                                    <h4><a href="#"><b>"บ่อทอง"</b> ดูข้อมูลเพิ่มเติม</a></h4>
+                                    <h4><a href="{{ url('/travel/' . $id_travel_5) }}"><b>"{{ $name_travel_5 }}"</b> ดูข้อมูลเพิ่มเติม</a></h4>
                                 </div>
-                            </div> 
-                        </div>
+                            </div>
+                        </div><br>
+                        <p style="text-align: right;"><a style="color: #666666 ;" href="{{ url('/travel') }}">ดูเพิ่มเติม</a></p>
                     </div>
                 </div>
            </div>
