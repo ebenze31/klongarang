@@ -118,8 +118,8 @@
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                             <div class="whats-news-caption">
                                 <div class="row">
-                                    @if($item->category == "อาหาร" )
                                     @foreach($products as $item)
+                                    @if($item->category == "อาหาร" )
                                     <div class="col-lg-4 col-md-4">
                                         <div class="single-what-news mb-100">
                                             <div class="card" style="background:none; border:none ">
@@ -168,8 +168,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    @endforeach
                                     @endif
+                                    @endforeach
                                 </div> 
                                 <div class="pagination-wrapper"> {!! $products->appends(['search' => Request::get('search')])->render() !!} </div>
                             </div>
@@ -179,8 +179,8 @@
                         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                             <div class="whats-news-caption">
                                 <div class="row">
-                                    @if($item->category == "ของที่ระลึก" )
                                     @foreach($products as $item)
+                                    @if($item->category == "ของที่ระลึก" )
                                     <div class="col-lg-4 col-md-4">
                                         <div class="single-what-news mb-100">
                                             <div class="card" style="background:none; border:none ">
@@ -229,8 +229,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    @endforeach
                                     @endif
+                                    @endforeach
                                 </div>
                                 <div class="pagination-wrapper"> {!! $products->appends(['search' => Request::get('search')])->render() !!} </div>
                             </div>
@@ -239,8 +239,8 @@
                         <div class="tab-pane fade" id="nav-last" role="tabpanel" aria-labelledby="nav-last-tab">
                             <div class="whats-news-caption">
                                 <div class="row">
-                                    @if($item->category == "สินค้าทางการเกษตร" )
                                     @foreach($products as $item)
+                                    @if($item->category == "สินค้าทางการเกษตร" )
                                     <div class="col-lg-4 col-md-4">
                                         <div class="single-what-news mb-100">
                                             <div class="card" style="background:none; border:none ">
@@ -289,8 +289,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    @endforeach
                                     @endif
+                                    @endforeach
                                 </div>
                                 <div class="pagination-wrapper"> {!! $products->appends(['search' => Request::get('search')])->render() !!} </div>
                             </div>
@@ -299,8 +299,8 @@
                         <div class="tab-pane fade" id="nav-a" role="tabpanel" aria-labelledby="nav-last-a">
                             <div class="whats-news-caption">
                                 <div class="row">
-                                    @if($item->category == "ผลิตภัณฑ์จากไผ่" )
                                     @foreach($products as $item)
+                                    @if($item->category == "ผลิตภัณฑ์จากไผ่" )
                                     <div class="col-lg-4 col-md-4">
                                         <div class="single-what-news mb-100">
                                             <div class="card" style="background:none; border:none ">
@@ -349,8 +349,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    @endforeach
                                     @endif
+                                    @endforeach
                                 </div>
                                 <div class="pagination-wrapper"> {!! $products->appends(['search' => Request::get('search')])->render() !!} </div>
                             </div>

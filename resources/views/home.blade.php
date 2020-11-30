@@ -1,6 +1,35 @@
 @extends('layout.main')
 
 @section('content')
+<?php
+$servername = "127.0.0.1";
+$username = "root";
+$password = "";
+$dbname = "klongarang2";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+
+$sql = "SELECT name, category, photo_1 FROM travel ORDER BY RAND() LIMIT 0,1";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "name: " . $row["name"]. " " . $row["category"]. " " . $row["photo_1"]. "<br>";
+    $name_travel1 = $row["name"];
+  }
+} else {
+  echo "0 results";
+}
+
+?>
+
     <!-- Trending Area Start -->
     <div class="trending-area fix">
         <div class="container">
@@ -34,7 +63,7 @@
                                     </div>
                                     <div class="trend-bottom-cap">
                                         <span class="color1">กิจกรรม , แหล่งท่องเที่ยว</span>
-                                        <h4><a href="details.html">บวชป่า</a></h4>
+                                        <h4><a href="details.html"><?php echo $name_travel1; ?></a></h4>
                                     </div>
                                 </div>
                                 </div>
