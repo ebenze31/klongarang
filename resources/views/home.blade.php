@@ -298,7 +298,8 @@ if ($result5->num_rows > 0) {
     </div>              
     <!-- End Weekly-News -->
 @include('home_product')
-<hr>
+
+@include('home_homestay')
     <!--   Weekly2-News start -->
     <div class="weekly2-news-area  weekly2-pading gray-bg">
         <div class="container">
@@ -372,7 +373,7 @@ if ($result5->num_rows > 0) {
     </div>           
     <hr>
     <!-- End Weekly-News -->
-@include('home_homestay')
+
     <!-- section Tittle -->
     <div class="row">
         <div class="col-10"></div>
