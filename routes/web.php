@@ -39,8 +39,6 @@ Route::middleware(['auth', 'role:คนดูแล'])->group(function () {
 
 Route::resource('travel', 'TravelController')->except(['create' , 'edit']);
 Route::resource('products', 'ProductsController')->except(['create' , 'edit']);
-Route::resource('homestay', 'HomestayController')->except(['create' , 'edit']);
-Route::resource('advertise', 'AdvertiseController');
-Route::resource('advertise', 'AdvertiseController');
+Route::resource('homestay', 'HomestayController')->except(['create' , 'edit' , 'show']);
 Route::resource('advertise', 'AdvertiseController');
 Route::resource('award', 'AwardController');

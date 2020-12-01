@@ -23,9 +23,41 @@
                             <table class="table">
                                 <tbody>
                                     <tr>
-                                        <th>ID</th><td>{{ $homestay->id }}</td>
+                                        <th>หลังที่</th>
+                                        <td>{{ $homestay->id }}</td>
                                     </tr>
-                                    <tr><th> Name </th><td> {{ $homestay->name }} </td></tr><tr><th> Home </th><td> {{ $homestay->home }} </td></tr><tr><th> Photo 1 </th><td> {{ $homestay->photo_1 }} </td></tr><tr><th> Photo 2 </th><td> {{ $homestay->photo_2 }} </td></tr><tr><th> Photo 3 </th><td> {{ $homestay->photo_3 }} </td></tr><tr><th> Photo 4 </th><td> {{ $homestay->photo_4 }} </td></tr><tr><th> Photo 5 </th><td> {{ $homestay->photo_5 }} </td></tr><tr><th> Photo 6 </th><td> {{ $homestay->photo_6 }} </td></tr>
+                                    <tr>
+                                        <th> ชื่อเจ้าของบ้าน </th>
+                                        <td> {{ $homestay->name }} </td>
+                                    </tr>
+                                    <tr>
+                                        <th> บ้านเลขที่ </th>
+                                        <td> {{ $homestay->home }} </td>
+                                    </tr>
+                                    <tr>
+                                        <th> รูปที่ 1 </th>
+                                        <td><img width="150" src="{{ url('storage')}}/{{ $homestay->photo_1 }}"></td>
+                                    </tr>
+                                    <tr>
+                                        <th> รูปที่ 2 </th>
+                                        <td><img width="150" src="{{ url('storage')}}/{{ $homestay->photo_2 }}"></td>
+                                    </tr>
+                                    <tr>
+                                        <th> รูปที่ 3 </th>
+                                        <td><img width="150" src="{{ url('storage')}}/{{ $homestay->photo_3 }}"></td>
+                                    </tr>
+                                    <tr>
+                                        <th> รูปที่ 4 </th>
+                                        <td><img width="150" src="{{ url('storage')}}/{{ $homestay->photo_4 }}"></td>
+                                    </tr>
+                                    <tr>
+                                        <th> รูปที่ 5 </th>
+                                        <td><img width="150" src="{{ url('storage')}}/{{ $homestay->photo_5 }}"></td>
+                                    </tr>
+                                    <tr>
+                                        <th> รูปที่ 6 </th>
+                                        <td><img width="150" src="{{ url('storage')}}/{{ $homestay->photo_6 }}"></td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
