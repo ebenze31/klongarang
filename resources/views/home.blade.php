@@ -157,7 +157,9 @@ if ($result5->num_rows > 0) {
                                 <div class="col-lg-4">
                                 <div class="single-bottom mb-35">
                                     <div class="trend-bottom-img mb-30">
+                                    <a href="{{ url('/travel/' . $id_travel_1) }}">
                                         <img width="100%" height="150" src="{{ url('storage')}}/{{ $photo_1_travel_1 }}" >
+                                    </a>
                                     </div>
                                     <div class="trend-bottom-cap">
                                         <h4><a href="{{ url('/travel/' . $id_travel_1) }}">"{{ $name_travel_1 }}"</a></h4>
@@ -168,7 +170,9 @@ if ($result5->num_rows > 0) {
                                 <div class="col-lg-4">
                                 <div class="single-bottom mb-35">
                                     <div class="trend-bottom-img mb-30">
+                                    <a href="{{ url('/travel/' . $id_travel_2) }}">
                                         <img width="100%" height="150" src="{{ url('storage')}}/{{ $photo_1_travel_2 }}" >
+                                    </a>
                                     </div>
                                     <div class="trend-bottom-cap">
                                         <h4><a href="{{ url('/travel/' . $id_travel_2) }}">"{{ $name_travel_2 }}"</a></h4>
@@ -179,7 +183,9 @@ if ($result5->num_rows > 0) {
                                 <div class="col-lg-4">
                                 <div class="single-bottom mb-35">
                                     <div class="trend-bottom-img mb-30">
+                                    <a href="{{ url('/travel/' . $id_travel_3) }}">
                                         <img width="100%" height="150" src="{{ url('storage')}}/{{ $photo_1_travel_3 }}" >
+                                    </a>
                                     </div>
                                     <div class="trend-bottom-cap">
                                         <h4><a href="{{ url('/travel/' . $id_travel_3) }}">"{{ $name_travel_3 }}"</a></h4>
@@ -242,7 +248,7 @@ if ($result5->num_rows > 0) {
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle mb-30">
-                            <h3> <a href="{{ url('/travel') }}">แหล่งท่องเที่ยวและกิจกรรม</a></h3>
+                            <h1 style="text-shadow: 1px 1px #FFF" ><a href="{{ url('/travel') }}">แหล่งท่องเที่ยวและกิจกรรม</a></h1>
                         </div>
                     </div>
                 </div>

@@ -39,10 +39,10 @@
                                           <li><a href="{{ url('/products') }}"><i class="fas fa-shopping-basket"></i> สินค้าและของที่ระลึก</a></li>
                                           <li><a >ติดต่อ <i class="fas fa-caret-down"></i> </a>
                                               <ul class="submenu">
-                                                  <li><a href="https://www.facebook.com/%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87-470519779751019"><i class="fab fa-facebook"></i> : บ้านคลองอาราง</a></li>
-                                                  <li><a href="blog.html"><i class="fas fa-paper-plane"></i> : ...@gmail.com</a></li>
-                                                  <li><a href="single-blog.html"><i class="fas fa-phone-volume"></i> : 0999999999</a></li>
-                                                  <li><a href="details.html"><i class="fab fa-line"></i> : ID:</a></li>
+                                                  <li><a href="https://www.facebook.com/%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87-470519779751019" target="_blank"><i class="fab fa-facebook"></i> : บ้านคลองอาราง</a></li>
+                                                  <li><a href="mailto:bb@gmail.com" target="_blank"><i class="fas fa-paper-plane"></i> : ...@gmail.com</a></li>
+                                                  <li><a href="tel:0999999999" target="_blank"><i class="fas fa-phone-volume"></i> : 0999999999</a></li>
+                                                  <li><a href="http://line.me/ti/p/~nongbenze012" target="_blank"><i class="fab fa-line"></i> : ID:</a></li>
                                               </ul>
                                           </li>
                                       </ul>

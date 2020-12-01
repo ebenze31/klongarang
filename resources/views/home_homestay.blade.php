@@ -103,7 +103,7 @@ if ($result6->num_rows > 0) {
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-tittle mb-30">
-                        <h3> <a href="{{ url('/homestay') }}">บรรยากาศโฮมสเตย์</a></h3>
+                      <h1 style="text-shadow: 1px 1px #FFF" ><a href="{{ url('/homestay') }}">บรรยากาศโฮมสเตย์</a></h1>
                     </div>
                 </div>
             </div>
@@ -160,8 +160,12 @@ if ($result6->num_rows > 0) {
                             </div>
                         </div>
                     </div>
+                    <div>
+                        <p style="text-align: right;"><a style="color: #666666 ;" href="{{ url('/homestay') }}">ดูเพิ่มเติม</a></p>
+                    </div> 
                 </div>
             </div>
        </div>
     </div>
-</div>           
+</div>        
+  

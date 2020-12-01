@@ -63,7 +63,7 @@
                                 <img src="assets/img/trending/trending_top.jpg" alt="">
                             </div>
                             <div class="section-tittle mb-30 pt-30">
-                                <h3>{{ $travel->name }}</h3>
+                                <h2 style="text-shadow: 1px 1px #FF0000 " class="text-white">{{ $travel->name }}</h2>
                             </div>
                             <div class="about-prea">
                                 <span style="color: #000" class="about-pera1 mb-25"><b> หมวดหมู่ :</b> {{ $travel->category }}</p>
@@ -73,12 +73,12 @@
                             
                             <div class="social-share pt-30">
                                 <div class="section-tittle">
-                                    <h3 class="mr-20">แชร์ :</h3>
+                                    <h3 class="mr-20">ติดต่อ :</h3>
                                     <ul>
-                                        <li><a href="#"><img src="{{ asset('/img/icon/icon-ins.png') }}" alt=""></a></li>
-                                        <li><a href="#"><img src="{{ asset('/img/icon/icon-fb.png') }}" alt=""></a></li>
-                                        <li><a href="#"><img src="{{ asset('/img/icon/icon-tw.png') }}" alt=""></a></li>
-                                        <li><a href="#"><img src="{{ asset('/img/icon/icon-yo.png') }}" alt=""></a></li>
+                                        <li><a href="https://www.facebook.com/%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87-470519779751019" target="_blank"><img src="{{ asset('/img/icon/icon-fb.png') }}" alt=""></a></li>
+                                        <li><a href="http://line.me/ti/p/~nongbenze012" target="_blank"><img src="{{ asset('/img/icon/icon-line.png') }}" alt=""></a></li>
+                                        <li><a href="mailto:bb@gmail.com" target="_blank"><img src="{{ asset('/img/icon/icon-mail.png') }}" alt=""></a></li>
+                                        <li><a href="tel:0999999999" target="_blank"><img src="{{ asset('/img/icon/icon-tel.png') }}" alt=""></a></li>
                                     </ul>
                                 </div>
                             </div>

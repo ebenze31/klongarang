@@ -4,8 +4,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">{{ $product->name }}</div>
+                <div style="background:none;border:none;" class="card">
+                    <h2 style="text-shadow: 1px 1px #FF0000 " class="text-white">{{ $product->name }}</h2>
                     <div class="card-body">
                                 <a href="{{ url('/products') }}" title="Back"><button class="btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> ย้อนกลับ</button></a>
                         @if(Auth::check())
