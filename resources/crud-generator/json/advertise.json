@@ -1,0 +1,20 @@
+{
+    "fields": [
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "dateline",
+            "type": "date"
+        },
+        {
+            "name": "photo",
+            "type": "file"
+        },
+        {
+            "name": "active",
+            "type": "string"
+        }
+    ]
+}

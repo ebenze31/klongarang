@@ -1,0 +1,20 @@
+{
+    "fields": [
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "detail",
+            "type": "text"
+        },
+        {
+            "name": "photo_1",
+            "type": "file"
+        },
+        {
+            "name": "photo_2",
+            "type": "file"
+        }
+    ]
+}
