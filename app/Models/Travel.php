@@ -25,7 +25,7 @@ class Travel extends Model
      *
      * @var array
      */
-    protected $fillable = ['category', 'name', 'detail', 'type', 'photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5'];
+    protected $fillable = ['category', 'name', 'detail', 'type', 'photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5', 'agriculture', 'culture', 'learn' , 'check_in'];
 
     
 }

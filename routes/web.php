@@ -34,11 +34,12 @@ Route::middleware(['auth', 'role:คนดูแล'])->group(function () {
 	Route::resource('travel', 'TravelController');
 	Route::resource('products', 'ProductsController');
 	Route::resource('homestay', 'HomestayController');
+	Route::resource('advertise', 'AdvertiseController');
+	Route::resource('award', 'AwardController');
 
 });
 
 Route::resource('travel', 'TravelController')->except(['create' , 'edit']);
 Route::resource('products', 'ProductsController')->except(['create' , 'edit']);
 Route::resource('homestay', 'HomestayController')->except(['create' , 'edit' , 'show']);
-Route::resource('advertise', 'AdvertiseController');
-Route::resource('award', 'AwardController');
+Route::resource('award', 'AwardController')->except(['create' , 'edit' ]);

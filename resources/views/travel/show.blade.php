@@ -66,8 +66,21 @@
                                 <h2 style="text-shadow: 1px 1px #FF0000 " class="text-white">{{ $travel->name }}</h2>
                             </div>
                             <div class="about-prea">
-                                <span style="color: #000" class="about-pera1 mb-25"><b> หมวดหมู่ :</b> {{ $travel->category }}</p>
-                                
+                                <span style="color: #000" class="about-pera1 mb-25"><b> หมวดหมู่ :</b> 
+                                @if($travel->agriculture == "on" )
+                                    &nbsp;เชิงเกษตร&nbsp;
+                                @endif
+
+                                @if($travel->culture == "on" )
+                                    &nbsp;เชิงวัฒนธรรม&nbsp;
+                                @endif
+                                @if($travel->learn == "on" )
+                                    &nbsp;กิจกรรมแลกเปลี่ยนเรียนรู้&nbsp;
+                                @endif
+                                @if($travel->check_in == "on" )
+                                    &nbsp;จุดเช็คอิน&nbsp;
+                                @endif
+                                </p>
                                 <span><b>รายละเอียด :</b> {{ $travel->detail }}</span>
                             </div> 
                             

@@ -30,6 +30,10 @@ class TravelController extends Controller
                 ->orWhere('photo_3', 'LIKE', "%$keyword%")
                 ->orWhere('photo_4', 'LIKE', "%$keyword%")
                 ->orWhere('photo_5', 'LIKE', "%$keyword%")
+                ->orWhere('agriculture', 'LIKE', "%$keyword%")
+                ->orWhere('culture', 'LIKE', "%$keyword%")
+                ->orWhere('learn', 'LIKE', "%$keyword%")
+                ->orWhere('check_in', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
             $travel = Travel::latest()->paginate($perPage);

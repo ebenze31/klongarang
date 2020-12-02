@@ -5,7 +5,14 @@
             <input class="form-control" name="type" type="text" id="type" value="แหล่งท่องเที่ยวและกิจกรรม" required readonly>
             {!! $errors->first('type', '<p class="help-block">:message</p>') !!}
         </div>
-        <div class="form-group {{ $errors->has('category') ? 'has-error' : ''}}">
+        <div>
+            <label for="category" class="control-label">{{ 'หมวดหมู่' }}</label><span style="color: #FF0033"> *</span>
+            <div><input name="agriculture" id="agriculture" type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เชิงเกษตร </div> 
+            <div><input name="culture" id="culture" type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เชิงวัฒนธรรม</div>
+            <div><input name="learn" id="learn" type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กิจกรรมแลกเปลี่ยนเรียนรู้</div>
+            <div><input name="check_in" id="check_in" type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;จุดเช็คอิน</div>
+        </div><br>
+        <div class="d-none form-group {{ $errors->has('category') ? 'has-error' : ''}}">
             <label for="category" class="control-label">{{ 'หมวดหมู่' }}</label><span style="color: #FF0033"> *</span><br>
             <select name="category" class="form-control" id="category" >
             @foreach (json_decode('{"\u0e40\u0e0a\u0e34\u0e07\u0e27\u0e31\u0e12\u0e19\u0e18\u0e23\u0e23\u0e21":"\u0e40\u0e0a\u0e34\u0e07\u0e27\u0e31\u0e12\u0e19\u0e18\u0e23\u0e23\u0e21","\u0e40\u0e0a\u0e34\u0e07\u0e40\u0e01\u0e29\u0e15\u0e23":"\u0e40\u0e0a\u0e34\u0e07\u0e40\u0e01\u0e29\u0e15\u0e23","\u0e01\u0e34\u0e08\u0e01\u0e23\u0e23\u0e21\u0e41\u0e25\u0e01\u0e40\u0e1b\u0e25\u0e35\u0e48\u0e22\u0e19\u0e40\u0e23\u0e35\u0e22\u0e19\u0e23\u0e39\u0e49":"\u0e01\u0e34\u0e08\u0e01\u0e23\u0e23\u0e21\u0e41\u0e25\u0e01\u0e40\u0e1b\u0e25\u0e35\u0e48\u0e22\u0e19\u0e40\u0e23\u0e35\u0e22\u0e19\u0e23\u0e39\u0e49"}', true) as $optionKey => $optionValue)
@@ -13,7 +20,7 @@
             @endforeach
         </select>
             {!! $errors->first('category', '<p class="help-block">:message</p>') !!}
-        </div><br><br>
+        </div>
         <div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
             <label for="name" class="control-label ">{{ 'ชื่อสถานที่' }}</label><span style="color: #FF0033"> *</span>
             <input class="form-control" name="name" type="text" id="name" value="{{ isset($travel->name) ? $travel->name : ''}}" required >

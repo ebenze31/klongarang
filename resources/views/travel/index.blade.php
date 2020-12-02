@@ -22,6 +22,7 @@
                                 <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">เชิงเกษตร</a>
                                 <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">เชิงวัฒนธรรม</a>
                                 <a class="nav-item nav-link" id="nav-last-tab" data-toggle="tab" href="#nav-last" role="tab" aria-controls="nav-contact" aria-selected="false">กิจกรรมแลกเปลี่ยนเรียนรู้</a>
+                                <a class="nav-item nav-link" id="nav-check_in-tab" data-toggle="tab" href="#nav-check_in" role="tab" aria-controls="nav-contact" aria-selected="false">จุดเช็คอิน</a>
                                 
                             </div>
                         </nav>
@@ -68,19 +69,19 @@
                                                 </div>
                                                 <div>
                                                     <br>
-                                                @if($item->category == "เชิงวัฒนธรรม" )
-                                                    <span class="color1">
+                                                @if($item->agriculture == "on" )
+                                                    <span style="border-radius: 10px;" class="color2">&nbsp;&nbsp;&nbsp;เชิงเกษตร&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
 
-                                                @if($item->category == "เชิงเกษตร" )
-                                                    <span class="color2">
+                                                @if($item->culture == "on" )
+                                                    <span style="border-radius: 10px;" class="color1">&nbsp;&nbsp;&nbsp;เชิงวัฒนธรรม&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
-
-                                                @if($item->category == "กิจกรรมแลกเปลี่ยนเรียนรู้" )
-                                                    <span class="color3">
+                                                @if($item->learn == "on" )
+                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;กิจกรรมแลกเปลี่ยนเรียนรู้&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
-
-                                                        &nbsp;&nbsp;&nbsp;{{ $item->category }}&nbsp;&nbsp;&nbsp;</span>
+                                                @if($item->check_in == "on" )
+                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;จุดเช็คอิน&nbsp;&nbsp;&nbsp;</span>
+                                                @endif
                                                     <h4><br><a style="color: #fc3f00 !important" href="{{ url('/travel/' . $item->id) }}">"{{ $item->name }}"</a></h4>
                                                     <!-- <p>{{ $item->detail }}</p> -->
                                                     <br>
@@ -114,7 +115,7 @@
                             <div class="whats-news-caption">
                                 <div class="row">
                                     @foreach($travel as $item)
-                                    @if($item->category == "เชิงเกษตร" )
+                                    @if($item->agriculture == "on" )
                                     <div class="col-lg-4 col-md-4">
                                         <div class="single-what-news mb-100">
                                             <div class="what-img">
@@ -122,7 +123,16 @@
                                             </div>
                                             <div>
                                                 <br>
-                                                <span class="color2">&nbsp;&nbsp;&nbsp;{{ $item->category }}&nbsp;&nbsp;&nbsp;</span>
+                                                <span style="border-radius: 10px;" class="color2">&nbsp;&nbsp;&nbsp;เชิงเกษตร&nbsp;&nbsp;&nbsp;</span>
+                                                @if($item->culture == "on" )
+                                                    <span style="border-radius: 10px;" class="color1">&nbsp;&nbsp;&nbsp;เชิงวัฒนธรรม&nbsp;&nbsp;&nbsp;</span>
+                                                @endif
+                                                @if($item->learn == "on" )
+                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;กิจกรรมแลกเปลี่ยนเรียนรู้&nbsp;&nbsp;&nbsp;</span>
+                                                @endif
+                                                @if($item->check_in == "on" )
+                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;จุดเช็คอิน&nbsp;&nbsp;&nbsp;</span>
+                                                @endif
                                                 <h4><br><a style="color: #fc3f00 !important" href="#">"{{ $item->name }}"</a></h4>
                                                 <!-- <p>{{ $item->detail }}</p> -->
                                                 <br>
@@ -156,7 +166,7 @@
                             <div class="whats-news-caption">
                                 <div class="row">
                                     @foreach($travel as $item)
-                                    @if($item->category == "เชิงวัฒนธรรม" )
+                                    @if($item->culture == "on" )
                                     <div class="col-lg-4 col-md-4">
                                         <div class="single-what-news mb-100">
                                             <div class="what-img">
@@ -164,7 +174,16 @@
                                             </div>
                                             <div>
                                                 <br>
-                                                <span class="color1">&nbsp;&nbsp;&nbsp;{{ $item->category }}&nbsp;&nbsp;&nbsp;</span>
+                                                <span style="border-radius: 10px;" class="color1">&nbsp;&nbsp;&nbsp;เชิงวัฒนธรรม&nbsp;&nbsp;&nbsp;</span>
+                                                @if($item->agriculture == "on" )
+                                                    <span style="border-radius: 10px;" class="color2">&nbsp;&nbsp;&nbsp;เชิงเกษตร&nbsp;&nbsp;&nbsp;</span>
+                                                @endif
+                                                @if($item->learn == "on" )
+                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;กิจกรรมแลกเปลี่ยนเรียนรู้&nbsp;&nbsp;&nbsp;</span>
+                                                @endif
+                                                @if($item->check_in == "on" )
+                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;จุดเช็คอิน&nbsp;&nbsp;&nbsp;</span>
+                                                @endif
                                                 <h4><br><a style="color: #fc3f00 !important" href="#">"{{ $item->name }}"</a></h4>
                                                 <!-- <p>{{ $item->detail }}</p> -->
                                                 <br>
@@ -197,7 +216,7 @@
                             <div class="whats-news-caption">
                                 <div class="row">
                                     @foreach($travel as $item)
-                                    @if($item->category == "กิจกรรมแลกเปลี่ยนเรียนรู้" )
+                                    @if($item->learn == "on" )
                                     <div class="col-lg-4 col-md-4">
                                         <div class="single-what-news mb-100">
                                             <div class="what-img">
@@ -205,7 +224,68 @@
                                             </div>
                                             <div>
                                                 <br>
-                                                <span class="color3">&nbsp;&nbsp;&nbsp;{{ $item->category }}&nbsp;&nbsp;&nbsp;</span>
+                                                <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;กิจกรรมแลกเปลี่ยนเรียนรู้&nbsp;&nbsp;&nbsp;</span>
+                                                @if($item->agriculture == "on" )
+                                                    <span style="border-radius: 10px;" class="color2">&nbsp;&nbsp;&nbsp;เชิงเกษตร&nbsp;&nbsp;&nbsp;</span>
+                                                @endif
+
+                                                @if($item->culture == "on" )
+                                                    <span style="border-radius: 10px;" class="color1">&nbsp;&nbsp;&nbsp;เชิงวัฒนธรรม&nbsp;&nbsp;&nbsp;</span>
+                                                @endif
+                                                @if($item->check_in == "on" )
+                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;จุดเช็คอิน&nbsp;&nbsp;&nbsp;</span>
+                                                @endif
+                                                <h4><br><a style="color: #fc3f00 !important" href="#">"{{ $item->name }}"</a></h4>
+                                                <!-- <p>{{ $item->detail }}</p> -->
+                                                <br>
+                                            </div>
+                                            <div>
+                                                <a href="{{ url('/travel/' . $item->id) }}" title="View Travel"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
+                                                @if(Auth::check())
+                                                    @if(Auth::user()->profile->role == "คนดูแล" )
+                                                        
+                                                        <a href="{{ url('/travel/' . $item->id . '/edit') }}" title="Edit Travel"><button class="btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> แก้ไขข้อมูล</button></a>
+
+                                                        <form method="POST" action="{{ url('/travel' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                                            {{ method_field('DELETE') }}
+                                                            {{ csrf_field() }}
+                                                            <button type="submit" class="btn-danger btn-sm" title="Delete Travel" onclick="return confirm(&quot;ยืนยันการลบ ?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> ลบ</button>
+                                                        </form>
+                                                    @endif
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endif
+                                    @endforeach
+                                </div>
+                                <div class="pagination-wrapper"> {!! $travel->appends(['search' => Request::get('search')])->render() !!} </div>
+                            </div>
+                        </div>
+                        <!-- card five -->
+                        <div class="tab-pane fade" id="nav-check_in" role="tabpanel" aria-labelledby="nav-check_in-tab">
+                            <div class="whats-news-caption">
+                                <div class="row">
+                                    @foreach($travel as $item)
+                                    @if($item->check_in == "on" )
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="single-what-news mb-100">
+                                            <div class="what-img">
+                                                <img width="350" height="320" src="{{ url('storage')}}/{{ $item->photo_1 }}" alt="">
+                                            </div>
+                                            <div>
+                                                <br>
+                                                <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;จุดเช็คอิน&nbsp;&nbsp;&nbsp;</span>
+                                                @if($item->agriculture == "on" )
+                                                    <span style="border-radius: 10px;" class="color2">&nbsp;&nbsp;&nbsp;เชิงเกษตร&nbsp;&nbsp;&nbsp;</span>
+                                                @endif
+
+                                                @if($item->culture == "on" )
+                                                    <span style="border-radius: 10px;" class="color1">&nbsp;&nbsp;&nbsp;เชิงวัฒนธรรม&nbsp;&nbsp;&nbsp;</span>
+                                                @endif
+                                                @if($item->learn == "on" )
+                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;กิจกรรมแลกเปลี่ยนเรียนรู้&nbsp;&nbsp;&nbsp;</span>
+                                                @endif
                                                 <h4><br><a style="color: #fc3f00 !important" href="#">"{{ $item->name }}"</a></h4>
                                                 <!-- <p>{{ $item->detail }}</p> -->
                                                 <br>

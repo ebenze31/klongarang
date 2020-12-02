@@ -239,7 +239,7 @@ if ($result4->num_rows > 0) {
                 </div><br>
                 @if(Auth::check())
                     @if(Auth::user()->profile->role == "คนดูแล" )
-                        <p style="text-align: right;"><a style="color: #666666 ;" href="{{ url('/') }}">เพิ่มโฆษณา</a></p>
+                        <p style="text-align: right;"><a style="color: #666666 ;" href="{{ url('/advertise') }}">เพิ่มโฆษณา</a></p>
                     @endif
                 @endif
 
