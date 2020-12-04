@@ -234,8 +234,36 @@ if ($result4->num_rows > 0) {
                     </div>
                 </div>
                 <!-- New Poster -->
+                @php
+                    $photo_poster = " ";
+                    $dateline = " ";
+                    $sql_poster = "SELECT photo , dateline FROM advertises WHERE active = 'ใช้งาน' ORDER BY RAND() LIMIT 0,1  ";
+                    $result = $conn->query($sql_poster);
+
+                    if ($result->num_rows > 0) {
+                      // output data of each row
+                      while($row = $result->fetch_assoc()) {
+                        $photo_poster = $row["photo"];
+                        $dateline = $row["dateline"];
+                        // echo $name_product_1;
+                      }
+                    } else {
+                      // echo "0 results";
+                    }
+                    $date_now = date('Y-m-d');
+                    //echo $date_now;
+                    if($dateline = $date_now)
+                        $sql_update = "UPDATE advertises SET active='ไม่ใช้งาน' WHERE dateline= '$date_now'";
+
+                        if ($conn->query($sql_update) === TRUE) {
+                           //echo "Record updated successfully";
+                        } else {
+                           //echo "Error updating record: " . $conn->error;
+                        }
+                    
+                @endphp
                 <div class="news-poster d-lg-block">
-                    <img height="650" src="{{ asset('/img/icon/ปีใหม่.png') }}" alt="">
+                    <img height="650" src="{{ url('storage')}}/{{ $photo_poster }}" alt="">
                 </div><br>
                 @if(Auth::check())
                     @if(Auth::user()->profile->role == "คนดูแล" )

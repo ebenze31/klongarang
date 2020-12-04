@@ -77,7 +77,7 @@
                                                     <span style="border-radius: 10px;" class="color1">&nbsp;&nbsp;&nbsp;เชิงวัฒนธรรม&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
                                                 @if($item->learn == "on" )
-                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;กิจกรรมแลกเปลี่ยนเรียนรู้&nbsp;&nbsp;&nbsp;</span>
+                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;กิจกรรม&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
                                                 @if($item->check_in == "on" )
                                                     <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;จุดเช็คอิน&nbsp;&nbsp;&nbsp;</span>
@@ -128,7 +128,7 @@
                                                     <span style="border-radius: 10px;" class="color1">&nbsp;&nbsp;&nbsp;เชิงวัฒนธรรม&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
                                                 @if($item->learn == "on" )
-                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;กิจกรรมแลกเปลี่ยนเรียนรู้&nbsp;&nbsp;&nbsp;</span>
+                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;กิจกรรม&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
                                                 @if($item->check_in == "on" )
                                                     <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;จุดเช็คอิน&nbsp;&nbsp;&nbsp;</span>
@@ -179,7 +179,7 @@
                                                     <span style="border-radius: 10px;" class="color2">&nbsp;&nbsp;&nbsp;เชิงเกษตร&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
                                                 @if($item->learn == "on" )
-                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;กิจกรรมแลกเปลี่ยนเรียนรู้&nbsp;&nbsp;&nbsp;</span>
+                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;กิจกรรม&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
                                                 @if($item->check_in == "on" )
                                                     <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;จุดเช็คอิน&nbsp;&nbsp;&nbsp;</span>
@@ -224,7 +224,7 @@
                                             </div>
                                             <div>
                                                 <br>
-                                                <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;กิจกรรมแลกเปลี่ยนเรียนรู้&nbsp;&nbsp;&nbsp;</span>
+                                                <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;กิจกรรม&nbsp;&nbsp;&nbsp;</span>
                                                 @if($item->agriculture == "on" )
                                                     <span style="border-radius: 10px;" class="color2">&nbsp;&nbsp;&nbsp;เชิงเกษตร&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
@@ -284,7 +284,7 @@
                                                     <span style="border-radius: 10px;" class="color1">&nbsp;&nbsp;&nbsp;เชิงวัฒนธรรม&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
                                                 @if($item->learn == "on" )
-                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;กิจกรรมแลกเปลี่ยนเรียนรู้&nbsp;&nbsp;&nbsp;</span>
+                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;กิจกรรม&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
                                                 <h4><br><a style="color: #fc3f00 !important" href="#">"{{ $item->name }}"</a></h4>
                                                 <!-- <p>{{ $item->detail }}</p> -->

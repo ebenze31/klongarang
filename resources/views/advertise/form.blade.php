@@ -7,13 +7,15 @@
                 {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
             </div>
             <div class="form-group {{ $errors->has('dateline') ? 'has-error' : ''}}">
-                <label for="dateline" class="control-label">{{ 'วันสิ้นสุดกิจกรรม' }}</label><span style="color: red"> *</span>
+                <label for="dateline" class="control-label">{{ 'วันสิ้นสุดกิจกรรม' }}</label><span style="color: red;font-size: 13px;"> * (เดือน/วัน/ปี)</span>
                 <input class="form-control" name="dateline" type="date" id="dateline" value="{{ isset($advertise->dateline) ? $advertise->dateline : ''}}" required>
                 {!! $errors->first('dateline', '<p class="help-block">:message</p>') !!}
             </div>
             <div class="form-group {{ $errors->has('photo') ? 'has-error' : ''}}">
-                <label for="photo" class="control-label">{{ 'รูปภาพ' }}</label><span style="color: red"> *</span>
-                <input class="form-control" name="photo" type="file" id="photo" value="{{ isset($advertise->photo) ? $advertise->photo : ''}}" required>
+                <label for="photo" class="control-label">{{ 'รูปภาพ' }}</label>
+                <span style="color: red;font-size: 13px;"> * (กรุณาเพิ่มรูปภาพที่มีขนาด 300 * 755 พิกเซล)</span>
+                <span style="position:absolute; right:0;"><a style="color: #000;font-size: 12px;" href="{{ asset('/img/icon/ปีใหม่.png') }}" target="bank">ดูตัวอย่าง</a></span>
+                <input class="form-control" name="photo" type="file" id="photo" value="{{ isset($advertise->photo) ? $advertise->photo : ''}}" required >
                 {!! $errors->first('photo', '<p class="help-block">:message</p>') !!}
             </div>
             <div class="d-none form-group {{ $errors->has('active') ? 'has-error' : ''}}">
@@ -23,7 +25,7 @@
             </div>
             <br>
             <div class="form-group">
-                <input class="btn btn-primary" type="submit" value="{{ $formMode === 'edit' ? 'แก้ไขข้อมูล' : 'เพิ่มข้อมูล' }}">
+                <input class="btn btn-primary" type="submit" value="{{ $formMode === 'edit' ? 'แก้ไขข้อมูล' : 'เพิ่มข้อมูล' }}" >
             </div>
         </div>
         <div class="col-md-6">

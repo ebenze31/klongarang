@@ -1,12 +1,12 @@
 <div class="row">
     <div class="col-lg-6 col-md-6">
-        <div class="form-group {{ $errors->has('type') ? 'has-error' : ''}}">
+        <div class="d-none form-group {{ $errors->has('type') ? 'has-error' : ''}}">
             <label for="type" class="control-label">{{ 'ประเภท' }}</label>
             <input class="form-control" name="type" type="text" id="type" value="แหล่งท่องเที่ยวและกิจกรรม" required readonly>
             {!! $errors->first('type', '<p class="help-block">:message</p>') !!}
-        </div>
+        </div><br>
         <div>
-            <label for="category" class="control-label">{{ 'หมวดหมู่' }}</label><span style="color: #FF0033"> *</span>
+            <label for="category" class="control-label">{{ 'หมวดหมู่' }}</label><span style="color: #FF0033;font-size: 13px;"> (เลือกได้มากกว่า 1 ข้อ)</span>
             <div><input name="agriculture" id="agriculture" type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เชิงเกษตร </div> 
             <div><input name="culture" id="culture" type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เชิงวัฒนธรรม</div>
             <div><input name="learn" id="learn" type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กิจกรรมแลกเปลี่ยนเรียนรู้</div>
