@@ -30,7 +30,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Name</th><th>Title</th><th>1 Day Trip</th><th>2 Days Trip</th><th>3 Days Trip</th><th>Cover Photo</th><th>Photo 1</th><th>Photo 2</th><th>Photo 3</th><th>Photo 4</th><th>Photo 5</th><th>Photo 6</th><th>Photo 7</th><th>Photo 8</th><th>Photo 9</th><th>Photo 10</th><th>Day 1 Morning</th><th>Day 1 Noon</th><th>Day 1 Afternoon</th><th>Day 1 Evening</th><th>Day 1 Night</th><th>Day 2 Morning</th><th>Day 2 Noon</th><th>Day 2 Afternoon</th><th>Day 2 Evening</th><th>Day 2 Night</th><th>Day 3 Morning</th><th>Day 3 Noon</th><th>Day 3 Afternoon</th><th>Day 3 Evening</th><th>Day 3 Night</th><th>Remark</th><th>Actions</th>
+                                        <th>#</th><th>Name</th><th>Title</th><th>1 Day Trip</th><th>2 Days Trip</th><th>Cover Photo</th><th>Photo 1</th><th>Photo 2</th><th>Photo 3</th><th>Photo 4</th><th>Photo 5</th><th>Photo 6</th><th>Photo 7</th><th>Photo 8</th><th>Photo 9</th><th>Photo 10</th><th>Remark</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -41,7 +41,6 @@
                                         <td>{{ $item->title }}</td>
                                         <td>{{ $item->one_day_trip }}</td>
                                         <td>{{ $item->two_days_trip }}</td>
-                                        <td>{{ $item->three_days_trip }}</td>
                                         <td>{{ $item->cover_photo }}</td>
                                         <td>{{ $item->photo_1 }}</td>
                                         <td>{{ $item->photo_2 }}</td>
@@ -53,21 +52,7 @@
                                         <td>{{ $item->photo_8 }}</td>
                                         <td>{{ $item->photo_9 }}</td>
                                         <td>{{ $item->photo_10 }}</td>
-                                        <td>{{ $item->day_1_morning }}</td>
-                                        <td>{{ $item->day_1_noon }}</td>
-                                        <td>{{ $item->day_1_afternoon }}</td>
-                                        <td>{{ $item->day_1_evening }}</td>
-                                        <td>{{ $item->day_1_night }}</td>
-                                        <td>{{ $item->day_2_morning }}</td>
-                                        <td>{{ $item->day_2_noon }}</td>
-                                        <td>{{ $item->day_2_afternoon }}</td>
-                                        <td>{{ $item->day_2_evening }}</td>
-                                        <td>{{ $item->day_2_night }}</td>
-                                        <td>{{ $item->day_3_morning }}</td>
-                                        <td>{{ $item->day_3_noon }}</td>
-                                        <td>{{ $item->day_3_afternoon }}</td>
-                                        <td>{{ $item->day_3_evening }}</td>
-                                        <td>{{ $item->day_3_night }}</td>
+                                        
                                         <td>{{ $item->remark }}</td>
                                         <td>
                                             <a href="{{ url('/trip/' . $item->id) }}" title="View Trip"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>

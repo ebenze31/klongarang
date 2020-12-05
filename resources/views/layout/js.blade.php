@@ -39,3 +39,9 @@
 		<!-- Jquery Plugins, main Jquery -->	
         <script src="{{ asset('js/plugins.js') }}"></script>
         <script src="{{ asset('js/main.js') }}"></script>
+        <script>
+            $(".chb").change(function() {
+              $(".chb").prop('checked', false);
+              $(this).prop('checked', true);
+            });
+        </script>
