@@ -7,9 +7,9 @@
         <div class="row">
         <div class="col-lg-12">
                 <div class="card">
-                    <div class="card-header">Edit Trip #{{ $trip->id }}</div>
+                    <h3 class="card-header">แก้ไขข้อมูล</h3>
                     <div class="card-body">
-                        <a href="{{ url('/trip') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/trip') }}" title="Back"><button class="btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> ย้อนกลับ</button></a>
                         <br />
                         <br />
 

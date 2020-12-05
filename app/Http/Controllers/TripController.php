@@ -18,7 +18,7 @@ class TripController extends Controller
     public function index(Request $request)
     {
         $keyword = $request->get('search');
-        $perPage = 25;
+        $perPage = 9;
 
         if (!empty($keyword)) {
             $trip = Trip::where('name', 'LIKE', "%$keyword%")

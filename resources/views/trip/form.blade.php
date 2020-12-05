@@ -13,59 +13,16 @@
         <div>
             <label class="control-label">{{ 'โปรแกรมท่องเที่ยว' }}</label><span style="color: #FF0033;font-size: 13px;"> *</span>
             <div>
-                <input name="one_day_trip" id="one_day_trip" type="checkbox" onchange="if(this.checked){ document.querySelector('#div_1_day').classList.remove('d-none'),document.querySelector('#two_days_trip').classList.add('d-none') }else{ document.querySelector('#div_1_day').classList.add('d-none'),document.querySelector('#two_days_trip').classList.remove('d-none')}">&nbsp;&nbsp;&nbsp;1 วัน  &nbsp;&nbsp;&nbsp;
+                <input name="one_day_trip" id="one_day_trip" type="checkbox" onchange="if(this.checked){ document.querySelector('#div_1_day').classList.remove('d-none'),document.querySelector('#name_1_day').classList.remove('d-none'),document.querySelector('#two_days_trip').classList.add('d-none') }else{ document.querySelector('#div_1_day').classList.add('d-none'),document.querySelector('#name_1_day').classList.add('d-none'),document.querySelector('#two_days_trip').classList.remove('d-none')}">&nbsp;&nbsp;&nbsp;1 วัน  &nbsp;&nbsp;&nbsp;
 
-                <input name="two_days_trip" id="two_days_trip" type="checkbox" onchange="if(this.checked){ document.querySelector('#div_2_days').classList.remove('d-none'),document.querySelector('#one_day_trip').classList.add('d-none') }else{ document.querySelector('#div_2_days').classList.add('d-none'),document.querySelector('#one_day_trip').classList.remove('d-none')}">&nbsp;&nbsp;&nbsp;2 วัน 1 คืน
+                <input name="two_days_trip" id="two_days_trip" type="checkbox" onchange="if(this.checked){ document.querySelector('#div_2_days').classList.remove('d-none'),document.querySelector('#name_2_days').classList.remove('d-none'),document.querySelector('#div_1_day').classList.remove('d-none'),document.querySelector('#one_day_trip').classList.add('d-none') }else{ document.querySelector('#div_2_days').classList.add('d-none'),document.querySelector('#name_2_days').classList.add('d-none'),document.querySelector('#div_1_day').classList.add('d-none'),document.querySelector('#one_day_trip').classList.remove('d-none')}">&nbsp;&nbsp;&nbsp;2 วัน 1 คืน
             </div>
         </div>
         <br>
         <!-- 1 DAY TRIP -->
         <div class="d-none" name="div_1_day" id="div_1_day">
-            <h4>โปรแกรม 1 วัน</h4>
-            <label>{{ '09.00-12.00 น.' }}</label>
-            <div class="form-group {{ $errors->has('day_1_mo_1') ? 'has-error' : ''}}">
-                <input class="form-control" name="day_1_mo_1" type="text" id="day_1_mo_1" value="{{ isset($trip->day_1_mo_1) ? $trip->day_1_mo_1 : ''}}"  placeholder="กิจกรรมที่ 1">
-                {!! $errors->first('day_1_mo_1', '<p class="help-block">:message</p>') !!}
-            </div>
-            <div class="form-group {{ $errors->has('day_1_mo_2') ? 'has-error' : ''}}">
-                <input class="form-control" name="day_1_mo_2" type="text" id="day_1_mo_2" value="{{ isset($trip->day_1_mo_2) ? $trip->day_1_mo_2 : ''}}"  placeholder="กิจกรรมที่ 2">
-                {!! $errors->first('day_1_mo_2', '<p class="help-block">:message</p>') !!}
-            </div>
-            <div class="form-group {{ $errors->has('day_1_mo_3') ? 'has-error' : ''}}">
-                <input class="form-control" name="day_1_mo_3" type="text" id="day_1_mo_3" value="{{ isset($trip->day_1_mo_3) ? $trip->day_1_mo_3 : ''}}"  placeholder="กิจกรรมที่ 3">
-                {!! $errors->first('day_1_mo_3', '<p class="help-block">:message</p>') !!}
-            </div>
-            <div class="form-group {{ $errors->has('day_1_mo_4') ? 'has-error' : ''}}">
-                <input class="form-control" name="day_1_mo_4" type="text" id="day_1_mo_4" value="{{ isset($trip->day_1_mo_4) ? $trip->day_1_mo_4 : ''}}"  placeholder="กิจกรรมที่ 4">
-                {!! $errors->first('day_1_mo_4', '<p class="help-block">:message</p>') !!}
-            </div>
-
-            <label>{{ '13.00-16.30 น.' }}</label>
-            <div class="form-group {{ $errors->has('day_1_af_1') ? 'has-error' : ''}}">
-                <input class="form-control" name="day_1_af_1" type="text" id="day_1_af_1" value="{{ isset($trip->day_1_af_1) ? $trip->day_1_af_1 : ''}}"  placeholder="กิจกรรมที่ 1">
-                {!! $errors->first('day_1_af_1', '<p class="help-block">:message</p>') !!}
-            </div>
-            <div class="form-group {{ $errors->has('day_1_af_2') ? 'has-error' : ''}}">
-                <input class="form-control" name="day_1_af_2" type="text" id="day_1_af_2" value="{{ isset($trip->day_1_af_2) ? $trip->day_1_af_2 : ''}}"  placeholder="กิจกรรมที่ 2">
-                {!! $errors->first('day_1_af_2', '<p class="help-block">:message</p>') !!}
-            </div>
-            <div class="form-group {{ $errors->has('day_1_af_3') ? 'has-error' : ''}}">
-                <input class="form-control" name="day_1_af_3" type="text" id="day_1_af_3" value="{{ isset($trip->day_1_af_3) ? $trip->day_1_af_3 : ''}}"  placeholder="กิจกรรมที่ 3">
-                {!! $errors->first('day_1_af_3', '<p class="help-block">:message</p>') !!}
-            </div>
-            <div class="form-group {{ $errors->has('day_1_af_4') ? 'has-error' : ''}}">
-                <input class="form-control" name="day_1_af_4" type="text" id="day_1_af_4" value="{{ isset($trip->day_1_af_4) ? $trip->day_1_af_4 : ''}}"  placeholder="กิจกรรมที่ 4">
-                {!! $errors->first('day_1_af_4', '<p class="help-block">:message</p>') !!}
-            </div>
-            <div class="form-group {{ $errors->has('remark') ? 'has-error' : ''}}">
-                <label for="remark" class="control-label">{{ 'หมายเหตุ' }}</label>
-                <input class="form-control" name="remark" type="text" id="remark" value="{{ isset($trip->remark) ? $trip->remark : ''}}" >
-                {!! $errors->first('remark', '<p class="help-block">:message</p>') !!}
-            </div>
-        </div>
-        <!-- 2 DAYS TRIP -->
-        <div class="d-none" name="div_2_days" id="div_2_days">
-            <h4>โปรแกรม 2 วัน 1 คืน</h4>
+            <h4 class="d-none" name="name_1_day" id="name_1_day">โปรแกรม 1 วัน</h4>
+            <h4 class="d-none" name="name_2_days" id="name_2_days">โปรแกรม 2 วัน 1 คืน</h4>
             <label><b>วันที่ 1</b>: 09.00-12.00 น.</label>
             <div class="form-group {{ $errors->has('day_1_mo_1') ? 'has-error' : ''}}">
                 <input class="form-control" name="day_1_mo_1" type="text" id="day_1_mo_1" value="{{ isset($trip->day_1_mo_1) ? $trip->day_1_mo_1 : ''}}"  placeholder="กิจกรรมที่ 1">
@@ -101,6 +58,10 @@
                 <input class="form-control" name="day_1_af_4" type="text" id="day_1_af_4" value="{{ isset($trip->day_1_af_4) ? $trip->day_1_af_4 : ''}}"  placeholder="กิจกรรมที่ 4">
                 {!! $errors->first('day_1_af_4', '<p class="help-block">:message</p>') !!}
             </div>
+            
+        </div>
+        <!-- 2 DAYS TRIP -->
+        <div class="d-none" name="div_2_days" id="div_2_days">
             <label><b>วันที่ 1</b>: 18.30-20.30 น.</label>
             <div class="form-group {{ $errors->has('day_1_ni_1') ? 'has-error' : ''}}">
                 <input class="form-control" name="day_1_ni_1" type="text" id="day_1_ni_1" value="{{ isset($trip->day_1_ni_1) ? $trip->day_1_ni_1 : ''}}"  placeholder="กิจกรรมที่ 1">
@@ -145,32 +106,13 @@
                 <input class="form-control" name="day_2_af_4" type="text" id="day_2_af_4" value="{{ isset($trip->day_2_af_4) ? $trip->day_2_af_4 : ''}}"  placeholder="กิจกรรมที่ 4">
                 {!! $errors->first('day_2_af_4', '<p class="help-block">:message</p>') !!}
             </div>
-
-            <div class="form-group {{ $errors->has('remark') ? 'has-error' : ''}}">
+        </div>
+        <div class="form-group {{ $errors->has('remark') ? 'has-error' : ''}}">
                 <label for="remark" class="control-label">{{ 'หมายเหตุ' }}</label>
                 <input class="form-control" name="remark" type="text" id="remark" value="{{ isset($trip->remark) ? $trip->remark : ''}}" >
                 {!! $errors->first('remark', '<p class="help-block">:message</p>') !!}
             </div>
-        </div>
-        
     </div>
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <div class="col-lg-6 col-md-6">
