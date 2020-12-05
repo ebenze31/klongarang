@@ -55,7 +55,7 @@
 <div class="about-area">
     <div class="container">
            <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-9">
                     <!-- Trending Tittle -->
                     <div class="card" style="background:none; border:none ">
                         <div class="about-right mb-90">
@@ -88,35 +88,63 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4"><br><br><br><br><br>
-                    <form class="form-contact contact_form mb-80" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <textarea class="form-control w-100 error" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder="Enter Message"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <input class="form-control error" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <input class="form-control error" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <input class="form-control error" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject">
-                                </div>
-                            </div>
+@php
+$servername = "127.0.0.1";
+$username = "root";
+$password = "";
+$dbname = "klongarang2";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql_trip = "SELECT id, name, title, one_day_trip, two_days_trip, cover_photo FROM trips ORDER BY RAND() LIMIT 0,1";
+$result_trip = $conn->query($sql_trip);
+
+if ($result_trip->num_rows > 0) {
+  // output data of each row
+  while($row = $result_trip->fetch_assoc()) {
+    $id_trip_1 = $row["id"];
+    $name_trip_1 = $row["name"];
+    $title_trip_1 = $row["title"];
+    $one_day_trip_1 = $row["one_day_trip"];
+    $two_days_trip_1 = $row["two_days_trip"];
+    $cover_photo_trip_1 = $row["cover_photo"];
+  }
+} else {
+  // echo "0 results";
+}
+@endphp
+
+        <div class="col-lg-3"><br><br><br><br><br>
+            <h2 style="text-shadow: 1px 1px #FF0000 " class="text-white">แพคเกจท่องเที่ยว</h2><br>
+            <div class="row">
+                <div class="col-12">
+                    <div class="weekly2-single">
+                        <div class="weekly2-img">
+                            <a href="{{ url('/trip/' . $id_trip_1) }}">
+                                <img height="160" src="{{ url('storage')}}/{{ $cover_photo_trip_1 }}" alt="">
+                            </a>
+                            <hr>
                         </div>
-                        <div class="form-group mt-3">
-                            <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+                        <div class="weekly2-caption">
+                            @if($one_day_trip_1 == "on" )
+                                <span style="border-radius: 10px;font-size: 15px;" class="color2">&nbsp;&nbsp;&nbsp;โปรแกรม 1 วัน&nbsp;&nbsp;&nbsp;</span>
+                            @endif
+                            @if($two_days_trip_1 == "on" )
+                                <span style="border-radius: 10px;font-size: 15px;" class="color3">&nbsp;&nbsp;&nbsp;โปรแกรม 2 วัน 1 คืน&nbsp;&nbsp;&nbsp;</span>
+                            @endif
+                            <hr>
+                            <h4 style="text-shadow: 1px 1px #FF0000 " class="text-white">{{ $name_trip_1 }}</h4>
+                            <hr>
+                            <p>{{ $title_trip_1 }}</p>
                         </div>
-                    </form>
-           </div>
+                    </div> 
+                </div>
+            </div>
+       </div>
     </div>
 </div>
 <!-- About US End -->

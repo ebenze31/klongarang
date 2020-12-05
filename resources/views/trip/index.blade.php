@@ -59,80 +59,88 @@
                                 <div class="row">
                                     @foreach($trip as $item)
                                     <div class="col-lg-4 col-md-4">
-                                        <div class="card">
-                                            <img height="200" src="{{ url('storage')}}/{{ $item->cover_photo }}" class="card-img-top" >
-                                        </div>
-                                        <hr>
-                                        <div style="background: none;border:none;" class="card p-3 text-right">
-                                            <blockquote class="blockquote mb-0">
-                                                <h3 style="text-shadow: 1px 1px #FFF " class="text-danger">{{ $item->name }}</h3>
-                                              
-                                              @if($item->one_day_trip == "on" )
-                                                <span style="border-radius: 10px;font-size: 15px;" class="color2">&nbsp;&nbsp;&nbsp;โปรแกรม 1 วัน&nbsp;&nbsp;&nbsp;</span>
-                                              @endif
-                                              @if($item->two_days_trip == "on" )
-                                                <span style="border-radius: 10px;font-size: 15px;" class="color3">&nbsp;&nbsp;&nbsp;โปรแกรม 2 วัน 1 คืน&nbsp;&nbsp;&nbsp;</span>
-                                              @endif
-                                              <p>{{ $item->title }}</p>
-                                              <div>
-                                                <a href="{{ url('/trip/' . $item->id) }}" title="View trip"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
-                                                @if(Auth::check())
-                                                    @if(Auth::user()->profile->role == "คนดูแล" )
-                                                        
-                                                        <a href="{{ url('/trip/' . $item->id . '/edit') }}" title="Edit trip"><button class="btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> แก้ไขข้อมูล</button></a>
+                                        <div class="single-what-news mb-100">
+                                            <div class="card text-right" style="background:none; border:none ">
+                                                <div class="what-img">
+                                                    <img height="200" src="{{ url('storage')}}/{{ $item->cover_photo }}" class="card-img-top" >
+                                                </div>
+                                                <hr>
+                                                <div>
+                                                    <blockquote class="blockquote mb-0">
+                                                        <h3 style="text-shadow: 1px 1px #FFF " class="text-danger">{{ $item->name }}</h3>
+                                                      
+                                                      @if($item->one_day_trip == "on" )
+                                                        <span style="border-radius: 10px;font-size: 15px;" class="color2">&nbsp;&nbsp;&nbsp;โปรแกรม 1 วัน&nbsp;&nbsp;&nbsp;</span>
+                                                      @endif
+                                                      @if($item->two_days_trip == "on" )
+                                                        <span style="border-radius: 10px;font-size: 15px;" class="color3">&nbsp;&nbsp;&nbsp;โปรแกรม 2 วัน 1 คืน&nbsp;&nbsp;&nbsp;</span>
+                                                      @endif
+                                                      <p>{{ $item->title }}</p>
+                                                    </blockquote>
+                                                </div>
+                                                <div>
+                                                    <a href="{{ url('/trip/' . $item->id) }}" title="View trip"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูรายละเอียดเพิ่มเติม</button></a>
+                                                    @if(Auth::check())
+                                                        @if(Auth::user()->profile->role == "คนดูแล" )
+                                                            
+                                                            <a href="{{ url('/trip/' . $item->id . '/edit') }}" title="Edit trip"><button class="btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> แก้ไขข้อมูล</button></a>
 
-                                                        <form method="POST" action="{{ url('/trip' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
-                                                            {{ method_field('DELETE') }}
-                                                            {{ csrf_field() }}
-                                                            <button type="submit" class="btn-danger btn-sm" title="Delete trip" onclick="return confirm(&quot;ยืนยันการลบ ?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> ลบ</button>
-                                                        </form>
+                                                            <form method="POST" action="{{ url('/trip' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                                                {{ method_field('DELETE') }}
+                                                                {{ csrf_field() }}
+                                                                <button type="submit" class="btn-danger btn-sm" title="Delete trip" onclick="return confirm(&quot;ยืนยันการลบ ?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> ลบ</button>
+                                                            </form>
+                                                        @endif
                                                     @endif
-                                                @endif
+                                                </div>
                                             </div>
-                                            </blockquote>
                                         </div>
-                                        <br>
                                     </div>
                                     @endforeach
                                 </div> 
                                 <div class="pagination-wrapper"> {!! $trip->appends(['search' => Request::get('search')])->render() !!} </div>
                             </div>
                         </div>
+                        
 
                         <!-- Card two -->
-                        <div class="tab-pane fade show active" id="nav-oneday" role="tabpanel" aria-labelledby="nav-oneday-tab">
+                        <div class="tab-pane fade" id="nav-oneday" role="tabpanel" aria-labelledby="nav-oneday-tab">
                             <div class="whats-news-caption">
                                 <div class="row">
                                     @foreach($trip as $item)
                                     @if($item->one_day_trip == "on" )
                                     <div class="col-lg-4 col-md-4">
-                                        <div class="card">
-                                            <img height="200" src="{{ url('storage')}}/{{ $item->cover_photo }}" class="card-img-top" >
-                                        </div>
-                                        <hr>
-                                        <div style="background: none;border:none;" class="card p-3 text-right">
-                                            <blockquote class="blockquote mb-0">
-                                                <h3 style="text-shadow: 1px 1px #FFF " class="text-danger">{{ $item->name }}</h3>
-                                                <span style="border-radius: 10px;font-size: 15px;" class="color2">&nbsp;&nbsp;&nbsp;โปรแกรม 1 วัน&nbsp;&nbsp;&nbsp;</span>
-                                              <p>{{ $item->title }}</p>
-                                              <div>
-                                                <a href="{{ url('/trip/' . $item->id) }}" title="View trip"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
-                                                @if(Auth::check())
-                                                    @if(Auth::user()->profile->role == "คนดูแล" )
-                                                        
-                                                        <a href="{{ url('/trip/' . $item->id . '/edit') }}" title="Edit trip"><button class="btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> แก้ไขข้อมูล</button></a>
+                                        <div class="single-what-news mb-100">
+                                            <div class="card text-right" style="background:none; border:none ">
+                                                <div class="what-img">
+                                                    <img height="200" src="{{ url('storage')}}/{{ $item->cover_photo }}" class="card-img-top" >
+                                                </div>
+                                                <hr>
+                                                <div>
+                                                    <blockquote class="blockquote mb-0">
+                                                        <h3 style="text-shadow: 1px 1px #FFF " class="text-danger">{{ $item->name }}</h3>
+                                                      
+                                                        <span style="border-radius: 10px;font-size: 15px;" class="color2">&nbsp;&nbsp;&nbsp;โปรแกรม 1 วัน&nbsp;&nbsp;&nbsp;</span>
+                                                      <p>{{ $item->title }}</p>
+                                                    </blockquote>
+                                                </div>
+                                                <div>
+                                                    <a href="{{ url('/trip/' . $item->id) }}" title="View trip"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูรายละเอียดเพิ่มเติม</button></a>
+                                                    @if(Auth::check())
+                                                        @if(Auth::user()->profile->role == "คนดูแล" )
+                                                            
+                                                            <a href="{{ url('/trip/' . $item->id . '/edit') }}" title="Edit trip"><button class="btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> แก้ไขข้อมูล</button></a>
 
-                                                        <form method="POST" action="{{ url('/trip' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
-                                                            {{ method_field('DELETE') }}
-                                                            {{ csrf_field() }}
-                                                            <button type="submit" class="btn-danger btn-sm" title="Delete trip" onclick="return confirm(&quot;ยืนยันการลบ ?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> ลบ</button>
-                                                        </form>
+                                                            <form method="POST" action="{{ url('/trip' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                                                {{ method_field('DELETE') }}
+                                                                {{ csrf_field() }}
+                                                                <button type="submit" class="btn-danger btn-sm" title="Delete trip" onclick="return confirm(&quot;ยืนยันการลบ ?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> ลบ</button>
+                                                            </form>
+                                                        @endif
                                                     @endif
-                                                @endif
+                                                </div>
                                             </div>
-                                            </blockquote>
                                         </div>
-                                        <br>
                                     </div>
                                     @endif
                                     @endforeach
@@ -142,39 +150,43 @@
                         </div>
 
                         <!-- Card three -->
-                        <div class="tab-pane fade show active" id="nav-twodays" role="tabpanel" aria-labelledby="nav-twodays-tab">
+                        <div class="tab-pane fade" id="nav-twodays" role="tabpanel" aria-labelledby="nav-twodays-tab">
                             <div class="whats-news-caption">
                                 <div class="row">
                                     @foreach($trip as $item)
                                     @if($item->two_days_trip == "on" )
                                     <div class="col-lg-4 col-md-4">
-                                        <div class="card">
-                                            <img height="200" src="{{ url('storage')}}/{{ $item->cover_photo }}" class="card-img-top" >
-                                        </div>
-                                        <hr>
-                                        <div style="background: none;border:none;" class="card p-3 text-right">
-                                            <blockquote class="blockquote mb-0">
-                                                <h3 style="text-shadow: 1px 1px #FFF " class="text-danger">{{ $item->name }}</h3>
-                                                <span style="border-radius: 10px;font-size: 15px;" class="color3">&nbsp;&nbsp;&nbsp;โปรแกรม 2 วัน 1 คืน&nbsp;&nbsp;&nbsp;</span>
-                                              <p>{{ $item->title }}</p>
-                                              <div>
-                                                <a href="{{ url('/trip/' . $item->id) }}" title="View trip"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
-                                                @if(Auth::check())
-                                                    @if(Auth::user()->profile->role == "คนดูแล" )
-                                                        
-                                                        <a href="{{ url('/trip/' . $item->id . '/edit') }}" title="Edit trip"><button class="btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> แก้ไขข้อมูล</button></a>
+                                        <div class="single-what-news mb-100">
+                                            <div class="card text-right" style="background:none; border:none ">
+                                                <div class="what-img">
+                                                    <img height="200" src="{{ url('storage')}}/{{ $item->cover_photo }}" class="card-img-top" >
+                                                </div>
+                                                <hr>
+                                                <div>
+                                                    <blockquote class="blockquote mb-0">
+                                                        <h3 style="text-shadow: 1px 1px #FFF " class="text-danger">{{ $item->name }}</h3>
+                                                        <span style="border-radius: 10px;font-size: 15px;" class="color3">&nbsp;&nbsp;&nbsp;โปรแกรม 2 วัน 1 คืน&nbsp;&nbsp;&nbsp;</span>
+                                                      
+                                                      <p>{{ $item->title }}</p>
+                                                    </blockquote>
+                                                </div>
+                                                <div>
+                                                    <a href="{{ url('/trip/' . $item->id) }}" title="View trip"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูรายละเอียดเพิ่มเติม</button></a>
+                                                    @if(Auth::check())
+                                                        @if(Auth::user()->profile->role == "คนดูแล" )
+                                                            
+                                                            <a href="{{ url('/trip/' . $item->id . '/edit') }}" title="Edit trip"><button class="btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> แก้ไขข้อมูล</button></a>
 
-                                                        <form method="POST" action="{{ url('/trip' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
-                                                            {{ method_field('DELETE') }}
-                                                            {{ csrf_field() }}
-                                                            <button type="submit" class="btn-danger btn-sm" title="Delete trip" onclick="return confirm(&quot;ยืนยันการลบ ?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> ลบ</button>
-                                                        </form>
+                                                            <form method="POST" action="{{ url('/trip' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                                                {{ method_field('DELETE') }}
+                                                                {{ csrf_field() }}
+                                                                <button type="submit" class="btn-danger btn-sm" title="Delete trip" onclick="return confirm(&quot;ยืนยันการลบ ?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> ลบ</button>
+                                                            </form>
+                                                        @endif
                                                     @endif
-                                                @endif
+                                                </div>
                                             </div>
-                                            </blockquote>
                                         </div>
-                                        <br>
                                     </div>
                                     @endif
                                     @endforeach
@@ -182,8 +194,8 @@
                                 <div class="pagination-wrapper"> {!! $trip->appends(['search' => Request::get('search')])->render() !!} </div>
                             </div>
                         </div>
+                        
                 <!-- End Nav Card -->
-                    </div>
                 </div>
             </div>
         </div>
