@@ -65,26 +65,20 @@
                                             <div class="card" style="background:none; border:none ">
                                                 <div class="what-img">
                                                     <img width="350" height="320" src="{{ url('storage')}}/{{ $item->photo }}" alt="">
-                                                </div>
+                                                </div><br>
                                                 <div>
-                                                    <br>
-                                                @if($item->category == "อาหาร" )
-                                                    <span class="color1">
+                                                @if($item->food == "on" )
+                                                    <span style="border-radius: 10px;" class="color1">&nbsp;&nbsp;&nbsp;อาหาร&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
-
-                                                @if($item->category == "ของที่ระลึก" )
-                                                    <span class="color2">
+                                                @if($item->gift == "on" )
+                                                    <span style="border-radius: 10px;" class="color2">&nbsp;&nbsp;&nbsp;ของที่ระลึก&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
-
-                                                @if($item->category == "สินค้าทางการเกษตร" )
-                                                    <span class="color3">
+                                                @if($item->agricultural == "on" )
+                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;สินค้าทางการเกษตร&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
-
-                                                @if($item->category == "ผลิตภัณฑ์จากไผ่" )
-                                                    <span class="color3">
+                                                @if($item->bamboo == "on" )
+                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;ผลิตภัณฑ์จากไผ่&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
-
-                                                        &nbsp;&nbsp;&nbsp;{{ $item->category }}&nbsp;&nbsp;&nbsp;</span>
                                                     <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $item->id) }}">"{{ $item->name }}"</a></h4>
                                                     <p><b>รายละเอียด :</b> {{ $item->detail }}</p>
                                                     <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
@@ -119,7 +113,7 @@
                             <div class="whats-news-caption">
                                 <div class="row">
                                     @foreach($products as $item)
-                                    @if($item->category == "อาหาร" )
+                                    @if($item->food == "on" )
                                     <div class="col-lg-4 col-md-4">
                                         <div class="single-what-news mb-100">
                                             <div class="card" style="background:none; border:none ">
@@ -128,23 +122,16 @@
                                                 </div>
                                                 <div>
                                                     <br>
-                                                @if($item->category == "อาหาร" )
-                                                    <span class="color1">
-                                                @endif
-
-                                                @if($item->category == "ของที่ระลึก" )
-                                                    <span class="color2">
-                                                @endif
-
-                                                @if($item->category == "สินค้าทางการเกษตร" )
-                                                    <span class="color3">
-                                                @endif
-
-                                                @if($item->category == "ผลิตภัณฑ์จากไผ่" )
-                                                    <span class="color3">
-                                                @endif
-
-                                                        &nbsp;&nbsp;&nbsp;{{ $item->category }}&nbsp;&nbsp;&nbsp;</span>
+                                                    <span style="border-radius: 10px;" class="color1">&nbsp;&nbsp;&nbsp;อาหาร&nbsp;&nbsp;&nbsp;</span>
+                                                    @if($item->gift == "on" )
+                                                    <span style="border-radius: 10px;" class="color2">&nbsp;&nbsp;&nbsp;ของที่ระลึก&nbsp;&nbsp;&nbsp;</span>
+                                                    @endif
+                                                    @if($item->agricultural == "on" )
+                                                        <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;สินค้าทางการเกษตร&nbsp;&nbsp;&nbsp;</span>
+                                                    @endif
+                                                    @if($item->bamboo == "on" )
+                                                        <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;ผลิตภัณฑ์จากไผ่&nbsp;&nbsp;&nbsp;</span>
+                                                    @endif
                                                     <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $item->id) }}">"{{ $item->name }}"</a></h4>
                                                     <p><b>รายละเอียด :</b> {{ $item->detail }}</p>
                                                     <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
@@ -180,7 +167,7 @@
                             <div class="whats-news-caption">
                                 <div class="row">
                                     @foreach($products as $item)
-                                    @if($item->category == "ของที่ระลึก" )
+                                    @if($item->gift == "on" )
                                     <div class="col-lg-4 col-md-4">
                                         <div class="single-what-news mb-100">
                                             <div class="card" style="background:none; border:none ">
@@ -189,23 +176,17 @@
                                                 </div>
                                                 <div>
                                                     <br>
-                                                @if($item->category == "อาหาร" )
-                                                    <span class="color1">
-                                                @endif
+                                                    <span style="border-radius: 10px;" class="color2">&nbsp;&nbsp;&nbsp;ของที่ระลึก&nbsp;&nbsp;&nbsp;</span>
 
-                                                @if($item->category == "ของที่ระลึก" )
-                                                    <span class="color2">
-                                                @endif
-
-                                                @if($item->category == "สินค้าทางการเกษตร" )
-                                                    <span class="color3">
-                                                @endif
-
-                                                @if($item->category == "ผลิตภัณฑ์จากไผ่" )
-                                                    <span class="color3">
-                                                @endif
-
-                                                        &nbsp;&nbsp;&nbsp;{{ $item->category }}&nbsp;&nbsp;&nbsp;</span>
+                                                    @if($item->food == "on" )
+                                                    <span style="border-radius: 10px;" class="color1">&nbsp;&nbsp;&nbsp;อาหาร&nbsp;&nbsp;&nbsp;</span>
+                                                    @endif
+                                                    @if($item->agricultural == "on" )
+                                                        <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;สินค้าทางการเกษตร&nbsp;&nbsp;&nbsp;</span>
+                                                    @endif
+                                                    @if($item->bamboo == "on" )
+                                                        <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;ผลิตภัณฑ์จากไผ่&nbsp;&nbsp;&nbsp;</span>
+                                                    @endif
                                                     <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $item->id) }}">"{{ $item->name }}"</a></h4>
                                                     <p><b>รายละเอียด :</b> {{ $item->detail }}</p>
                                                     <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
@@ -240,7 +221,7 @@
                             <div class="whats-news-caption">
                                 <div class="row">
                                     @foreach($products as $item)
-                                    @if($item->category == "สินค้าทางการเกษตร" )
+                                    @if($item->agricultural == "on" )
                                     <div class="col-lg-4 col-md-4">
                                         <div class="single-what-news mb-100">
                                             <div class="card" style="background:none; border:none ">
@@ -249,23 +230,16 @@
                                                 </div>
                                                 <div>
                                                     <br>
-                                                @if($item->category == "อาหาร" )
-                                                    <span class="color1">
+                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;สินค้าทางการเกษตร&nbsp;&nbsp;&nbsp;</span>
+                                                @if($item->food == "on" )
+                                                    <span style="border-radius: 10px;" class="color1">&nbsp;&nbsp;&nbsp;อาหาร&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
-
-                                                @if($item->category == "ของที่ระลึก" )
-                                                    <span class="color2">
+                                                @if($item->gift == "on" )
+                                                    <span style="border-radius: 10px;" class="color2">&nbsp;&nbsp;&nbsp;ของที่ระลึก&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
-
-                                                @if($item->category == "สินค้าทางการเกษตร" )
-                                                    <span class="color3">
+                                                @if($item->bamboo == "on" )
+                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;ผลิตภัณฑ์จากไผ่&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
-
-                                                @if($item->category == "ผลิตภัณฑ์จากไผ่" )
-                                                    <span class="color3">
-                                                @endif
-
-                                                        &nbsp;&nbsp;&nbsp;{{ $item->category }}&nbsp;&nbsp;&nbsp;</span>
                                                     <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $item->id) }}">"{{ $item->name }}"</a></h4>
                                                     <p><b>รายละเอียด :</b> {{ $item->detail }}</p>
                                                     <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
@@ -300,7 +274,7 @@
                             <div class="whats-news-caption">
                                 <div class="row">
                                     @foreach($products as $item)
-                                    @if($item->category == "ผลิตภัณฑ์จากไผ่" )
+                                    @if($item->bamboo == "on" )
                                     <div class="col-lg-4 col-md-4">
                                         <div class="single-what-news mb-100">
                                             <div class="card" style="background:none; border:none ">
@@ -309,23 +283,16 @@
                                                 </div>
                                                 <div>
                                                     <br>
-                                                @if($item->category == "อาหาร" )
-                                                    <span class="color1">
-                                                @endif
-
-                                                @if($item->category == "ของที่ระลึก" )
-                                                    <span class="color2">
-                                                @endif
-
-                                                @if($item->category == "สินค้าทางการเกษตร" )
-                                                    <span class="color3">
-                                                @endif
-
-                                                @if($item->category == "ผลิตภัณฑ์จากไผ่" )
-                                                    <span class="color3">
-                                                @endif
-
-                                                        &nbsp;&nbsp;&nbsp;{{ $item->category }}&nbsp;&nbsp;&nbsp;</span>
+                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;ผลิตภัณฑ์จากไผ่&nbsp;&nbsp;&nbsp;</span>
+                                                    @if($item->food == "on" )
+                                                    <span style="border-radius: 10px;" class="color1">&nbsp;&nbsp;&nbsp;อาหาร&nbsp;&nbsp;&nbsp;</span>
+                                                    @endif
+                                                    @if($item->gift == "on" )
+                                                        <span style="border-radius: 10px;" class="color2">&nbsp;&nbsp;&nbsp;ของที่ระลึก&nbsp;&nbsp;&nbsp;</span>
+                                                    @endif
+                                                    @if($item->agricultural == "on" )
+                                                        <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;สินค้าทางการเกษตร&nbsp;&nbsp;&nbsp;</span>
+                                                    @endif
                                                     <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $item->id) }}">"{{ $item->name }}"</a></h4>
                                                     <p><b>รายละเอียด :</b> {{ $item->detail }}</p>
                                                     <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>

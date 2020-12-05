@@ -1,14 +1,21 @@
 <div class="row">
     <div class="col-lg-6 col-md-6">
-        <div class="form-group {{ $errors->has('category') ? 'has-error' : ''}}">
-            <label for="category" class="control-label">{{ 'หมวดหมู่' }}</label><span style="color: #FF0033"> *</span><br>
+        <div>
+            <label for="category" class="control-label">{{ 'หมวดหมู่' }}</label><span style="color: #FF0033;font-size: 13px;"> (เลือกได้มากกว่า 1 ข้อ)</span>
+            <div><input name="food" id="food" type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อาหาร </div> 
+            <div><input name="gift" id="gift" type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ของที่ระลึก</div>
+            <div><input name="agricultural" id="agricultural" type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สินค้าทางการเกษตร</div>
+            <div><input name="bamboo" id="bamboo" type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ผลิตภัณฑ์จากไผ่</div>
+        </div><br>
+        <div class="d-none form-group {{ $errors->has('category') ? 'has-error' : ''}}">
+            <label for="category" class="control-label">{{ 'หมวดหมู่' }}</label><span style="color: #FF0033"> *</span>
             <select name="category" class="form-control" id="category" >
             @foreach (json_decode('{"\u0e2d\u0e32\u0e2b\u0e32\u0e23":"\u0e2d\u0e32\u0e2b\u0e32\u0e23","\u0e02\u0e2d\u0e07\u0e17\u0e35\u0e48\u0e23\u0e30\u0e25\u0e36\u0e01":"\u0e02\u0e2d\u0e07\u0e17\u0e35\u0e48\u0e23\u0e30\u0e25\u0e36\u0e01","\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32\u0e17\u0e32\u0e07\u0e01\u0e32\u0e23\u0e40\u0e01\u0e29\u0e15\u0e23":"\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32\u0e17\u0e32\u0e07\u0e01\u0e32\u0e23\u0e40\u0e01\u0e29\u0e15\u0e23","\u0e1c\u0e25\u0e34\u0e15\u0e20\u0e31\u0e13\u0e11\u0e4c\u0e08\u0e32\u0e01\u0e44\u0e1c\u0e48":"\u0e1c\u0e25\u0e34\u0e15\u0e20\u0e31\u0e13\u0e11\u0e4c\u0e08\u0e32\u0e01\u0e44\u0e1c\u0e48"}', true) as $optionKey => $optionValue)
                 <option value="{{ $optionKey }}" {{ (isset($product->category) && $product->category == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
             @endforeach
         </select>
             {!! $errors->first('category', '<p class="help-block">:message</p>') !!}
-        </div><br><br>
+        </div>
         <div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
             <label for="name" class="control-label">{{ 'ชื่อ' }}</label><span style="color: #FF0033"> *</span>
             <input class="form-control" name="name" type="text" id="name" value="{{ isset($product->name) ? $product->name : ''}}" required >

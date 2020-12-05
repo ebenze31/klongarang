@@ -1,0 +1,132 @@
+{
+    "fields": [
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "title",
+            "type": "string"
+        },
+        {
+            "name": "1_day_trip",
+            "type": "string"
+        },
+        {
+            "name": "2_days_trip",
+            "type": "string"
+        },
+        {
+            "name": "3_days_trip",
+            "type": "string"
+        },
+        {
+            "name": "cover_photo",
+            "type": "file"
+        },
+        {
+            "name": "photo_1",
+            "type": "file"
+        },
+        {
+            "name": "photo_2",
+            "type": "file"
+        },
+        {
+            "name": "photo_3",
+            "type": "file"
+        },
+        {
+            "name": "photo_4",
+            "type": "file"
+        },
+        {
+            "name": "photo_5",
+            "type": "file"
+        },
+        {
+            "name": "photo_6",
+            "type": "file"
+        },
+        {
+            "name": "photo_7",
+            "type": "file"
+        },
+        {
+            "name": "photo_8",
+            "type": "file"
+        },
+        {
+            "name": "photo_9",
+            "type": "file"
+        },
+        {
+            "name": "photo_10",
+            "type": "file"
+        },
+        {
+            "name": "day_1_morning",
+            "type": "text"
+        },
+        {
+            "name": "day_1_noon",
+            "type": "text"
+        },
+        {
+            "name": "day_1_afternoon",
+            "type": "text"
+        },
+        {
+            "name": "day_1_evening",
+            "type": "text"
+        },
+        {
+            "name": "day_1_night",
+            "type": "text"
+        },
+        {
+            "name": "day_2_morning",
+            "type": "text"
+        },
+        {
+            "name": "day_2_noon",
+            "type": "text"
+        },
+        {
+            "name": "day_2_afternoon",
+            "type": "text"
+        },
+        {
+            "name": "day_2_evening",
+            "type": "text"
+        },
+        {
+            "name": "day_2_night",
+            "type": "text"
+        },
+        {
+            "name": "day_3_morning",
+            "type": "text"
+        },
+        {
+            "name": "day_3_noon",
+            "type": "text"
+        },
+        {
+            "name": "day_3_afternoon",
+            "type": "text"
+        },
+        {
+            "name": "day_3_evening",
+            "type": "text"
+        },
+        {
+            "name": "day_3_night",
+            "type": "text"
+        },
+        {
+            "name": "remark",
+            "type": "string"
+        }
+    ]
+}

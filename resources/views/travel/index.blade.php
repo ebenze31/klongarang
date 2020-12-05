@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <section class="whats-news-area pt-50 pb-20">
     <div class="container">
         <div class="row">

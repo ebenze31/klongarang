@@ -55,6 +55,7 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            @include('contact')
                         </div>
 
                     </div>

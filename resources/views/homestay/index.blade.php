@@ -275,11 +275,20 @@ if ($result6->num_rows > 0) {
                 </div>
             </div>
             <hr>
-            
-            
         </div>
     </div>
 </section>
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            
+        </div>
+        <div class="col-4">
+            <br><br>
+            @include('contact')
+        </div>
+    </div>
+</div>
 <br>
 <hr>
     @if(Auth::check())
