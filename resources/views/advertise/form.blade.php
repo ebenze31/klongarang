@@ -15,7 +15,7 @@
                 <label for="photo" class="control-label">{{ 'รูปภาพ' }}</label>
                 <span style="color: red;font-size: 13px;"> * (กรุณาเพิ่มรูปภาพที่มีขนาด 300 * 755 พิกเซล)</span>
                 <span style="position:absolute; right:0;"><a style="color: #000;font-size: 12px;" href="{{ asset('/img/icon/ปีใหม่.png') }}" target="bank">ดูตัวอย่าง</a></span>
-                <input class="form-control" name="photo" type="file" id="photo" value="{{ isset($advertise->photo) ? $advertise->photo : ''}}" required >
+                <input class="form-control" name="photo" type="file" id="photo" value="{{ isset($advertise->photo) ? $advertise->photo : ''}}" >
                 {!! $errors->first('photo', '<p class="help-block">:message</p>') !!}
             </div>
             <div class="d-none form-group {{ $errors->has('active') ? 'has-error' : ''}}">

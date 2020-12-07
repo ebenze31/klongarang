@@ -1,3 +1,4 @@
+
 <body>
    
   <header>
@@ -35,7 +36,7 @@
                                       <ul id="navigation">    
                                           <li><a href="{{ url('/home') }}"><i class="fas fa-home"></i> หน้าแรก</a></li>
                                           <li><a href="{{ url('/about') }}"><i class="fas fa-address-card"></i> เกี่ยวกับโครงการ</a></li>
-                                          <li><a href="about.html"><i class="far fa-address-card"></i> เกี่ยวกับหมู่บ้าน</a></li>
+                                          <li><a href="{{ url('/community') }}"><i class="far fa-address-card"></i> เกี่ยวกับหมู่บ้าน</a></li>
                                           <li><a href="{{ url('/products') }}"><i class="fas fa-shopping-basket"></i> สินค้าและของที่ระลึก</a></li>
                                           <li><a >ติดต่อ <i class="fas fa-caret-down"></i> </a>
                                               <ul class="submenu">

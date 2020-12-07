@@ -47,7 +47,7 @@
         </div>
         <div class="form-group {{ $errors->has('photo') ? 'has-error' : ''}}">
             <label for="photo" class="control-label">{{ 'รูปภาพ' }}</label><span style="color: #FF0033"> *</span>
-            <input class="form-control" name="photo" type="file" id="photo" value="{{ isset($product->photo) ? $product->photo : ''}}" required>
+            <input class="form-control" name="photo" type="file" id="photo" value="{{ isset($product->photo) ? $product->photo : ''}}" >
             {!! $errors->first('photo', '<p class="help-block">:message</p>') !!}
         </div>
 

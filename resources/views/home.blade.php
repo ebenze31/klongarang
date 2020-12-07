@@ -3,6 +3,17 @@
 @section('content')
 
 @php
+$servername = "127.0.0.1";
+$username = "root";
+$password = "";
+$dbname = "klongarang2";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
 
 $id_travel_1 = " ";
 $name_travel_1 = " ";
@@ -29,17 +40,6 @@ $name_travel_5 = " ";
 $category_travel_5 = " ";
 $photo_1_travel_5 = " ";
 
-$servername = "127.0.0.1";
-$username = "root";
-$password = "";
-$dbname = "klongarang2";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
 
 
 $sql = "SELECT id ,name, category, photo_1 FROM travel ORDER BY RAND() LIMIT 0,1";
@@ -199,7 +199,7 @@ if ($result5->num_rows > 0) {
                     <div class="col-lg-4">
                         <div class="trand-right-single d-flex">
                             <div class="trand-right-img">
-                                <img width="165" height="110" src="{{ asset('/img/klongarang/P1010045.JPG') }}" alt="">
+                                <img width="165" height="110" src="{{ asset('/img/klongarang/P1010114.JPG') }}" alt="">
                             </div>
                             <div class="trand-right-cap">
                                 <span class="color1">โครงการ</span>

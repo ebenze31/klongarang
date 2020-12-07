@@ -1,3 +1,32 @@
+@php
+$servername = "127.0.0.1";
+$username = "root";
+$password = "";
+$dbname = "klongarang2";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql_trip = "SELECT id, name, title, one_day_trip, two_days_trip, cover_photo FROM trips ORDER BY RAND() LIMIT 0,1";
+$result_trip = $conn->query($sql_trip);
+
+if ($result_trip->num_rows > 0) {
+  // output data of each row
+  while($row = $result_trip->fetch_assoc()) {
+    $id_trip_1 = $row["id"];
+    $name_trip_1 = $row["name"];
+    $title_trip_1 = $row["title"];
+    $one_day_trip_1 = $row["one_day_trip"];
+    $two_days_trip_1 = $row["two_days_trip"];
+    $cover_photo_trip_1 = $row["cover_photo"];
+  }
+} else {
+  // echo "0 results";
+}
+@endphp
 @extends('layout.main')
 
 @section('content')
@@ -66,7 +95,7 @@
                                 <h2 style="text-shadow: 1px 1px #FF0000 " class="text-white">{{ $travel->name }}</h2>
                             </div>
                             <div class="about-prea">
-                                <span style="color: #000" class="about-pera1 mb-25"><b> หมวดหมู่ :</b> 
+                                <span style="color: #000" class="about-pera1 mb-25"><b> หมวดหมู่ :</b> </span>
                                 @if($travel->agriculture == "on" )
                                     &nbsp;เชิงเกษตร&nbsp;
                                 @endif
@@ -88,36 +117,6 @@
                         </div>
                     </div>
                 </div>
-@php
-$servername = "127.0.0.1";
-$username = "root";
-$password = "";
-$dbname = "klongarang2";
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
-$sql_trip = "SELECT id, name, title, one_day_trip, two_days_trip, cover_photo FROM trips ORDER BY RAND() LIMIT 0,1";
-$result_trip = $conn->query($sql_trip);
-
-if ($result_trip->num_rows > 0) {
-  // output data of each row
-  while($row = $result_trip->fetch_assoc()) {
-    $id_trip_1 = $row["id"];
-    $name_trip_1 = $row["name"];
-    $title_trip_1 = $row["title"];
-    $one_day_trip_1 = $row["one_day_trip"];
-    $two_days_trip_1 = $row["two_days_trip"];
-    $cover_photo_trip_1 = $row["cover_photo"];
-  }
-} else {
-  // echo "0 results";
-}
-@endphp
-
         <div class="col-lg-3"><br><br><br><br><br>
             <h2 style="text-shadow: 1px 1px #FF0000 " class="text-white">แพคเกจท่องเที่ยว</h2><br>
             <div class="row">
@@ -148,40 +147,4 @@ if ($result_trip->num_rows > 0) {
     </div>
 </div>
 <!-- About US End -->
-<!-- 
-
-<div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">Travel {{ $travel->id }}</div>
-                    <div class="card-body">
-
-                        <a href="{{ url('/travel') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
-                        <a href="{{ url('/travel/' . $travel->id . '/edit') }}" title="Edit Travel"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
-
-                        <form method="POST" action="{{ url('travel' . '/' . $travel->id) }}" accept-charset="UTF-8" style="display:inline">
-                            {{ method_field('DELETE') }}
-                            {{ csrf_field() }}
-                            <button type="submit" class="btn btn-danger btn-sm" title="Delete Travel" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
-                        </form>
-                        <br/>
-                        <br/>
-
-                        <div class="table-responsive">
-                            <table class="table">
-                                <tbody>
-                                    <tr>
-                                        <th>ID</th><td>{{ $travel->id }}</td>
-                                    </tr>
-                                    <tr><th> Category </th><td> {{ $travel->category }} </td></tr><tr><th> Name </th><td> {{ $travel->name }} </td></tr><tr><th> Detail </th><td> {{ $travel->detail }} </td></tr><tr><th> Type </th><td> {{ $travel->type }} </td></tr><tr><th> Photo 1 </th><td> {{ $travel->photo_1 }} </td></tr><tr><th> Photo 2 </th><td> {{ $travel->photo_2 }} </td></tr><tr><th> Photo 3 </th><td> {{ $travel->photo_3 }} </td></tr><tr><th> Photo 4 </th><td> {{ $travel->photo_4 }} </td></tr><tr><th> Photo 5 </th><td> {{ $travel->photo_5 }} </td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
 @endsection

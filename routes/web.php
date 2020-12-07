@@ -37,11 +37,13 @@ Route::middleware(['auth', 'role:คนดูแล'])->group(function () {
 	Route::resource('advertise', 'AdvertiseController');
 	Route::resource('award', 'AwardController');
 	Route::resource('trip', 'TripController');
+	Route::resource('community', 'CommunityController');
 
 });
 
 Route::resource('travel', 'TravelController')->except(['create' , 'edit']);
 Route::resource('products', 'ProductsController')->except(['create' , 'edit']);
 Route::resource('homestay', 'HomestayController')->except(['create' , 'edit' , 'show']);
-Route::resource('award', 'AwardController')->except(['create' , 'edit' ]);
 Route::resource('trip', 'TripController')->except(['create' , 'edit' ]);
+Route::resource('award', 'AwardController')->except(['create' , 'edit', 'show' , 'show' ]);
+Route::resource('community', 'CommunityController')->except(['create' , 'edit' , 'show']);

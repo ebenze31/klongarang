@@ -79,7 +79,7 @@
                                                     </blockquote>
                                                 </div>
                                                 <div>
-                                                    <a href="{{ url('/trip/' . $item->id) }}" title="View trip"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูรายละเอียดเพิ่มเติม</button></a>
+                                                    <a href="{{ url('/trip/' . $item->id) }}" title="View trip"><button class="btn-info btn-sm"> <i class="fa fa-eye" aria-hidden="true"></i> ดูรายละเอียดเพิ่มเติม</button></a>
                                                     @if(Auth::check())
                                                         @if(Auth::user()->profile->role == "คนดูแล" )
                                                             

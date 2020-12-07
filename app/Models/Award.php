@@ -25,7 +25,9 @@ class Award extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'detail', 'photo_1', 'photo_2'];
+    protected $fillable = ['name', 'detail', 'photo_1', 'photo_2' , 'community_id'];
 
-    
+    public function communitys(){
+        return $this->belongsTo('App\Community', 'community_id'); 
+    }
 }

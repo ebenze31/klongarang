@@ -21,18 +21,6 @@ $name_product_4 = " ";
 $category_product_4 = " ";
 $photo_product_4 = " ";
 
-$servername = "127.0.0.1";
-$username = "root";
-$password = "";
-$dbname = "klongarang2";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
 
 $sql = "SELECT id ,name, category, photo FROM products ORDER BY RAND() LIMIT 0,1";
 $result = $conn->query($sql);

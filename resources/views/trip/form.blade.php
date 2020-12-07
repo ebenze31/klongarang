@@ -118,29 +118,29 @@
     <div class="col-lg-6 col-md-6">
         <div class="form-group {{ $errors->has('cover_photo') ? 'has-error' : ''}}">
             <label for="cover_photo" class="control-label">{{ 'รูปปกโปรแกรมการท่องเที่ยว' }}</label><span style="color: #FF0033;font-size: 13px;"> *</span>
-            <input class="form-control" name="cover_photo" type="file" id="cover_photo" value="{{ isset($trip->cover_photo) ? $trip->cover_photo : ''}}" required>
+            <input class="form-control" name="cover_photo" type="file" id="cover_photo" value="{{ isset($trip->cover_photo) ? $trip->cover_photo : ''}}" >
             {!! $errors->first('cover_photo', '<p class="help-block">:message</p>') !!}
         </div>
         <hr>
         <div class="row">
             <div class="col-lg-6 col-md-6">
-                <span style="color: #FF0033;font-size: 13px;"> * เพิ่มรูปภาพอย่างน้อย 6 รูป</span>
+                <span style="color: #FF0033;font-size: 13px;"> * กรุณาเพิ่มรูปภาพอย่างน้อย 6 รูป</span>
                 <div class="form-group {{ $errors->has('photo_1') ? 'has-error' : ''}}">
                     <br>
                     <label for="photo_1" class="control-label">{{ 'รูปภาพที่ 1' }}</label><span style="color: #FF0033;font-size: 13px;"> *</span>
-                    <input class="form-control" name="photo_1" type="file" id="photo_1" value="{{ isset($trip->photo_1) ? $trip->photo_1 : ''}}" required>
+                    <input class="form-control" name="photo_1" type="file" id="photo_1" value="{{ isset($trip->photo_1) ? $trip->photo_1 : ''}}" >
                     {!! $errors->first('photo_1', '<p class="help-block">:message</p>') !!}
                 </div>
                 <hr>
                 <div class="form-group {{ $errors->has('photo_3') ? 'has-error' : ''}}">
                     <label for="photo_3" class="control-label">{{ 'รูปภาพที่ 3' }}</label><span style="color: #FF0033;font-size: 13px;"> *</span>
-                    <input class="form-control" name="photo_3" type="file" id="photo_3" value="{{ isset($trip->photo_3) ? $trip->photo_3 : ''}}" required>
+                    <input class="form-control" name="photo_3" type="file" id="photo_3" value="{{ isset($trip->photo_3) ? $trip->photo_3 : ''}}" >
                     {!! $errors->first('photo_3', '<p class="help-block">:message</p>') !!}
                 </div>
                 <hr>
                 <div class="form-group {{ $errors->has('photo_5') ? 'has-error' : ''}}">
                     <label for="photo_5" class="control-label">{{ 'รูปภาพที่ 5' }}</label><span style="color: #FF0033;font-size: 13px;"> *</span>
-                    <input class="form-control" name="photo_5" type="file" id="photo_5" value="{{ isset($trip->photo_5) ? $trip->photo_5 : ''}}" required>
+                    <input class="form-control" name="photo_5" type="file" id="photo_5" value="{{ isset($trip->photo_5) ? $trip->photo_5 : ''}}" >
                     {!! $errors->first('photo_5', '<p class="help-block">:message</p>') !!}
                 </div>
                 <hr>
@@ -160,19 +160,19 @@
                 <br><br>
                 <div class="form-group {{ $errors->has('photo_2') ? 'has-error' : ''}}">
                     <label for="photo_2" class="control-label">{{ 'รูปภาพที่ 2' }}</label><span style="color: #FF0033;font-size: 13px;"> *</span>
-                    <input class="form-control" name="photo_2" type="file" id="photo_2" value="{{ isset($trip->photo_2) ? $trip->photo_2 : ''}}" required>
+                    <input class="form-control" name="photo_2" type="file" id="photo_2" value="{{ isset($trip->photo_2) ? $trip->photo_2 : ''}}" >
                     {!! $errors->first('photo_2', '<p class="help-block">:message</p>') !!}
                 </div>
                 <hr>
                 <div class="form-group {{ $errors->has('photo_4') ? 'has-error' : ''}}">
                     <label for="photo_4" class="control-label">{{ 'รูปภาพที่ 4' }}</label><span style="color: #FF0033;font-size: 13px;"> *</span>
-                    <input class="form-control" name="photo_4" type="file" id="photo_4" value="{{ isset($trip->photo_4) ? $trip->photo_4 : ''}}" required>
+                    <input class="form-control" name="photo_4" type="file" id="photo_4" value="{{ isset($trip->photo_4) ? $trip->photo_4 : ''}}" >
                     {!! $errors->first('photo_4', '<p class="help-block">:message</p>') !!}
                 </div>
                 <hr>
                 <div class="form-group {{ $errors->has('photo_6') ? 'has-error' : ''}}">
                     <label for="photo_6" class="control-label">{{ 'รูปภาพที่ 6' }}</label><span style="color: #FF0033;font-size: 13px;"> *</span>
-                    <input class="form-control" name="photo_6" type="file" id="photo_6" value="{{ isset($trip->photo_6) ? $trip->photo_6 : ''}}" required>
+                    <input class="form-control" name="photo_6" type="file" id="photo_6" value="{{ isset($trip->photo_6) ? $trip->photo_6 : ''}}" >
                     {!! $errors->first('photo_6', '<p class="help-block">:message</p>') !!}
                 </div>
                 

@@ -103,89 +103,90 @@ if ($result_trip5->num_rows > 0) {
                     <div class="col-12">
                         <div class="weekly2-news-active dot-style d-flex dot-style">
                             <div class="weekly2-single">
-                                <div class="weekly2-img">
-                                    <a href="{{ url('/trip/' . $id_trip_1) }}">
+                                <a href="{{ url('/trip/' . $id_trip_1) }}">
+                                    <div class="weekly2-img">
                                         <img height="160" src="{{ url('storage')}}/{{ $cover_photo_trip_1 }}" alt="">
-                                    </a>
-                                </div>
-                                <div class="weekly2-caption">
-                                    @if($one_day_trip_1 == "on" )
-                                        <span style="border-radius: 10px;font-size: 15px;" class="color2">&nbsp;&nbsp;&nbsp;โปรแกรม 1 วัน&nbsp;&nbsp;&nbsp;</span>
-                                    @endif
-                                    @if($two_days_trip_1 == "on" )
-                                        <span style="border-radius: 10px;font-size: 15px;" class="color3">&nbsp;&nbsp;&nbsp;โปรแกรม 2 วัน 1 คืน&nbsp;&nbsp;&nbsp;</span>
-                                    @endif
-                                    <h3 style="text-shadow: 1px 1px #FF0000 " class="text-white">{{ $name_trip_1 }}</h3>
-                                    <p>{{ $title_trip_1 }}</p>
-                                </div>
+                                    </div>
+                                    <div class="weekly2-caption">
+                                        @if($one_day_trip_1 == "on" )
+                                            <span style="border-radius: 10px;font-size: 15px;" class="color2">&nbsp;&nbsp;&nbsp;โปรแกรม 1 วัน&nbsp;&nbsp;&nbsp;</span>
+                                        @endif
+                                        @if($two_days_trip_1 == "on" )
+                                            <span style="border-radius: 10px;font-size: 15px;" class="color3">&nbsp;&nbsp;&nbsp;โปรแกรม 2 วัน 1 คืน&nbsp;&nbsp;&nbsp;</span>
+                                        @endif
+                                        <h3 style="text-shadow: 1px 1px #FF0000 " class="text-white">{{ $name_trip_1 }}</h3>
+                                        <p>{{ $title_trip_1 }}</p>
+                                    </div>
+                                </a>
                             </div> 
                             <div class="weekly2-single">
-                                <div class="weekly2-img">
-                                    <a href="{{ url('/trip/' . $id_trip_2) }}">
+                                <a href="{{ url('/trip/' . $id_trip_2) }}">
+                                    <div class="weekly2-img">
                                         <img height="160" src="{{ url('storage')}}/{{ $cover_photo_trip_2 }}" alt="">
-                                    </a>
-                                </div>
-                                <div class="weekly2-caption">
-                                    @if($one_day_trip_2 == "on" )
-                                        <span style="border-radius: 10px;font-size: 15px;" class="color2">&nbsp;&nbsp;&nbsp;โปรแกรม 1 วัน&nbsp;&nbsp;&nbsp;</span>
-                                    @endif
-                                    @if($two_days_trip_2 == "on" )
-                                        <span style="border-radius: 10px;font-size: 15px;" class="color3">&nbsp;&nbsp;&nbsp;โปรแกรม 2 วัน 1 คืน&nbsp;&nbsp;&nbsp;</span>
-                                    @endif
-                                    <h3 style="text-shadow: 1px 1px #FF0000 " class="text-white">{{ $name_trip_2 }}</h3>
-                                    <p>{{ $title_trip_2 }}</p>
-                                </div>
+                                    </div>
+                                    <div class="weekly2-caption">
+                                        @if($one_day_trip_2 == "on" )
+                                            <span style="border-radius: 10px;font-size: 15px;" class="color2">&nbsp;&nbsp;&nbsp;โปรแกรม 1 วัน&nbsp;&nbsp;&nbsp;</span>
+                                        @endif
+                                        @if($two_days_trip_2 == "on" )
+                                            <span style="border-radius: 10px;font-size: 15px;" class="color3">&nbsp;&nbsp;&nbsp;โปรแกรม 2 วัน 1 คืน&nbsp;&nbsp;&nbsp;</span>
+                                        @endif
+                                        <h3 style="text-shadow: 1px 1px #FF0000 " class="text-white">{{ $name_trip_2 }}</h3>
+                                        <p>{{ $title_trip_2 }}</p>
+                                    </div>
+                                </a>
                             </div> 
                             <div class="weekly2-single">
-                                <div class="weekly2-img">
-                                    <a href="{{ url('/trip/' . $id_trip_3) }}">
+                                <a href="{{ url('/trip/' . $id_trip_3) }}">
+                                    <div class="weekly2-img">
                                         <img height="160" src="{{ url('storage')}}/{{ $cover_photo_trip_3 }}" alt="">
-                                    </a>
-                                </div>
-                                <div class="weekly2-caption">
-                                    @if($one_day_trip_3 == "on" )
-                                        <span style="border-radius: 10px;font-size: 15px;" class="color2">&nbsp;&nbsp;&nbsp;โปรแกรม 1 วัน&nbsp;&nbsp;&nbsp;</span>
-                                    @endif
-                                    @if($two_days_trip_3 == "on" )
-                                        <span style="border-radius: 10px;font-size: 15px;" class="color3">&nbsp;&nbsp;&nbsp;โปรแกรม 2 วัน 1 คืน&nbsp;&nbsp;&nbsp;</span>
-                                    @endif
-                                    <h3 style="text-shadow: 1px 1px #FF0000 " class="text-white">{{ $name_trip_3 }}</h3>
-                                    <p>{{ $title_trip_3 }}</p>
-                                </div>
+                                    </div>
+                                    <div class="weekly2-caption">
+                                        @if($one_day_trip_3 == "on" )
+                                            <span style="border-radius: 10px;font-size: 15px;" class="color2">&nbsp;&nbsp;&nbsp;โปรแกรม 1 วัน&nbsp;&nbsp;&nbsp;</span>
+                                        @endif
+                                        @if($two_days_trip_3 == "on" )
+                                            <span style="border-radius: 10px;font-size: 15px;" class="color3">&nbsp;&nbsp;&nbsp;โปรแกรม 2 วัน 1 คืน&nbsp;&nbsp;&nbsp;</span>
+                                        @endif
+                                        <h3 style="text-shadow: 1px 1px #FF0000 " class="text-white">{{ $name_trip_3 }}</h3>
+                                        <p>{{ $title_trip_3 }}</p>
+                                    </div>
+                                </a>
                             </div> 
                             <div class="weekly2-single">
-                                <div class="weekly2-img">
-                                    <a href="{{ url('/trip/' . $id_trip_4) }}">
+                                <a href="{{ url('/trip/' . $id_trip_4) }}">
+                                    <div class="weekly2-img">
                                         <img height="160" src="{{ url('storage')}}/{{ $cover_photo_trip_4 }}" alt="">
-                                    </a>
-                                </div>
-                                <div class="weekly2-caption">
-                                    @if($one_day_trip_4 == "on" )
-                                        <span style="border-radius: 10px;font-size: 15px;" class="color2">&nbsp;&nbsp;&nbsp;โปรแกรม 1 วัน&nbsp;&nbsp;&nbsp;</span>
-                                    @endif
-                                    @if($two_days_trip_4 == "on" )
-                                        <span style="border-radius: 10px;font-size: 15px;" class="color3">&nbsp;&nbsp;&nbsp;โปรแกรม 2 วัน 1 คืน&nbsp;&nbsp;&nbsp;</span>
-                                    @endif
-                                    <h3 style="text-shadow: 1px 1px #FF0000 " class="text-white">{{ $name_trip_4 }}</h3>
-                                    <p>{{ $title_trip_4 }}</p>
-                                </div>
+                                        
+                                    </div>
+                                    <div class="weekly2-caption">
+                                        @if($one_day_trip_4 == "on" )
+                                            <span style="border-radius: 10px;font-size: 15px;" class="color2">&nbsp;&nbsp;&nbsp;โปรแกรม 1 วัน&nbsp;&nbsp;&nbsp;</span>
+                                        @endif
+                                        @if($two_days_trip_4 == "on" )
+                                            <span style="border-radius: 10px;font-size: 15px;" class="color3">&nbsp;&nbsp;&nbsp;โปรแกรม 2 วัน 1 คืน&nbsp;&nbsp;&nbsp;</span>
+                                        @endif
+                                        <h3 style="text-shadow: 1px 1px #FF0000 " class="text-white">{{ $name_trip_4 }}</h3>
+                                        <p>{{ $title_trip_4 }}</p>
+                                    </div>
+                                </a>
                             </div> 
                             <div class="weekly2-single">
-                                <div class="weekly2-img">
-                                    <a href="{{ url('/trip/' . $id_trip_5) }}">
+                                <a href="{{ url('/trip/' . $id_trip_5) }}">
+                                    <div class="weekly2-img">
                                         <img height="160" src="{{ url('storage')}}/{{ $cover_photo_trip_5 }}" alt="">
-                                    </a>
-                                </div>
-                                <div class="weekly2-caption">
-                                    @if($one_day_trip_5 == "on" )
-                                        <span style="border-radius: 10px;font-size: 15px;" class="color2">&nbsp;&nbsp;&nbsp;โปรแกรม 1 วัน&nbsp;&nbsp;&nbsp;</span>
-                                    @endif
-                                    @if($two_days_trip_5 == "on" )
-                                        <span style="border-radius: 10px;font-size: 15px;" class="color3">&nbsp;&nbsp;&nbsp;โปรแกรม 2 วัน 1 คืน&nbsp;&nbsp;&nbsp;</span>
-                                    @endif
-                                    <h3 style="text-shadow: 1px 1px #FF0000 " class="text-white">{{ $name_trip_5 }}</h3>
-                                    <p>{{ $title_trip_5 }}</p>
-                                </div>
+                                    </div>
+                                    <div class="weekly2-caption">
+                                        @if($one_day_trip_5 == "on" )
+                                            <span style="border-radius: 10px;font-size: 15px;" class="color2">&nbsp;&nbsp;&nbsp;โปรแกรม 1 วัน&nbsp;&nbsp;&nbsp;</span>
+                                        @endif
+                                        @if($two_days_trip_5 == "on" )
+                                            <span style="border-radius: 10px;font-size: 15px;" class="color3">&nbsp;&nbsp;&nbsp;โปรแกรม 2 วัน 1 คืน&nbsp;&nbsp;&nbsp;</span>
+                                        @endif
+                                        <h3 style="text-shadow: 1px 1px #FF0000 " class="text-white">{{ $name_trip_5 }}</h3>
+                                        <p>{{ $title_trip_5 }}</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>

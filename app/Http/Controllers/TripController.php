@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
-
 use App\Models\Trip;
 use Illuminate\Http\Request;
+use DB;
 
 class TripController extends Controller
 {
@@ -146,6 +146,10 @@ class TripController extends Controller
     public function show($id)
     {
         $trip = Trip::findOrFail($id);
+
+        // $count = DB::table('advertises')->count();
+        // $advertises = DB::table('advertises')->where('active', '=', "ใช้งาน")->take(1)->get();
+        // echo $count;
 
         return view('trip.show', compact('trip'));
     }

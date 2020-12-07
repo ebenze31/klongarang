@@ -1,0 +1,145 @@
+{
+    "fields": [
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "president",
+            "type": "string"
+        },
+        {
+            "name": "president_img",
+            "type": "file"
+        },
+        {
+            "name": "vice_President_1",
+            "type": "string"
+        },
+        {
+            "name": "vice_President_1_img",
+            "type": "file"
+        },
+        {
+            "name": "vice_President_2",
+            "type": "string"
+        },
+        {
+            "name": "vice_President_2_img",
+            "type": "file"
+        },
+        {
+            "name": "secretary_1",
+            "type": "string"
+        },
+        {
+            "name": "secretary_1_img",
+            "type": "file"
+        },
+        {
+            "name": "secretary_2",
+            "type": "string"
+        },
+        {
+            "name": "secretary_2_img",
+            "type": "file"
+        },
+        {
+            "name": "board_by_position_1",
+            "type": "string"
+        },
+        {
+            "name": "board_by_position_1_img",
+            "type": "file"
+        },
+        {
+            "name": "board_by_position_2",
+            "type": "string"
+        },
+        {
+            "name": "board_by_position_2_img",
+            "type": "file"
+        },
+        {
+            "name": "board_by_position_3",
+            "type": "string"
+        },
+        {
+            "name": "board_by_position_3_img",
+            "type": "file"
+        },
+        {
+            "name": "board_by_experts_1",
+            "type": "string"
+        },
+        {
+            "name": "board_by_experts_1_img",
+            "type": "file"
+        },
+        {
+            "name": "board_by_experts_2",
+            "type": "string"
+        },
+        {
+            "name": "board_by_experts_2_img",
+            "type": "file"
+        },
+        {
+            "name": "board_by_experts_3",
+            "type": "string"
+        },
+        {
+            "name": "board_by_experts_3_img",
+            "type": "file"
+        },
+        {
+            "name": "board_by_experts_4",
+            "type": "string"
+        },
+        {
+            "name": "board_by_experts_4_img",
+            "type": "file"
+        },
+        {
+            "name": "board_by_experts_5",
+            "type": "string"
+        },
+        {
+            "name": "board_by_experts_5_img",
+            "type": "file"
+        },
+        {
+            "name": "board_by_experts_6",
+            "type": "string"
+        },
+        {
+            "name": "board_by_experts_6_img",
+            "type": "file"
+        },
+        {
+            "name": "board_by_experts_7",
+            "type": "string"
+        },
+        {
+            "name": "board_by_experts_7_img",
+            "type": "file"
+        },
+        {
+            "name": "board_by_experts_8",
+            "type": "string"
+        },
+        {
+            "name": "board_by_experts_8_img",
+            "type": "file"
+        },
+        {
+            "name": "board_by_experts_9",
+            "type": "string"
+        },
+        {
+            "name": "board_by_experts_9_img",
+            "type": "file"
+        }
+
+    ]
+}

@@ -41,25 +41,25 @@
     </div>
 
     <div class="col-lg-6 col-md-6">
-        <p style="color: #FF0033">เพิ่มรูปภาพอย่างน้อย 4 รูป</p>
+        <p style="color: #FF0033">กรุณาเพิ่มรูปภาพอย่างน้อย 4 รูป</p>
         <div class="form-group {{ $errors->has('photo_1') ? 'has-error' : ''}}">
             <label for="photo_1" class="control-label">{{ 'รูปที่ 1' }}</label><span style="color: #FF0033"> *</span>
-            <input class="form-control" name="photo_1" type="file" id="photo_1" value="{{ isset($travel->photo_1) ? $travel->photo_1 : ''}}" required >
+            <input class="form-control" name="photo_1" type="file" id="photo_1" value="{{ isset($travel->photo_1) ? $travel->photo_1 : ''}}"  >
             {!! $errors->first('photo_1', '<p class="help-block">:message</p>') !!}
         </div>
         <div class="form-group {{ $errors->has('photo_2') ? 'has-error' : ''}}">
             <label for="photo_2" class="control-label">{{ 'รูปที่ 2' }}</label><span style="color: #FF0033"> *</span>
-            <input class="form-control" name="photo_2" type="file" id="photo_2" value="{{ isset($travel->photo_2) ? $travel->photo_2 : ''}}" required >
+            <input class="form-control" name="photo_2" type="file" id="photo_2" value="{{ isset($travel->photo_2) ? $travel->photo_2 : ''}}"  >
             {!! $errors->first('photo_2', '<p class="help-block">:message</p>') !!}
         </div>
         <div class="form-group {{ $errors->has('photo_3') ? 'has-error' : ''}}">
             <label for="photo_3" class="control-label">{{ 'รูปที่ 3' }}</label><span style="color: #FF0033"> *</span>
-            <input class="form-control" name="photo_3" type="file" id="photo_3" value="{{ isset($travel->photo_3) ? $travel->photo_3 : ''}}" required >
+            <input class="form-control" name="photo_3" type="file" id="photo_3" value="{{ isset($travel->photo_3) ? $travel->photo_3 : ''}}"  >
             {!! $errors->first('photo_3', '<p class="help-block">:message</p>') !!}
         </div>
         <div class="form-group {{ $errors->has('photo_4') ? 'has-error' : ''}}">
             <label for="photo_4" class="control-label">{{ 'รูปที่ 4' }}</label><span style="color: #FF0033"> *</span>
-            <input class="form-control" name="photo_4" type="file" id="photo_4" value="{{ isset($travel->photo_4) ? $travel->photo_4 : ''}}" required >
+            <input class="form-control" name="photo_4" type="file" id="photo_4" value="{{ isset($travel->photo_4) ? $travel->photo_4 : ''}}"  >
             {!! $errors->first('photo_4', '<p class="help-block">:message</p>') !!}
         </div>
         <div class="form-group {{ $errors->has('photo_5') ? 'has-error' : ''}}">

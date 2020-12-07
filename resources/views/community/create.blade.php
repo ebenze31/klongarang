@@ -5,9 +5,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <h3 class="card-header">เพิ่มรางวัลที่ได้รับ</h3>
+                    <div class="card-header">Create New Community</div>
                     <div class="card-body">
-                        <a href="{{ url('/award') }}" title="Back"><button class="btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> ย้อนกลับ</button></a>
+                        <a href="{{ url('/community') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />
                         <br />
 
@@ -19,10 +19,10 @@
                             </ul>
                         @endif
 
-                        <form method="POST" action="{{ url('/award') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                        <form method="POST" action="{{ url('/community') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                             {{ csrf_field() }}
 
-                            @include ('award.form', ['formMode' => 'create'])
+                            @include ('community.form', ['formMode' => 'create'])
 
                         </form>
 
