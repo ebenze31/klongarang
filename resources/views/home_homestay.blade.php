@@ -1,8 +1,4 @@
 @php
-$servername = "127.0.0.1";
-$username = "root";
-$password = "";
-$dbname = "klongarang2";
 
 $photo_1 = " ";
 $photo_2 = " ";
@@ -10,15 +6,6 @@ $photo_3 = " ";
 $photo_4 = " ";
 $photo_5 = " ";
 $photo_6 = " ";
-
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
 
 $sql = "SELECT photo_1 FROM homestays ORDER BY RAND() LIMIT 0,1";
 $result = $conn->query($sql);

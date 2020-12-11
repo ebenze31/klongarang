@@ -31,6 +31,7 @@ class ProductsController extends Controller
                 ->orWhere('gift', 'LIKE', "%$keyword%")
                 ->orWhere('agricultural', 'LIKE', "%$keyword%")
                 ->orWhere('bamboo', 'LIKE', "%$keyword%")
+                ->orWhere('otop', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
             $products = Product::latest()->paginate($perPage);

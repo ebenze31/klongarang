@@ -22,6 +22,7 @@
                                 <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">ของที่ระลึก</a>
                                 <a class="nav-item nav-link" id="nav-last-tab" data-toggle="tab" href="#nav-last" role="tab" aria-controls="nav-contact" aria-selected="false">สินค้าทางการเกษตร</a>
                                 <a class="nav-item nav-link" id="nav-a-tab" data-toggle="tab" href="#nav-a" role="tab" aria-controls="nav-contact" aria-selected="false">ผลิตภัณฑ์จากไผ่</a>
+                                <a class="nav-item nav-link" id="nav-otop-tab" data-toggle="tab" href="#nav-otop" role="tab" aria-controls="nav-otop" aria-selected="false">OTOP</a>
                                 
                             </div>
                         </nav>
@@ -67,6 +68,9 @@
                                                     <img width="350" height="320" src="{{ url('storage')}}/{{ $item->photo }}" alt="">
                                                 </div><br>
                                                 <div>
+                                                @if($item->otop == "on" )
+                                                <span style="border-radius: 10px;" class="color4">&nbsp;&nbsp;&nbsp;OTOP&nbsp;&nbsp;&nbsp;</span>
+                                                @endif
                                                 @if($item->food == "on" )
                                                     <span style="border-radius: 10px;" class="color1">&nbsp;&nbsp;&nbsp;อาหาร&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
@@ -81,8 +85,8 @@
                                                 @endif
                                                     <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $item->id) }}">"{{ $item->name }}"</a></h4>
                                                     <p><b>รายละเอียด :</b> {{ $item->detail }}</p>
-                                                    <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
-                                                    <p><b>วิธีใช้ :</b> {{ $item->how_to_use }}</p>
+                                                    <!-- <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
+                                                    <p><b>วิธีใช้ :</b> {{ $item->how_to_use }}</p> -->
                                                 </div>
                                                 <div>
                                                     <a href="{{ url('/products/' . $item->id) }}" title="View products"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
@@ -132,10 +136,13 @@
                                                     @if($item->bamboo == "on" )
                                                         <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;ผลิตภัณฑ์จากไผ่&nbsp;&nbsp;&nbsp;</span>
                                                     @endif
+                                                    @if($item->otop == "on" )
+                                                        <span style="border-radius: 10px;" class="color4">&nbsp;&nbsp;&nbsp;OTOP&nbsp;&nbsp;&nbsp;</span>
+                                                    @endif
                                                     <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $item->id) }}">"{{ $item->name }}"</a></h4>
                                                     <p><b>รายละเอียด :</b> {{ $item->detail }}</p>
-                                                    <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
-                                                    <p><b>วิธีใช้ :</b> {{ $item->how_to_use }}</p>
+                                                    <!-- <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
+                                                    <p><b>วิธีใช้ :</b> {{ $item->how_to_use }}</p> -->
                                                 </div>
                                                 <div>
                                                     <a href="{{ url('/products/' . $item->id) }}" title="View products"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
@@ -187,10 +194,13 @@
                                                     @if($item->bamboo == "on" )
                                                         <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;ผลิตภัณฑ์จากไผ่&nbsp;&nbsp;&nbsp;</span>
                                                     @endif
+                                                    @if($item->otop == "on" )
+                                                        <span style="border-radius: 10px;" class="color4">&nbsp;&nbsp;&nbsp;OTOP&nbsp;&nbsp;&nbsp;</span>
+                                                    @endif
                                                     <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $item->id) }}">"{{ $item->name }}"</a></h4>
                                                     <p><b>รายละเอียด :</b> {{ $item->detail }}</p>
-                                                    <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
-                                                    <p><b>วิธีใช้ :</b> {{ $item->how_to_use }}</p>
+                                                    <!-- <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
+                                                    <p><b>วิธีใช้ :</b> {{ $item->how_to_use }}</p> -->
                                                 </div>
                                                 <div>
                                                     <a href="{{ url('/products/' . $item->id) }}" title="View products"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
@@ -240,10 +250,13 @@
                                                 @if($item->bamboo == "on" )
                                                     <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;ผลิตภัณฑ์จากไผ่&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
+                                                @if($item->otop == "on" )
+                                                    <span style="border-radius: 10px;" class="color4">&nbsp;&nbsp;&nbsp;OTOP&nbsp;&nbsp;&nbsp;</span>
+                                                @endif
                                                     <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $item->id) }}">"{{ $item->name }}"</a></h4>
                                                     <p><b>รายละเอียด :</b> {{ $item->detail }}</p>
-                                                    <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
-                                                    <p><b>วิธีใช้ :</b> {{ $item->how_to_use }}</p>
+                                                    <!-- <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
+                                                    <p><b>วิธีใช้ :</b> {{ $item->how_to_use }}</p> -->
                                                 </div>
                                                 <div>
                                                     <a href="{{ url('/products/' . $item->id) }}" title="View products"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
@@ -293,10 +306,69 @@
                                                     @if($item->agricultural == "on" )
                                                         <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;สินค้าทางการเกษตร&nbsp;&nbsp;&nbsp;</span>
                                                     @endif
+                                                    @if($item->otop == "on" )
+                                                        <span style="border-radius: 10px;" class="color4">&nbsp;&nbsp;&nbsp;OTOP&nbsp;&nbsp;&nbsp;</span>
+                                                    @endif
                                                     <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $item->id) }}">"{{ $item->name }}"</a></h4>
                                                     <p><b>รายละเอียด :</b> {{ $item->detail }}</p>
-                                                    <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
-                                                    <p><b>วิธีใช้ :</b> {{ $item->how_to_use }}</p>
+                                                    <!-- <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
+                                                    <p><b>วิธีใช้ :</b> {{ $item->how_to_use }}</p> -->
+                                                </div>
+                                                <div>
+                                                    <a href="{{ url('/products/' . $item->id) }}" title="View products"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
+                                                    @if(Auth::check())
+                                                        @if(Auth::user()->profile->role == "คนดูแล" )
+                                                            
+                                                            <a href="{{ url('/products/' . $item->id . '/edit') }}" title="Edit products"><button class="btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> แก้ไขข้อมูล</button></a>
+
+                                                            <form method="POST" action="{{ url('/products' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                                                {{ method_field('DELETE') }}
+                                                                {{ csrf_field() }}
+                                                                <button type="submit" class="btn-danger btn-sm" title="Delete products" onclick="return confirm(&quot;ยืนยันการลบ ?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> ลบ</button>
+                                                            </form>
+                                                        @endif
+                                                    @endif
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endif
+                                    @endforeach
+                                </div>
+                                <div class="pagination-wrapper"> {!! $products->appends(['search' => Request::get('search')])->render() !!} </div>
+                            </div>
+                        </div>
+                        <!-- card six -->
+                        <div class="tab-pane fade" id="nav-otop" role="tabpanel" aria-labelledby="nav-last-a">
+                            <div class="whats-news-caption">
+                                <div class="row">
+                                    @foreach($products as $item)
+                                    @if($item->otop == "on" )
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="single-what-news mb-100">
+                                            <div class="card" style="background:none; border:none ">
+                                                <div class="what-img">
+                                                    <img width="350" height="320" src="{{ url('storage')}}/{{ $item->photo }}" alt="">
+                                                </div>
+                                                <div>
+                                                    <br>
+                                                    <span style="border-radius: 10px;" class="color4">&nbsp;&nbsp;&nbsp;OTOP&nbsp;&nbsp;&nbsp;</span>
+                                                    @if($item->bamboo == "on" )
+                                                    <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;ผลิตภัณฑ์จากไผ่&nbsp;&nbsp;&nbsp;</span>
+                                                    @endif
+                                                    @if($item->food == "on" )
+                                                    <span style="border-radius: 10px;" class="color1">&nbsp;&nbsp;&nbsp;อาหาร&nbsp;&nbsp;&nbsp;</span>
+                                                    @endif
+                                                    @if($item->gift == "on" )
+                                                        <span style="border-radius: 10px;" class="color2">&nbsp;&nbsp;&nbsp;ของที่ระลึก&nbsp;&nbsp;&nbsp;</span>
+                                                    @endif
+                                                    @if($item->agricultural == "on" )
+                                                        <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;สินค้าทางการเกษตร&nbsp;&nbsp;&nbsp;</span>
+                                                    @endif
+                                                    <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $item->id) }}">"{{ $item->name }}"</a></h4>
+                                                    <p><b>รายละเอียด :</b> {{ $item->detail }}</p>
+                                                    <!-- <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
+                                                    <p><b>วิธีใช้ :</b> {{ $item->how_to_use }}</p> -->
                                                 </div>
                                                 <div>
                                                     <a href="{{ url('/products/' . $item->id) }}" title="View products"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>

@@ -1,33 +1,3 @@
-
-@php
-$servername = "127.0.0.1";
-$username = "root";
-$password = "";
-$dbname = "klongarang2";
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
-$photo_poster = " ";
-$dateline = " ";
-$sql_poster = "SELECT photo , dateline FROM advertises WHERE active = 'ใช้งาน' ORDER BY RAND() LIMIT 0,1  ";
-$result = $conn->query($sql_poster);
-
-if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-    $photo_poster = $row["photo"];
-    $dateline = $row["dateline"];
-    // echo $name_product_1;
-  }
-} else {
-  // echo "0 results";
-}
-@endphp
-
 @extends('layout.main')
 
 @section('content')
@@ -284,7 +254,7 @@ if ($result->num_rows > 0) {
             <div class="col-lg-4">
                 <div class="single-follow mb-45">
                     <br><br><br><br>
-                    <img class="float-right" height="650" src="{{ url('storage')}}/{{ $photo_poster }}" alt="">
+                    <img class="float-right" height="650" src="{{ url('storage')}}/{{ $random->photo }}" alt="">
                 </div>
                 <!-- New Poster -->
             </div>

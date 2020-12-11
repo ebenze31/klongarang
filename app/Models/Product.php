@@ -25,7 +25,7 @@ class Product extends Model
      *
      * @var array
      */
-    protected $fillable = ['category', 'name', 'detail', 'benefit', 'how_to_use', 'photo', 'food', 'gift', 'agricultural', 'bamboo'];
+    protected $fillable = ['category', 'name', 'detail', 'benefit', 'how_to_use', 'photo', 'food', 'gift', 'agricultural', 'bamboo', 'otop'];
 
     
 }

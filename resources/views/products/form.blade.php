@@ -6,6 +6,7 @@
             <div><input name="gift" id="gift" type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ของที่ระลึก</div>
             <div><input name="agricultural" id="agricultural" type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สินค้าทางการเกษตร</div>
             <div><input name="bamboo" id="bamboo" type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ผลิตภัณฑ์จากไผ่</div>
+            <div><input name="otop" id="otop" type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OTOP</div>
         </div><br>
         <div class="d-none form-group {{ $errors->has('category') ? 'has-error' : ''}}">
             <label for="category" class="control-label">{{ 'หมวดหมู่' }}</label><span style="color: #FF0033"> *</span>

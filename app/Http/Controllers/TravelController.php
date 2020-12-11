@@ -7,6 +7,8 @@ use App\Http\Requests;
 
 use App\Models\Travel;
 use Illuminate\Http\Request;
+use DB;
+use App\Models\Trip;
 
 class TravelController extends Controller
 {
@@ -99,8 +101,11 @@ class TravelController extends Controller
     public function show($id)
     {
         $travel = Travel::findOrFail($id);
+        $random = DB::table('trips')
+                ->inRandomOrder()
+                ->first();
 
-        return view('travel.show', compact('travel'));
+        return view('travel.show', compact('travel' ,'random'));
     }
 
     /**
