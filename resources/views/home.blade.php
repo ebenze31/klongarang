@@ -40,6 +40,16 @@ $name_travel_5 = " ";
 $category_travel_5 = " ";
 $photo_1_travel_5 = " ";
 
+$id_product_1 = " ";
+$name_product_1 = " ";
+$category_product_1 = " ";
+$photo_product_1 = " ";
+
+$id_product_2 = " ";
+$name_product_2 = " ";
+$category_product_2 = " ";
+$photo_product_2 = " ";
+
 
 
 $sql = "SELECT id ,name, category, photo_1 FROM travel ORDER BY RAND() LIMIT 0,1";
@@ -127,6 +137,34 @@ if ($result5->num_rows > 0) {
   // echo "0 results";
 }
 
+$sql_p1 = "SELECT id ,name , photo FROM products ORDER BY RAND() LIMIT 0,1";
+$result_p1 = $conn->query($sql_p1);
+
+if ($result_p1->num_rows > 0) {
+  // output data of each row
+  while($row = $result_p1->fetch_assoc()) {
+    $id_product_1 = $row["id"];
+    $name_product_1 = $row["name"];
+    $photo_product_1 = $row["photo"];
+  }
+} else {
+  // echo "0 results";
+}
+
+$sql_p2 = "SELECT id ,name , photo FROM products ORDER BY RAND() LIMIT 0,1";
+$result_p2 = $conn->query($sql_p2);
+
+if ($result_p2->num_rows > 0) {
+  // output data of each row
+  while($row = $result_p2->fetch_assoc()) {
+    $id_product_2 = $row["id"];
+    $name_product_2 = $row["name"];
+    $photo_product_2 = $row["photo"];
+  }
+} else {
+  // echo "0 results";
+}
+
 @endphp
     <!-- Trending Area Start -->
     <div class="trending-area fix">
@@ -152,6 +190,8 @@ if ($result5->num_rows > 0) {
                             </div>
                         </div>
                         <!-- Trending Bottom -->
+                        <span style="border-radius: 10px;" class="color1">&nbsp;&nbsp;&nbsp;แหล่งท่องเที่ยวและกิจกรรม&nbsp;&nbsp;&nbsp;</span>
+                        <br><br>
                         <div class="trending-bottom">
                             <div class="row">
                                 <div class="col-lg-4">
@@ -196,31 +236,14 @@ if ($result5->num_rows > 0) {
                         </div>
                     </div>
                     <!-- Riht content -->
-                    <div class="col-lg-4">
-                        <div class="trand-right-single d-flex">
-                            <div class="trand-right-img">
-                                <img width="165" height="110" src="{{ asset('/img/klongarang/P1010114.JPG') }}" alt="">
-                            </div>
-                            <div class="trand-right-cap">
-                                <span class="color1">โครงการ</span>
-                                <h4><a href="{{ url('/about') }}">ที่มาและความสำคัญของโครงการ</a></h4>
-                            </div>
-                        </div>
-                        <div class="trand-right-single d-flex">
-                            <div class="trand-right-img">
-                                <img width="165" height="110" src="{{ asset('/img/klongarang/IMG20200815162213.jpg') }}" alt="">
-                            </div>
-                            <div class="trand-right-cap">
-                                <span class="color3">กิจกรรม</span>
-                                <h4><a href="details.html">ปลูกต้นทองอุไรตลอดแนวถนนเพื่อความสวยงามของหมู่บ้าน</a></h4>
-                            </div>
-                        </div>
+                    <div style="padding-top: 5px;" class="col-lg-4">
+                        <span style="border-radius: 10px;" class="color4">&nbsp;&nbsp;&nbsp;กิจกรรมโครงการ&nbsp;&nbsp;&nbsp;</span>
+                        <br><br>
                         <div class="trand-right-single d-flex">
                             <div class="trand-right-img">
                                 <img width="165" height="110" src="{{ asset('/img/klongarang/P1010061.JPG') }}" alt="">
                             </div>
                             <div class="trand-right-cap">
-                                <span class="color2">โครงการ</span>
                                 <h4><a href="details.html">ศึกษาดูงาน ณ บ้านวังรี</a></h4>
                             </div>
                         </div> 
@@ -229,11 +252,32 @@ if ($result5->num_rows > 0) {
                                 <img width="165" height="110" src="{{ asset('/img/klongarang/IMG20200815142423.jpg') }}" alt="">
                             </div>
                             <div class="trand-right-cap">
-                                <span class="color4">โครงการ</span>
                                 <h4><a href="details.html">ประชุมผู้นำและตัวแทนชาวบ้าน</a></h4>
                             </div>
                         </div>
-                        
+                        <!-- สินค้า -->
+                        <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;สินค้าและของที่ระลึก&nbsp;&nbsp;&nbsp;</span>
+                        <br><br>
+                        <div class="trand-right-single d-flex">
+                            <div class="trand-right-img">
+                                <a href="{{ url('/products/' . $id_product_1) }}">
+                                    <img width="165" height="110" src="{{ url('storage')}}/{{ $photo_product_1 }}" alt="">
+                                </a>
+                            </div>
+                            <div class="trand-right-cap">
+                                <h4><a href="{{ url('/products/' . $id_product_1) }}">"{{ $name_product_1 }}"</a></h4>
+                            </div>
+                        </div> 
+                        <div class="trand-right-single d-flex">
+                            <div class="trand-right-img">
+                                <a href="{{ url('/products/' . $id_product_2) }}">
+                                    <img width="165" height="110" src="{{ url('storage')}}/{{ $photo_product_2 }}" alt="">
+                                </a>
+                            </div>
+                            <div class="trand-right-cap">
+                                <h4><a href="{{ url('/products/' . $id_product_2) }}">"{{ $name_product_2 }}"</a></h4>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>

@@ -23,6 +23,9 @@ Route::get('home', function () {
 Route::get('about', function () {
     return view('About/about');
 });
+Route::get('aboutcommu', function () {
+    return view('About/aboutcommu');
+});
 
 
 
