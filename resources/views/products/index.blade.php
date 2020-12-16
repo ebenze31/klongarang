@@ -63,9 +63,9 @@
                                     @foreach($products as $item)
                                     <div class="col-lg-4 col-md-4">
                                         <div class="single-what-news mb-100">
-                                            <div class="card" style="background:none; border:none ">
-                                                <div class="what-img">
-                                                    <img width="350" height="320" src="{{ url('storage')}}/{{ $item->photo }}" alt="">
+                                            <div class="card" style="background:none; border:none" >
+                                                <div>
+                                                    <img width="350" height="220" src="{{ url('storage')}}/{{ $item->photo }}" alt="">
                                                 </div><br>
                                                 <div>
                                                 @if($item->otop == "on" )
@@ -84,11 +84,11 @@
                                                     <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;ผลิตภัณฑ์จากไผ่&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
                                                     <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $item->id) }}">"{{ $item->name }}"</a></h4>
-                                                    <p><b>รายละเอียด :</b> {{ $item->detail }}</p>
+                                                    <!-- <p><b>รายละเอียด :</b> {{ $item->detail }}</p> -->
                                                     <!-- <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
                                                     <p><b>วิธีใช้ :</b> {{ $item->how_to_use }}</p> -->
                                                 </div>
-                                                <div>
+                                                <div class="text-right">
                                                     <a href="{{ url('/products/' . $item->id) }}" title="View products"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
                                                     @if(Auth::check())
                                                         @if(Auth::user()->profile->role == "คนดูแล" )
@@ -122,7 +122,7 @@
                                         <div class="single-what-news mb-100">
                                             <div class="card" style="background:none; border:none ">
                                                 <div class="what-img">
-                                                    <img width="350" height="320" src="{{ url('storage')}}/{{ $item->photo }}" alt="">
+                                                    <img width="350" height="220" src="{{ url('storage')}}/{{ $item->photo }}" alt="">
                                                 </div>
                                                 <div>
                                                     <br>
@@ -140,11 +140,11 @@
                                                         <span style="border-radius: 10px;" class="color4">&nbsp;&nbsp;&nbsp;OTOP&nbsp;&nbsp;&nbsp;</span>
                                                     @endif
                                                     <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $item->id) }}">"{{ $item->name }}"</a></h4>
-                                                    <p><b>รายละเอียด :</b> {{ $item->detail }}</p>
+                                                    <!-- <p><b>รายละเอียด :</b> {{ $item->detail }}</p> -->
                                                     <!-- <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
                                                     <p><b>วิธีใช้ :</b> {{ $item->how_to_use }}</p> -->
                                                 </div>
-                                                <div>
+                                                <div class="text-right">
                                                     <a href="{{ url('/products/' . $item->id) }}" title="View products"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
                                                     @if(Auth::check())
                                                         @if(Auth::user()->profile->role == "คนดูแล" )
@@ -179,7 +179,7 @@
                                         <div class="single-what-news mb-100">
                                             <div class="card" style="background:none; border:none ">
                                                 <div class="what-img">
-                                                    <img width="350" height="320" src="{{ url('storage')}}/{{ $item->photo }}" alt="">
+                                                    <img width="350" height="220" src="{{ url('storage')}}/{{ $item->photo }}" alt="">
                                                 </div>
                                                 <div>
                                                     <br>
@@ -198,11 +198,11 @@
                                                         <span style="border-radius: 10px;" class="color4">&nbsp;&nbsp;&nbsp;OTOP&nbsp;&nbsp;&nbsp;</span>
                                                     @endif
                                                     <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $item->id) }}">"{{ $item->name }}"</a></h4>
-                                                    <p><b>รายละเอียด :</b> {{ $item->detail }}</p>
+                                                    <!-- <p><b>รายละเอียด :</b> {{ $item->detail }}</p> -->
                                                     <!-- <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
                                                     <p><b>วิธีใช้ :</b> {{ $item->how_to_use }}</p> -->
                                                 </div>
-                                                <div>
+                                                <div class="text-right">
                                                     <a href="{{ url('/products/' . $item->id) }}" title="View products"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
                                                     @if(Auth::check())
                                                         @if(Auth::user()->profile->role == "คนดูแล" )
@@ -236,7 +236,7 @@
                                         <div class="single-what-news mb-100">
                                             <div class="card" style="background:none; border:none ">
                                                 <div class="what-img">
-                                                    <img width="350" height="320" src="{{ url('storage')}}/{{ $item->photo }}" alt="">
+                                                    <img width="350" height="220" src="{{ url('storage')}}/{{ $item->photo }}" alt="">
                                                 </div>
                                                 <div>
                                                     <br>
@@ -254,11 +254,11 @@
                                                     <span style="border-radius: 10px;" class="color4">&nbsp;&nbsp;&nbsp;OTOP&nbsp;&nbsp;&nbsp;</span>
                                                 @endif
                                                     <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $item->id) }}">"{{ $item->name }}"</a></h4>
-                                                    <p><b>รายละเอียด :</b> {{ $item->detail }}</p>
+                                                    <!-- <p><b>รายละเอียด :</b> {{ $item->detail }}</p> -->
                                                     <!-- <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
                                                     <p><b>วิธีใช้ :</b> {{ $item->how_to_use }}</p> -->
                                                 </div>
-                                                <div>
+                                                <div class="text-right">
                                                     <a href="{{ url('/products/' . $item->id) }}" title="View products"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
                                                     @if(Auth::check())
                                                         @if(Auth::user()->profile->role == "คนดูแล" )
@@ -292,7 +292,7 @@
                                         <div class="single-what-news mb-100">
                                             <div class="card" style="background:none; border:none ">
                                                 <div class="what-img">
-                                                    <img width="350" height="320" src="{{ url('storage')}}/{{ $item->photo }}" alt="">
+                                                    <img width="350" height="220" src="{{ url('storage')}}/{{ $item->photo }}" alt="">
                                                 </div>
                                                 <div>
                                                     <br>
@@ -310,11 +310,11 @@
                                                         <span style="border-radius: 10px;" class="color4">&nbsp;&nbsp;&nbsp;OTOP&nbsp;&nbsp;&nbsp;</span>
                                                     @endif
                                                     <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $item->id) }}">"{{ $item->name }}"</a></h4>
-                                                    <p><b>รายละเอียด :</b> {{ $item->detail }}</p>
+                                                    <!-- <p><b>รายละเอียด :</b> {{ $item->detail }}</p> -->
                                                     <!-- <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
                                                     <p><b>วิธีใช้ :</b> {{ $item->how_to_use }}</p> -->
                                                 </div>
-                                                <div>
+                                                <div class="text-right">
                                                     <a href="{{ url('/products/' . $item->id) }}" title="View products"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
                                                     @if(Auth::check())
                                                         @if(Auth::user()->profile->role == "คนดูแล" )
@@ -348,7 +348,7 @@
                                         <div class="single-what-news mb-100">
                                             <div class="card" style="background:none; border:none ">
                                                 <div class="what-img">
-                                                    <img width="350" height="320" src="{{ url('storage')}}/{{ $item->photo }}" alt="">
+                                                    <img width="350" height="220" src="{{ url('storage')}}/{{ $item->photo }}" alt="">
                                                 </div>
                                                 <div>
                                                     <br>
@@ -366,11 +366,11 @@
                                                         <span style="border-radius: 10px;" class="color3">&nbsp;&nbsp;&nbsp;สินค้าทางการเกษตร&nbsp;&nbsp;&nbsp;</span>
                                                     @endif
                                                     <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $item->id) }}">"{{ $item->name }}"</a></h4>
-                                                    <p><b>รายละเอียด :</b> {{ $item->detail }}</p>
+                                                    <!-- <p><b>รายละเอียด :</b> {{ $item->detail }}</p> -->
                                                     <!-- <p><b>สรรพคุณ , ประโยชน์ :</b> {{ $item->benefit }}</p>
                                                     <p><b>วิธีใช้ :</b> {{ $item->how_to_use }}</p> -->
                                                 </div>
-                                                <div>
+                                                <div class="text-right">
                                                     <a href="{{ url('/products/' . $item->id) }}" title="View products"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
                                                     @if(Auth::check())
                                                         @if(Auth::user()->profile->role == "คนดูแล" )

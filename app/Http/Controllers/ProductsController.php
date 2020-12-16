@@ -8,6 +8,9 @@ use App\Http\Requests;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
+use DB;
+use App\Models\Trip;
+
 class ProductsController extends Controller
 {
     /**
@@ -81,8 +84,11 @@ class ProductsController extends Controller
     public function show($id)
     {
         $product = Product::findOrFail($id);
+        $random = DB::table('trips')
+                ->inRandomOrder()
+                ->first();
 
-        return view('products.show', compact('product'));
+        return view('products.show', compact('product','random'));
     }
 
     /**

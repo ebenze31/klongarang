@@ -34,16 +34,17 @@
                               <div class="main-menu d-none d-md-block">
                                   <nav>                  
                                       <ul id="navigation">    
-                                          <li><a href="{{ url('/home') }}"><i class="fas fa-home"></i> หน้าแรก</a></li>
-                                          <li><a href="{{ url('/about') }}"><i class="fas fa-address-card"></i> เกี่ยวกับโครงการ</a></li>
-                                          <li><a href="{{ url('/community') }}"><i class="far fa-address-card"></i> เกี่ยวกับหมู่บ้าน</a></li>
-                                          <li><a href="{{ url('/products') }}"><i class="fas fa-shopping-basket"></i> สินค้าและของที่ระลึก</a></li>
-                                          <li><a >ติดต่อ <i class="fas fa-caret-down"></i> </a>
+                                          <li><a href="{{ url('/home') }}"><i style="color: #ed5565;" class="fas fa-home"></i> หน้าแรก</a></li>
+                                          <li><a href="{{ url('/about') }}"><i style="color: #197d4c;" class="fas fa-address-card"></i> เกี่ยวกับโครงการ</a></li>
+                                          <li><a href="{{ url('/community') }}"><i style="color: #ad6234;" class="far fa-address-card"></i> เกี่ยวกับหมู่บ้าน</a></li>
+                                          <li><a href="{{ url('/products') }}"><i style="color: #922692;" class="fas fa-shopping-basket"></i> สินค้าและของที่ระลึก</a></li>
+                                          <li><a href="{{ url('/review') }}"><i style="color: #fdf744;" class="fas fa-star"></i></i> ดูรีวิว</a></li>
+                                          <li><a >ติดต่อ <i style="color: #FF4500;" class="fas fa-caret-down"></i> </a>
                                               <ul class="submenu">
-                                                  <li><a href="https://www.facebook.com/%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87-470519779751019" target="_blank"><i class="fab fa-facebook"></i> : บ้านคลองอาราง</a></li>
-                                                  <li><a href="mailto:bb@gmail.com" target="_blank"><i class="fas fa-paper-plane"></i> : ...@gmail.com</a></li>
-                                                  <li><a href="tel:0999999999" target="_blank"><i class="fas fa-phone-volume"></i> : 0999999999</a></li>
-                                                  <li><a href="http://line.me/ti/p/~nongbenze012" target="_blank"><i class="fab fa-line"></i> : ID:</a></li>
+                                                  <li><a href="https://www.facebook.com/%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87-470519779751019" target="_blank"><i style="color: #1E90FF;" class="fab fa-facebook"></i> : บ้านคลองอาราง</a></li>
+                                                  <li><a href="mailto:bb@gmail.com" target="_blank"><i style="color: #FF0000;" class="fas fa-paper-plane"></i> : E-mail</a></li>
+                                                  <li><a href="tel:0999999999" target="_blank"><i style="color: #0099FF;" class="fas fa-phone-volume"></i> : 0999999999</a></li>
+                                                  <li><a href="http://line.me/ti/p/~nongbenze012" target="_blank"><i style="color: #00CC33;" class="fab fa-line"></i> : ID:</a></li>
                                               </ul>
                                           </li>
                                       </ul>

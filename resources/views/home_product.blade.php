@@ -21,6 +21,16 @@ $name_product_4 = " ";
 $category_product_4 = " ";
 $photo_product_4 = " ";
 
+$id_product_5 = " ";
+$name_product_5 = " ";
+$category_product_5 = " ";
+$photo_product_5 = " ";
+
+$id_product_6 = " ";
+$name_product_6 = " ";
+$category_product_6 = " ";
+$photo_product_6 = " ";
+
 
 $sql = "SELECT id ,name, category, photo FROM products ORDER BY RAND() LIMIT 0,1";
 $result = $conn->query($sql);
@@ -90,6 +100,40 @@ if ($result4->num_rows > 0) {
   // echo "0 results";
 }
 
+$sql5 = "SELECT id ,name, category, photo FROM products ORDER BY RAND() LIMIT 0,1";
+$result5 = $conn->query($sql);
+
+if ($result5->num_rows > 0) {
+  // output data of each row
+  while($row = $result5->fetch_assoc()) {
+    // echo "name: " . $row["name"]. " " . $row["category"]. " " . $row["photo"];
+    $id_product_5 = $row["id"];
+    $name_product_5 = $row["name"];
+    $category_product_5 = $row["category"];
+    $photo_product_5 = $row["photo"];
+    // echo $name_product_5;
+  }
+} else {
+  // echo "0 results";
+}
+
+$sql6 = "SELECT id ,name, category, photo FROM products ORDER BY RAND() LIMIT 0,1";
+$result6 = $conn->query($sql);
+
+if ($result6->num_rows > 0) {
+  // output data of each row
+  while($row = $result6->fetch_assoc()) {
+    // echo "name: " . $row["name"]. " " . $row["category"]. " " . $row["photo"];
+    $id_product_6 = $row["id"];
+    $name_product_6 = $row["name"];
+    $category_product_6 = $row["category"];
+    $photo_product_6 = $row["photo"];
+    // echo $name_product_6;
+  }
+} else {
+  // echo "0 results";
+}
+
 @endphp
 
 
@@ -119,7 +163,7 @@ if ($result4->num_rows > 0) {
                                             <div class="single-what-news mb-100">
                                                 <div class="what-img">
                                                     <a href="{{ url('/products/' . $id_product_1) }}">
-                                                    <img width="350" height="320" src="{{ url('storage')}}/{{ $photo_product_1 }}" alt="">
+                                                    <img width="350" height="220" src="{{ url('storage')}}/{{ $photo_product_1 }}" alt="">
                                                     </a>
                                                 </div>
                                                 <div>
@@ -131,7 +175,7 @@ if ($result4->num_rows > 0) {
                                             <div class="single-what-news mb-100">
                                                 <div class="what-img">
                                                     <a href="{{ url('/products/' . $id_product_2) }}">
-                                                    <img width="350" height="320" src="{{ url('storage')}}/{{ $photo_product_2 }}" alt="">
+                                                    <img width="350" height="220" src="{{ url('storage')}}/{{ $photo_product_2 }}" alt="">
                                                     </a>
                                                 </div>
                                                 <div>
@@ -143,7 +187,7 @@ if ($result4->num_rows > 0) {
                                             <div class="single-what-news mb-100">
                                                 <div class="what-img">
                                                     <a href="{{ url('/products/' . $id_product_3) }}">
-                                                    <img width="350" height="320" src="{{ url('storage')}}/{{ $photo_product_3 }}" alt="">
+                                                    <img width="350" height="220" src="{{ url('storage')}}/{{ $photo_product_3 }}" alt="">
                                                     </a>
                                                 </div>
                                                 <div>
@@ -154,18 +198,44 @@ if ($result4->num_rows > 0) {
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-what-news mb-100">
                                                 <div class="what-img">
-                                                    <a href="{{ url('/products/' . $id_product_3) }}">
-                                                    <img width="350" height="320" src="{{ url('storage')}}/{{ $photo_product_4 }}" alt="">
+                                                    <a href="{{ url('/products/' . $id_product_4) }}">
+                                                    <img width="350" height="220" src="{{ url('storage')}}/{{ $photo_product_4 }}" alt="">
                                                     </a>
                                                 </div>
                                                 <div>
-                                                    <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $id_product_3) }}">"{{ $name_product_4 }}"</a></h4>
+                                                    <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $id_product_4) }}">"{{ $name_product_4 }}"</a></h4>
+                                                </div>
+                                            </div>
+                                        </div> 
+
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="single-what-news mb-100">
+                                                <div class="what-img">
+                                                    <a href="{{ url('/products/' . $id_product_5) }}">
+                                                    <img width="350" height="220" src="{{ url('storage')}}/{{ $photo_product_5 }}" alt="">
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $id_product_5) }}">"{{ $name_product_5 }}"</a></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="single-what-news mb-100">
+                                                <div class="what-img">
+                                                    <a href="{{ url('/products/' . $id_product_6) }}">
+                                                    <img width="350" height="220" src="{{ url('storage')}}/{{ $photo_product_6 }}" alt="">
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <h4><br><a style="color: #fc3f00 !important" href="{{ url('/products/' . $id_product_6) }}">"{{ $name_product_6 }}"</a></h4>
                                                 </div>
                                                 <div>
                                                     <p style="text-align: right;"><a style="color: #666666 ;" href="{{ url('/products') }}">ดูเพิ่มเติม</a></p>
                                                 </div>
                                             </div>
-                                        </div> 
+                                        </div>  
                                     </div> 
                                     
                                 </div>

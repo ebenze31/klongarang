@@ -64,7 +64,7 @@
                                         <div class="single-what-news mb-100">
                                             <div class="card" style="background:none; border:none ">
                                                 <div class="what-img">
-                                                    <img width="350" height="320" src="{{ url('storage')}}/{{ $item->photo_1 }}" alt="">
+                                                    <img width="350" height="220" src="{{ url('storage')}}/{{ $item->photo_1 }}" alt="">
                                                 </div>
                                                 <div>
                                                     <br>
@@ -85,7 +85,7 @@
                                                     <!-- <p>{{ $item->detail }}</p> -->
                                                     <br>
                                                 </div>
-                                                <div>
+                                                <div class="text-right">
                                                     <a href="{{ url('/travel/' . $item->id) }}" title="View Travel"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
                                                     @if(Auth::check())
                                                         @if(Auth::user()->profile->role == "คนดูแล" )
@@ -118,7 +118,7 @@
                                     <div class="col-lg-4 col-md-4">
                                         <div class="single-what-news mb-100">
                                             <div class="what-img">
-                                                <img width="350" height="320" src="{{ url('storage')}}/{{ $item->photo_1 }}" alt="">
+                                                <img width="350" height="220" src="{{ url('storage')}}/{{ $item->photo_1 }}" alt="">
                                             </div>
                                             <div>
                                                 <br>
@@ -136,7 +136,7 @@
                                                 <!-- <p>{{ $item->detail }}</p> -->
                                                 <br>
                                             </div>
-                                            <div>
+                                            <div class="text-right">
                                                 <a href="{{ url('/travel/' . $item->id) }}" title="View Travel"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
                                                 @if(Auth::check())
                                                     @if(Auth::user()->profile->role == "คนดูแล" )
@@ -169,7 +169,7 @@
                                     <div class="col-lg-4 col-md-4">
                                         <div class="single-what-news mb-100">
                                             <div class="what-img">
-                                                <img width="350" height="320" src="{{ url('storage')}}/{{ $item->photo_1 }}" alt="">
+                                                <img width="350" height="220" src="{{ url('storage')}}/{{ $item->photo_1 }}" alt="">
                                             </div>
                                             <div>
                                                 <br>
@@ -187,7 +187,7 @@
                                                 <!-- <p>{{ $item->detail }}</p> -->
                                                 <br>
                                             </div>
-                                            <div>
+                                            <div class="text-right">
                                                 <a href="{{ url('/travel/' . $item->id) }}" title="View Travel"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
                                                 @if(Auth::check())
                                                     @if(Auth::user()->profile->role == "คนดูแล" )
@@ -219,7 +219,7 @@
                                     <div class="col-lg-4 col-md-4">
                                         <div class="single-what-news mb-100">
                                             <div class="what-img">
-                                                <img width="350" height="320" src="{{ url('storage')}}/{{ $item->photo_1 }}" alt="">
+                                                <img width="350" height="220" src="{{ url('storage')}}/{{ $item->photo_1 }}" alt="">
                                             </div>
                                             <div>
                                                 <br>
@@ -238,7 +238,7 @@
                                                 <!-- <p>{{ $item->detail }}</p> -->
                                                 <br>
                                             </div>
-                                            <div>
+                                            <div class="text-right">
                                                 <a href="{{ url('/travel/' . $item->id) }}" title="View Travel"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
                                                 @if(Auth::check())
                                                     @if(Auth::user()->profile->role == "คนดูแล" )
@@ -270,7 +270,7 @@
                                     <div class="col-lg-4 col-md-4">
                                         <div class="single-what-news mb-100">
                                             <div class="what-img">
-                                                <img width="350" height="320" src="{{ url('storage')}}/{{ $item->photo_1 }}" alt="">
+                                                <img width="350" height="220" src="{{ url('storage')}}/{{ $item->photo_1 }}" alt="">
                                             </div>
                                             <div>
                                                 <br>
@@ -289,7 +289,7 @@
                                                 <!-- <p>{{ $item->detail }}</p> -->
                                                 <br>
                                             </div>
-                                            <div>
+                                            <div class="text-right">
                                                 <a href="{{ url('/travel/' . $item->id) }}" title="View Travel"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> ดูข้อมูล</button></a>
                                                 @if(Auth::check())
                                                     @if(Auth::user()->profile->role == "คนดูแล" )
