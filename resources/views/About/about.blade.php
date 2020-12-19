@@ -5,13 +5,20 @@
     <div class="about-area">
         <div class="container">
                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <div class="about-right">
+                            <div style="border-radius: 25px;" class="about-img bg-white">
+                                <img style="padding: 20px; border-radius: 80px;" src="{{ asset('/img/klongarang/P1010114.JPG') }}" alt="" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
                     <div class="col-lg-8">
                         <!-- Trending Tittle -->
                                 <div class="about-right mb-90">
-                                    <div style="border-radius: 25px;" class="about-img bg-white">
-                                        <img style="padding: 20px; border-radius: 100px;" src="{{ asset('/img/klongarang/P1010114.JPG') }}" alt="" >
-                                    </div>
                                     <div class="section-tittle mb-30 pt-30">
+                                        <br><br>
                                         <h2 style="text-shadow: 1px 1px #FF0000 " class="text-white">ที่มาของโครงการ</h2>
                                     </div>
                                     <div>
@@ -50,42 +57,33 @@
                     </div>
                     <div class="col-lg-4">
                         <!-- Flow Socail -->
-                        <div class="single-follow mb-45">
-                            <div class="single-box">
-                                <div class="follow-us d-flex align-items-center">
-                                    <div class="follow-social">
-                                    </div>
-                                    <div class="follow-count">  
-                                        <span>ข้อมูล</span>
-                                    </div>
-                                </div> 
-                                <div class="follow-us d-flex align-items-center">
-                                    <div class="follow-social">
-                                    </div>
-                                    <div class="follow-count">
-                                        <span>ข้อมูล</span>
-                                    </div>
+                        <br><br><br><br><br><br>
+                        <center>
+                            <div class="trand-right-single d-flex d-lg-block">
+                                <div class="trand-right-img">
+                                    <a href="details.html">
+                                        <img style="border-radius: 10px;" width="165" height="110" src="{{ asset('/img/klongarang/P1010061.JPG') }}" alt="">
+                                    </a>
+                                    <br><br>
+                                    <h4><a href="details.html">ศึกษาดูงาน ณ บ้านวังรี</a></h4>
                                 </div>
-                                    <div class="follow-us d-flex align-items-center">
-                                    <div class="follow-social">
-                                    </div>
-                                    <div class="follow-count">
-                                        <span>ข้อมูล</span>
-                                    </div>
-                                </div>
-                                <div class="follow-us d-flex align-items-center">
-                                    <div class="follow-social">
-                                    </div>
-                                    <div class="follow-count">
-                                        <span>ข้อมูล</span>
-                                    </div>
+                            </div> 
+                            <hr>
+                            <div class="trand-right-single d-flex d-lg-block">
+                                <div class="trand-right-img">
+                                    <a href="details.html">
+                                        <img style="border-radius: 10px;" width="165" height="110" src="{{ asset('/img/klongarang/IMG20200815142423.jpg') }}" alt="">
+                                    </a>
+                                    <br><br>
+                                    <h4><a href="details.html">ประชุมผู้นำและตัวแทนชาวบ้าน</a></h4>
                                 </div>
                             </div>
-                        </div>
-                        <!-- New Poster -->
-                        <div class="news-poster d-none d-lg-block">
-                            <img src="{{ asset('/img/klongarang/news_card.png') }}" alt="">
-                        </div>
+                            <hr>
+                            <!-- New Poster -->
+                            <div class="news-poster d-none d-lg-block">
+                                <img src="{{ asset('/img/klongarang/news_card.png') }}" alt="">
+                            </div>
+                        </center>
                     </div>
                </div>
         </div>

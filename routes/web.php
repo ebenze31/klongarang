@@ -50,3 +50,4 @@ Route::resource('homestay', 'HomestayController')->except(['create' , 'edit' , '
 Route::resource('trip', 'TripController')->except(['create' , 'edit' ]);
 Route::resource('award', 'AwardController')->except(['create' , 'edit', 'show' , 'show' ]);
 Route::resource('community', 'CommunityController')->except(['create' , 'edit' , 'show']);
+Route::resource('review', 'ReviewController');

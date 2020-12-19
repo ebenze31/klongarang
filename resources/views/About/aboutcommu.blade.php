@@ -9,7 +9,7 @@
                     <div class="col-lg-8">
                         <div class="about-right">
                             <div style="border-radius: 25px;" class="about-img bg-white">
-                                <img style="padding: 20px; border-radius: 100px;" src="{{ asset('/img/klongarang/P1010100.1.JPG') }}" alt="" >
+                                <img style="padding: 20px; border-radius: 80px;" src="{{ asset('/img/klongarang/P1010100.1.JPG') }}" alt="" >
                             </div>
                         </div>
                     </div>
