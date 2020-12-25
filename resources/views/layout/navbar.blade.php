@@ -25,13 +25,13 @@
             <div style="background-color:#a0ccee " class="header-bottom header-sticky">
                   <div class="container">
                       <div class="row align-items-center">
-                          <div class="col-xl-10 col-lg-10 col-md-12 header-flex">
+                          <div class="col-xl-10 col-lg-10 col-md-12 ">
                               <!-- sticky -->
-                                  <div class="sticky-logo">
+                                  <div class="sticky-logo f-right">
                                       <a href="{{ url('/home') }}"><img src="{{ asset('/img/klongarang/logologo.png') }}" alt=""></a>
                                   </div>
                               <!-- Main-menu -->
-                              <div class="main-menu d-none d-md-block">
+                              <div class="main-menu d-md-block">
                                   <nav>                  
                                       <ul id="navigation">    
                                           <li><a href="{{ url('/home') }}"><i style="color: #ed5565;" class="fas fa-home"></i> หน้าแรก</a></li>
