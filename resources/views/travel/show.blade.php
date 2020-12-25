@@ -91,24 +91,26 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="weekly2-single">
-                            <div class="weekly2-img">
-                                <a href="{{ url('/trip/' . $random->id) }}">
-                                    <img height="160" src="{{ url('storage')}}/{{ $random->cover_photo }}" alt="">
-                                </a>
-                                <hr>
-                            </div>
-                            <div class="weekly2-caption">
-                                @if($random->one_day_trip == "on" )
-                                    <span style="border-radius: 10px;font-size: 15px;" class="color2">&nbsp;&nbsp;&nbsp;โปรแกรม 1 วัน&nbsp;&nbsp;&nbsp;</span>
-                                @endif
-                                @if($random->two_days_trip == "on" )
-                                    <span style="border-radius: 10px;font-size: 15px;" class="color3">&nbsp;&nbsp;&nbsp;โปรแกรม 2 วัน 1 คืน&nbsp;&nbsp;&nbsp;</span>
-                                @endif
-                                <br><br>
-                                <h4 style="text-shadow: 1px 1px #FF0000 " class="text-white">{{ $random->name }}</h4>
-                                <hr>
-                                {{ $random->title }}
-                            </div>
+                            @if(!empty($keyword))
+                                <div class="weekly2-img">
+                                    <a href="{{ url('/trip/' . $random->id) }}">
+                                        <img height="160" src="{{ url('storage')}}/{{ $random->cover_photo }}" alt="">
+                                    </a>
+                                    <hr>
+                                </div>
+                                <div class="weekly2-caption">
+                                    @if($random->one_day_trip == "on" )
+                                        <span style="border-radius: 10px;font-size: 15px;" class="color2">&nbsp;&nbsp;&nbsp;โปรแกรม 1 วัน&nbsp;&nbsp;&nbsp;</span>
+                                    @endif
+                                    @if($random->two_days_trip == "on" )
+                                        <span style="border-radius: 10px;font-size: 15px;" class="color3">&nbsp;&nbsp;&nbsp;โปรแกรม 2 วัน 1 คืน&nbsp;&nbsp;&nbsp;</span>
+                                    @endif
+                                    <br><br>
+                                    <h4 style="text-shadow: 1px 1px #FF0000 " class="text-white">{{ $random->name }}</h4>
+                                    <hr>
+                                    {{ $random->title }}
+                                </div>
+                            @endif
                         </div> 
                     </div>
                 </div>
