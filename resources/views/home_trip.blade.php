@@ -1,4 +1,38 @@
 @php
+$id_trip_1 = "";
+$name_trip_1 = "";
+$title_trip_1 = "";
+$one_day_trip_1 = "";
+$two_days_trip_1 = "";
+$cover_photo_trip_1 = "";
+
+$id_trip_2 = "";
+$name_trip_2 = "";
+$title_trip_2 = "";
+$one_day_trip_2 = "";
+$two_days_trip_2 = "";
+$cover_photo_trip_2 = "";
+
+$id_trip_3 = "";
+$name_trip_3 = "";
+$title_trip_3 = "";
+$one_day_trip_3 = "";
+$two_days_trip_3 = "";
+$cover_photo_trip_3 = "";
+
+$id_trip_4 = "";
+$name_trip_4 = "";
+$title_trip_4 = "";
+$one_day_trip_4 = "";
+$two_days_trip_4 = "";
+$cover_photo_trip_4 = "";
+
+$id_trip_5 = "";
+$name_trip_5 = "";
+$title_trip_5 = "";
+$one_day_trip_5 = "";
+$two_days_trip_5 = "";
+$cover_photo_trip_5 = "";
 
 $sql_trip = "SELECT id, name, title, one_day_trip, two_days_trip, cover_photo FROM trips ORDER BY RAND() LIMIT 0,1";
 $result_trip = $conn->query($sql_trip);

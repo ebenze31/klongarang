@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 <head>
   @include('layout.head')
 </head> 
-<body id="page-top" style="background-image: url('https://ak.picdn.net/shutterstock/videos/2559182/thumb/1.jpg');
+<body id="page-top" style="background-image: url('{{ asset('/img/klongarang/background.jpg') }}');
   background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;

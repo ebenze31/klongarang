@@ -40,9 +40,14 @@ class ReviewController extends Controller
         // REVIEW
         $total_score = DB::table('reviews')->sum('get_score');
         $total_user = DB::table('reviews')->count();
-        $star = $total_score/$total_user;
 
-        return view('review.index', compact('review' ,'star' , 'total_user'));
+        if (!empty($total_score)) {
+            $star = $total_score/$total_user;
+        }else {
+            $star = 0;
+        }
+
+        return view('review.index', compact('review' , 'star' , 'total_user'));
     }
 
     /**

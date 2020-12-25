@@ -6,7 +6,7 @@
 $servername = "127.0.0.1";
 $username = "root";
 $password = "";
-$dbname = "klongarang2";
+$dbname = "klongarang";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -179,7 +179,7 @@ if ($result_p2->num_rows > 0) {
                                     <!-- <iframe class="embed-responsive-item" src="{{ asset('/img/klongarang/VID20200829133405.mp4') }}"></iframe> -->
                                 
                                     <video class="video-fluid z-depth-1" autoplay loop controls muted>
-                                        <source src="{{ asset('/img/klongarang/บ้านคลองอาราง จังหวัดสระแก้ว.mp4') }}" type="video/mp4" />
+                                        <source src="{{ asset('/img/klongarang/วิดีโอบ้านคลองอาราง.mp4') }}" type="video/mp4" />
                                     </video>
                                 </div>
                                 <!-- <img src="{{ asset('/img/klongarang/บ่อทอง.JPG') }}" alt=""> -->

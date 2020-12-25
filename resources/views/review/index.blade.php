@@ -26,7 +26,10 @@
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                     @break
                             @endswitch
-                            @if($star < 1 )
+                            @if($star == 0 )
+                                <span>&nbsp;</span>
+                            @endif
+                            @if($star < 1 && $star > 0 )
                                 <i class="fas fa-star-half"></i>
                             @endif
                             @if($star > 1 && $star < 2)

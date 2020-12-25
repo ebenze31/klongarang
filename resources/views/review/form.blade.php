@@ -10,7 +10,7 @@
             <div class="form-group {{ $errors->has('get_score') ? 'has-error' : ''}}">
                 <h5 for="get_score" class="control-label">{{ 'ให้คะแนนความประทับใจ' }}<span style="color: #FF0033;font-size: 13px;"> *</span></h5>
                 <br>
-                <input class="form-control" name="get_score" type="float" id="get_score" value="{{ isset($review->get_score) ? $review->get_score : ''}}" min="1" max="5" placeholder="ใส่คะแนน 1-5"required>
+                <input class="form-control" name="get_score" type="float" id="get_score" value="{{ isset($review->get_score) ? $review->get_score : ''}}" min="1" max="5" placeholder="ใส่คะแนน 1-5 (5 คือมากทีสุด)"required>
                 {!! $errors->first('get_score', '<p class="help-block">:message</p>') !!}
             </div>
             <br>
