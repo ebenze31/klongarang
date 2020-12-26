@@ -4,8 +4,8 @@
 
 @php
 $servername = "127.0.0.1";
-$username = "klongarang";
-$password = "tt31082541";
+$username = "root";
+$password = "";
 $dbname = "klongarang";
 
 // Create connection
