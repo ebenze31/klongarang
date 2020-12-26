@@ -25,7 +25,7 @@
                <div style="background-color:#a0ccee " class="header-bottom header-sticky">
                     <div class="container">
                         <div class="row align-items-center">
-                            <div class="col-xl-10 col-lg-10 col-md-12 header-flex">
+                            <div class="col-xl-12 col-lg-12 col-md-12 header-flex">
                                 <!-- sticky -->
                                     <div class="sticky-logo">
                                         <a href="{{ url('/home') }}"><img src="{{ asset('/img/klongarang/logologo.png') }}" alt=""></a>
