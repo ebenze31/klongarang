@@ -41,6 +41,7 @@ Route::middleware(['auth', 'role:คนดูแล'])->group(function () {
 	Route::resource('award', 'AwardController');
 	Route::resource('trip', 'TripController');
 	Route::resource('community', 'CommunityController');
+	Route::resource('review', 'ReviewController');
 
 });
 

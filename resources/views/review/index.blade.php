@@ -118,11 +118,11 @@
                                             <!-- <a href="{{ url('/review/' . $item->id) }}" title="View Review"><button class="btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/review/' . $item->id . '/edit') }}" title="Edit Review"><button class="btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a> -->
 
-                                            <form method="POST" action="{{ url('/review' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                            <!-- <form method="POST" action="{{ url('/review' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
                                                 <button type="submit" class="btn-danger btn-sm" title="Delete Review" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
-                                            </form>
+                                            </form> -->
                                         </div>
                                         <br>
                                     @endif
