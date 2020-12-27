@@ -34,10 +34,6 @@
 
         <div><br><br><br></div>
 
-        <div class="form-group">
-            <input class="btn btn-primary" type="submit" value="{{ $formMode === 'edit' ? 'แก้ไขข้อมูล' : 'เพิ่มข้อมูล' }}">
-        </div>
-
     </div>
 
     <div class="col-lg-6 col-md-6">
@@ -66,6 +62,10 @@
             <label for="photo_5" class="control-label">{{ 'รูปที่ 5' }}</label>
             <input class="form-control" name="photo_5" type="file" id="photo_5" value="{{ isset($travel->photo_5) ? $travel->photo_5 : ''}}" >
             {!! $errors->first('photo_5', '<p class="help-block">:message</p>') !!}
+        </div>
+
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="{{ $formMode === 'edit' ? 'แก้ไขข้อมูล' : 'เพิ่มข้อมูล' }}">
         </div>
 
     </div>

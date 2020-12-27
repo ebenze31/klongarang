@@ -5,7 +5,7 @@
 $servername = "127.0.0.1";
 $username = "root";
 $password = "";
-$dbname = "klongarang2";
+$dbname = "klongarang";
 
 $photo_1 = " ";
 $photo_2 = " ";
