@@ -178,7 +178,7 @@ if ($result_p2->num_rows > 0) {
                             <div class="trend-top-img">
                                 <div class="embed-responsive embed-responsive-16by9">
                                     <!-- <iframe class="embed-responsive-item" src="{{ asset('/img/klongarang/VID20200829133405.mp4') }}"></iframe> -->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/qtu2RyUPcfE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe style="background-color: #8e8e8e;border: 0px solid #424242;border-radius: 5px;" width="570" height="320" src="https://www.youtube.com/embed/qtu2RyUPcfE?autoplay=1"></iframe>
                                     <!-- <video class="video-fluid z-depth-1" autoplay loop controls muted>
                                         <source src="{{ asset('/img/klongarang/วิดีโอบ้านคลองอาราง.mp4') }}" type="video/mp4" />
                                     </video> -->
