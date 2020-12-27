@@ -267,16 +267,16 @@ if ($result6->num_rows > 0) {
                                 <a href="http://line.me/ti/p/~0623894316" target="_blank"><img src="{{ asset('/img/icon/icon-line.png') }}" alt="">
                             </div>
                             <div class="follow-count">
-                                <span>ID: </span>
+                                <span>คุณบอล </span>
                             </div>
                             </a>
                         </div>
-                            <div class="follow-us d-flex align-items-center">
+                        <div class="follow-us d-flex align-items-center">
                             <div class="follow-social">
-                                <a href="mailto:bb@gmail.com" target="_blank"><img src="{{ asset('/img/icon/icon-mail.png') }}" alt="">
+                                <a href="tel:0861219718" target="_blank"><img src="{{ asset('/img/icon/icon-tel2.png') }}" alt="">
                             </div>
                             <div class="follow-count">
-                                <span>Mail</span>
+                                <span>086-1219718</span>
                             </div>
                             </a>
                         </div>

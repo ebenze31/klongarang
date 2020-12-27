@@ -42,9 +42,9 @@
                                             <li><a >ติดต่อ <i style="color: #FF4500;" class="fas fa-caret-down"></i> </a>
                                                 <ul class="submenu">
                                                     <li><a href="https://www.facebook.com/%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87-470519779751019" target="_blank"><i style="color: #1E90FF;" class="fab fa-facebook"></i> : บ้านคลองอาราง</a></li>
-                                                    <li><a href="mailto:bb@gmail.com" target="_blank"><i style="color: #FF0000;" class="fas fa-paper-plane"></i> : E-mail</a></li>
-                                                    <li><a href="tel:0623894316" target="_blank"><i style="color: #0099FF;" class="fas fa-phone-volume"></i> : 062-3894316</a></li>
-                                                    <li><a href="http://line.me/ti/p/~0623894316" target="_blank"><i style="color: #00CC33;" class="fab fa-line"></i> : ID:</a></li>
+                                                    <li><a href="http://line.me/ti/p/~0623894316" target="_blank"><i style="color: #00CC33;" class="fab fa-line"></i> : คุณบอล</a></li>
+                                                    <li><a href="tel:0861219718" target="_blank"><i style="color: #0099FF;" class="fas fa-phone-volume"></i> : 0861-219718</a></li>
+                                                    <li><a href="tel:0623894316" target="_blank"><i style="color: #FF0033;" class="fas fa-phone-volume"></i> : 062-3894316</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
