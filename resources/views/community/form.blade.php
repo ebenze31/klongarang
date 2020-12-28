@@ -231,9 +231,9 @@
                         <input class="form-control" name="rule_3" type="text" id="rule_3" value="{{ isset($community->rule_3) ? $community->rule_3 : ''}}" placeholder="คนที่ 3">
                         {!! $errors->first('rule_3', '<p class="help-block">:message</p>') !!}
                     </div>
-                    <div class="form-group {{ $errors->has('expand_4') ? 'has-error' : ''}}">
-                        <input class="form-control" name="expand_4" type="text" id="expand_4" value="{{ isset($community->expand_4) ? $community->expand_4 : ''}}" placeholder="คนที่ 4">
-                        {!! $errors->first('expand_4', '<p class="help-block">:message</p>') !!}
+                    <div class="form-group {{ $errors->has('rule_4') ? 'has-error' : ''}}">
+                        <input class="form-control" name="rule_4" type="text" id="rule_4" value="{{ isset($community->rule_4) ? $community->rule_4 : ''}}" placeholder="คนที่ 4">
+                        {!! $errors->first('rule_4', '<p class="help-block">:message</p>') !!}
                     </div>
                 </div>
             </div>
