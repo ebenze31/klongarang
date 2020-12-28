@@ -57,9 +57,11 @@
                                 <div class="carousel-item">
                                     <img height="100%" width="100%" src="{{ url('storage')}}/{{ $travel->photo_4 }}" alt="">
                                 </div>
+                                @if (!empty($photo_5))
                                 <div class="carousel-item">
                                     <img height="100%" width="100%" src="{{ url('storage')}}/{{ $travel->photo_5 }}" alt="">
                                 </div>
+                                @endif
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
