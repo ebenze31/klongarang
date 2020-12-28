@@ -359,7 +359,7 @@ if ($result_p2->num_rows > 0) {
 
     <!-- section Tittle -->
     <div class="row">
-        <div class="col-9"></div>
+        <div class="col-8"></div>
         <div class="col-2">
             @guest
                 <li class="nav-item">
@@ -389,6 +389,6 @@ if ($result_p2->num_rows > 0) {
                 </li>
             @endguest
         </div>
-        <div class="col-1"></div>
+        <div class="col-2"></div>
     </div>
 @endsection
