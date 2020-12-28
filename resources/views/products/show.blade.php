@@ -18,8 +18,6 @@
                             </form>
                         @endif
                     @endif
-                    <br/>
-                    <br/>
                     <center>
                         <div class="weekly-news-area pt-50">
                             <div class="container">
