@@ -80,7 +80,7 @@
                             </div>
                             <hr>
                             <!-- New Poster -->
-                            <div class="news-poster d-none d-lg-block">
+                            <div class="news-poster d-lg-block">
                                 <img src="{{ asset('/img/klongarang/news_card.png') }}" alt="">
                             </div>
                         </center>
