@@ -64,7 +64,7 @@
                                         <div class="single-what-news mb-100">
                                             <div class="card" style="background:none; border:none ">
                                                 <div class="what-img">
-                                                    <img width="350" height="220" src="{{ url('storage')}}/{{ $item->photo_1 }}" alt="">
+                                                    <img width="100%" height="100%" src="{{ url('storage')}}/{{ $item->photo_1 }}" alt="">
                                                 </div>
                                                 <div>
                                                     <br>
