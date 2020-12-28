@@ -24,6 +24,7 @@
                         <div class="weekly-news-area pt-50">
                             <div class="container">
                                <div class="weekly-wrapper">
+                                    <!-- แสดงเฉพาะคอม -->
                                     <div class="row d-none d-lg-block">
                                         <div class="col-2"></div>
                                         <div class="col-8">
@@ -31,9 +32,10 @@
                                         </div>
                                         <div class="col-2"></div>
                                     </div>
-                                    <div class="row d-none d-block d-md-none">
+                                    <!-- แสดงเฉพาะมือถือ -->
+                                    <div class="row d-block d-md-none">
                                         <div class="col-12">
-                                            <img style="border-radius: 15px;" width="100%" height="100%" src="{{ url('storage')}}/{{ $product->photo }}" alt="">
+                                            <img style="border-radius: 15px;" width="110%" height="110%" src="{{ url('storage')}}/{{ $product->photo }}" alt="">
                                         </div>
                                     </div>
                                </div>
