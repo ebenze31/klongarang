@@ -65,7 +65,7 @@
                                         <div class="single-what-news mb-100">
                                             <div class="card" style="background:none; border:none" >
                                                 <div>
-                                                    <img width="350" height="220" src="{{ url('storage')}}/{{ $item->photo }}" alt="">
+                                                    <img width="100%" height="100%" src="{{ url('storage')}}/{{ $item->photo }}" alt="">
                                                 </div><br>
                                                 <div>
                                                 @if($item->otop == "on" )
