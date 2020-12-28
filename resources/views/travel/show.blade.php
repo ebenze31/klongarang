@@ -15,28 +15,28 @@
                                 @endphp
                                 <div class="weekly-single">
                                     <div class="weekly-img">
-                                        <img height="220" src="{{ url('storage')}}/{{ $travel->photo_1 }}" alt="">
+                                        <img height="100%" width="100%" src="{{ url('storage')}}/{{ $travel->photo_1 }}" alt="">
                                     </div>
                                 </div> 
                                 <div class="weekly-single">
                                     <div class="weekly-img">
-                                            <img height="220" src="{{ url('storage')}}/{{ $travel->photo_2 }}" alt="">
+                                            <img height="100%" width="100%" src="{{ url('storage')}}/{{ $travel->photo_2 }}" alt="">
                                     </div>
                                 </div>
                                 <div class="weekly-single">
                                     <div class="weekly-img">
-                                            <img height="220" src="{{ url('storage')}}/{{ $travel->photo_3 }}" alt="">
+                                            <img height="100%" width="100%" src="{{ url('storage')}}/{{ $travel->photo_3 }}" alt="">
                                     </div>
                                 </div> 
                                 <div class="weekly-single">
                                     <div class="weekly-img">
-                                            <img height="220" src="{{ url('storage')}}/{{ $travel->photo_4 }}" alt="">
+                                            <img height="100%" width="100%" src="{{ url('storage')}}/{{ $travel->photo_4 }}" alt="">
                                     </div>
                                 </div>
                                 @if (!empty($photo_5))
                                 <div class="weekly-single">
                                     <div class="weekly-img">
-                                            <img height="220" src="{{ url('storage')}}/{{ $travel->photo_5 }}" alt="">
+                                            <img height="100%" width="100%" src="{{ url('storage')}}/{{ $travel->photo_5 }}" alt="">
                                     </div>
                                 </div>
                                 @endif
