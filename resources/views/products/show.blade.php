@@ -25,9 +25,11 @@
                             <div class="container">
                                <div class="weekly-wrapper">
                                     <div class="row">
-                                        <div class="col-12">
-                                            <img style="border-radius: 15px;" width="600" height="320" src="{{ url('storage')}}/{{ $product->photo }}" alt="">
+                                        <div class="col-2"></div>
+                                        <div class="col-8">
+                                            <img style="border-radius: 15px;" width="100%" height="100%" src="{{ url('storage')}}/{{ $product->photo }}" alt="">
                                         </div>
+                                        <div class="col-2"></div>
                                     </div>
                                </div>
                             </div>
@@ -78,7 +80,7 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="weekly2-single">
-                                                @if(!empty($keyword))
+                                                @if(!empty($random))
                                                     <div class="weekly2-img">
                                                         <a href="{{ url('/trip/' . $random->id) }}">
                                                             <img height="160" src="{{ url('storage')}}/{{ $random->cover_photo }}" alt="">

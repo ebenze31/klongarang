@@ -2,54 +2,96 @@
 
 @section('content')
 
-<div class="youtube-area">
-    <div class="container">
-        <div class="row">
-            <div class="weekly-news-area pt-50">
-                <div class="container">
-                   <div class="weekly-wrapper">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="weekly-news-active dot-style d-flex dot-style">
-                                    @php
-                                        $photo_5 = $travel->photo_5;
-                                    @endphp
-                                    <div class="weekly-single">
-                                        <div class="weekly-img">
-                                            <img height="235" src="{{ url('storage')}}/{{ $travel->photo_1 }}" alt="">
-                                        </div>
-                                    </div> 
-                                    <div class="weekly-single">
-                                        <div class="weekly-img">
-                                                <img height="235" src="{{ url('storage')}}/{{ $travel->photo_2 }}" alt="">
-                                        </div>
+<div class="container">
+    <div class="row">
+        <div class="weekly-news-area pt-50">
+            <div class="container">
+               <div class="weekly-wrapper">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="weekly-news-active dot-style d-flex dot-style">
+                                @php
+                                    $photo_5 = $travel->photo_5;
+                                @endphp
+                                <div class="weekly-single">
+                                    <div class="weekly-img">
+                                        <img height="220" src="{{ url('storage')}}/{{ $travel->photo_1 }}" alt="">
                                     </div>
-                                    <div class="weekly-single">
-                                        <div class="weekly-img">
-                                            <img height="235" src="{{ url('storage')}}/{{ $travel->photo_3 }}" alt="">
-                                        </div>
-                                    </div> 
-                                    <div class="weekly-single">
-                                        <div class="weekly-img">
-                                            <img height="235" src="{{ url('storage')}}/{{ $travel->photo_4 }}" alt="">
-                                        </div>
+                                </div> 
+                                <div class="weekly-single">
+                                    <div class="weekly-img">
+                                            <img height="220" src="{{ url('storage')}}/{{ $travel->photo_2 }}" alt="">
                                     </div>
-                                    @if (!empty($photo_5))
-                                    <div class="weekly-single">
-                                        <div class="weekly-img">
-                                            <img height="235" src="{{ url('storage')}}/{{ $travel->photo_5 }}" alt="">
-                                        </div>
-                                    </div> 
-                                    @endif
                                 </div>
-                            </div>
+                                <div class="weekly-single">
+                                    <div class="weekly-img">
+                                            <img height="220" src="{{ url('storage')}}/{{ $travel->photo_3 }}" alt="">
+                                    </div>
+                                </div> 
+                                <div class="weekly-single">
+                                    <div class="weekly-img">
+                                            <img height="220" src="{{ url('storage')}}/{{ $travel->photo_4 }}" alt="">
+                                    </div>
+                                </div>
+                                @if (!empty($photo_5))
+                                <div class="weekly-single">
+                                    <div class="weekly-img">
+                                            <img height="220" src="{{ url('storage')}}/{{ $travel->photo_5 }}" alt="">
+                                    </div>
+                                </div>
+                                @endif
+                            </div><br>
                         </div>
-                   </div>
-                </div>
+                    </div>
+               </div>
             </div>
         </div>
+
+
+        <!-- <div class="weekly-news-area pt-50">
+            <div class="container">
+               <div class="weekly-wrapper">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="weekly-news-active dot-style d-flex dot-style ">
+                                @php
+                                    $photo_5 = $travel->photo_5;
+                                @endphp
+                                <div class="weekly-single">
+                                    <div class="weekly-img">
+                                        <img height="235" src="{{ url('storage')}}/{{ $travel->photo_1 }}" alt="">
+                                    </div>
+                                </div> 
+                                <div class="weekly-single">
+                                    <div class="weekly-img">
+                                            <img height="235" src="{{ url('storage')}}/{{ $travel->photo_2 }}" alt="">
+                                    </div>
+                                </div>
+                                <div class="weekly-single">
+                                    <div class="weekly-img">
+                                        <img height="235" src="{{ url('storage')}}/{{ $travel->photo_3 }}" alt="">
+                                    </div>
+                                </div> 
+                                <div class="weekly-single">
+                                    <div class="weekly-img">
+                                        <img height="235" src="{{ url('storage')}}/{{ $travel->photo_4 }}" alt="">
+                                    </div>
+                                </div>
+                                @if (!empty($photo_5))
+                                <div class="weekly-single">
+                                    <div class="weekly-img">
+                                        <img height="235" src="{{ url('storage')}}/{{ $travel->photo_5 }}" alt="">
+                                    </div>
+                                </div> 
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div> -->
     </div>
-</div> 
+</div>
 <!-- About US Start -->
 <div class="about-area">
     <div class="container">
@@ -91,7 +133,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="weekly2-single">
-                            @if(!empty($keyword))
+                            @if(!empty($random))
                                 <div class="weekly2-img">
                                     <a href="{{ url('/trip/' . $random->id) }}">
                                         <img height="160" src="{{ url('storage')}}/{{ $random->cover_photo }}" alt="">

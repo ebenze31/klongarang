@@ -250,7 +250,7 @@
                     </div>
                 </div>
             </div>  
-
+            @if(!empty($random))
             <div class="col-lg-4">
                 <div class="single-follow mb-45">
                     <br><br><br><br>
@@ -258,6 +258,7 @@
                 </div>
                 <!-- New Poster -->
             </div>
+            @endif
         </div>
     </div>
 </div>
