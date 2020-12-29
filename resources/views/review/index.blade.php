@@ -106,19 +106,19 @@
                                 <br>
                                 <div class="col-md-12">
                                     @if(!empty($item->photo_1))
-                                    <img width="200" height="120" src="{{ url('/storage')}}/{{ $item->photo_1 }}" alt="">
+                                    <img width="200" height="120" src="{{ url('storage')}}/{{ $item->photo_1 }}" alt="">
                                     @endif
                                     @if(!empty($item->photo_2))
-                                    <img width="200" height="120" src="{{ url('/storage')}}/{{ $item->photo_2 }}" alt="">
+                                    <img width="200" height="120" src="{{ url('storage')}}/{{ $item->photo_2 }}" alt="">
                                     @endif
                                     @if(!empty($item->photo_3))
-                                    <img width="200" height="120" src="{{ url('/storage')}}/{{ $item->photo_3 }}" alt="">
+                                    <img width="200" height="120" src="{{ url('storage')}}/{{ $item->photo_3 }}" alt="">
                                     @endif
                                     @if(!empty($item->photo_4))
-                                    <img width="200" height="120" src="{{ url('/storage')}}/{{ $item->photo_4 }}" alt="">
+                                    <img width="200" height="120" src="{{ url('storage')}}/{{ $item->photo_4 }}" alt="">
                                     @endif
                                     @if(!empty($item->photo_5))
-                                    <img width="200" height="120" src="{{ url('/storage')}}/{{ $item->photo_5 }}" alt="">
+                                    <img width="200" height="120" src="{{ url('storage')}}/{{ $item->photo_5 }}" alt="">
                                     @endif
                                 </div>
                                 <br>
