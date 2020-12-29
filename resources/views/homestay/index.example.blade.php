@@ -97,7 +97,8 @@ if ($result6->num_rows > 0) {
 
 
 @endphp
-<section class="whats-news-area pt-50 pb-20">
+<!-- แสดงเฉพาะคอม -->
+<section class="whats-news-area pt-50 pb-20 d-none d-lg-block">
     <div class="container">
         <div class="row">
         <div class="col-lg-12">
@@ -107,12 +108,12 @@ if ($result6->num_rows > 0) {
                         <h2 style="text-shadow: 1px 1px #FF0000 " class="text-white">โฮมสเตย์</h2>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-8">
+                <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12">
                     <!-- // -->
                 </div>
-                <div class="col-lg-12">
+                <div class="col-lg-12 col-xs-12 col-sm-12">
                     <div class="row">
-                        <div style="z-index: 0;" class="col-lg-9 col-md-9">
+                        <div style="z-index: 0;" class="col-lg-9 col-md-9 col-sm-12">
                             <div style="background: #bbf1d7; border:none;" class="card ">
                                 <p style="color: #000; font-size: 19px; padding: 50px; padding-right: 200px">
                                     โฮมสเตย์ ความหมายคือ เป็นรูปแบบที่พักประเภทหนึ่งของการท่องเที่ยวแบบชนบท (Rural Tourism) และ การท่องเที่ยวเชิงนิเวศ บ้านพักที่อยู่ในชุมชนชนบทที่มีประชาชนเป็นเจ้าของบ้าน และประชาชนสมาชิกในครัวเรือนซึ่งอาศัยอยู่ประจำ และบ้านนั้นเป็นสมาชิกในรูปแบบของกลุ่ม ชมรม หรือว่าสหกรณ์ที่ร่วมจัดกันเป็นโฮมสเตย์ในชุมชน โดยนักท่องเที่ยวสามารถเข้าพักร่วมกับเจ้าของบ้าน และผู้เป็นเจ้าของบ้านเองก็มีความยินดีในการบริการ รับรองเรื่องห้องพัก อาหาร และกับนักท่องเที่ยว และเต็มใจ ที่จะรับนักท่องเที่ยวพร้อมทั้งถ่ายทอดประเพณีวัฒนธรรมอันดีงาม ของท้องถิ่นแก่นักท่องเที่ยวและพานักท่องเที่ยวเที่ยวชมแหล่งท่องเที่ยวและทำกิจกรรมต่าง ๆ เช่นเล่นน้าตก ขี่จักรยาน นั่งเรือเดินป่าศึกษาธรรมชาติและได้เรียนรู้วิถีชีวิตของชุมชนในถิ่นนั้นๆได้ด้วย
@@ -121,7 +122,7 @@ if ($result6->num_rows > 0) {
                                 </p>
                             </div>
                         </div>
-                        <div style="position:absolute; right:0; z-index: 1;" class="col-lg-5 col-md-5">
+                        <div style="position:absolute; right:0; z-index: 1;" class="col-sm-12 col-lg-5 col-md-5 col-xs-12">
                             <br><br><br>
                             <div style="background: none; border:none;" class="card">
                                 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -157,20 +158,20 @@ if ($result6->num_rows > 0) {
     </div>
 </section>
 
-<div class="recent-articles">
+<div class="recent-articles d-none d-lg-block">
     <div class="container">
        <div class="recent-wrapper">
         <hr>
             <!-- section Tittle -->
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12 col-sm-12 ">
                     <div class="section-tittle mb-30">
                         <h3 style="text-shadow: 1px 1px #FF0000 " class="text-white">บรรยากาศโฮมสเตย์</h3>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 col-sm-12 ">
                     <div class="recent-active dot-style d-flex dot-style">
 
                         <div class="single-recent mb-100">
@@ -226,15 +227,16 @@ if ($result6->num_rows > 0) {
             </div>
        </div>
     </div>
-</div>           
-<section class="whats-news-area pt-50 pb-20">
+</div>  
+
+<section class="whats-news-area pt-50 pb-20 d-none d-lg-block">
     <div class="container">
         <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12 col-sm-12 ">
             <div class="row d-flex justify-content-between">
-                <div class="col-lg-12">
+                <div class="col-lg-12 col-sm-12 ">
                     <div class="row">
-                        <div style="position:absolute; right:0; z-index: 0;" class="col-lg-9 col-md-9">
+                        <div style="position:absolute; right:0; z-index: 0;" class="col-lg-9 col-md-9 col-sm-12 ">
                             <div style="background: #f0f6e4; border:none;" class="card ">
                                 <p style="color: #000; font-size: 19px; padding: 50px; padding-left: 200px">
                                     โฮมสเตย์ ความหมายคือ เป็นรูปแบบที่พักประเภทหนึ่งของการท่องเที่ยวแบบชนบท (Rural Tourism) และ การท่องเที่ยวเชิงนิเวศ บ้านพักที่อยู่ในชุมชนชนบทที่มีประชาชนเป็นเจ้าของบ้าน และประชาชนสมาชิกในครัวเรือนซึ่งอาศัยอยู่ประจำ และบ้านนั้นเป็นสมาชิกในรูปแบบของกลุ่ม ชมรม หรือว่าสหกรณ์ที่ร่วมจัดกันเป็นโฮมสเตย์ในชุมชน โดยนักท่องเที่ยวสามารถเข้าพักร่วมกับเจ้าของบ้าน และผู้เป็นเจ้าของบ้านเองก็มีความยินดีในการบริการ รับรองเรื่องห้องพัก อาหาร และกับนักท่องเที่ยว และเต็มใจ ที่จะรับนักท่องเที่ยวพร้อมทั้งถ่ายทอดประเพณีวัฒนธรรมอันดีงาม ของท้องถิ่นแก่นักท่องเที่ยวและพานักท่องเที่ยวเที่ยวชมแหล่งท่องเที่ยวและทำกิจกรรมต่าง ๆ เช่นเล่นน้าตก ขี่จักรยาน นั่งเรือเดินป่าศึกษาธรรมชาติและได้เรียนรู้วิถีชีวิตของชุมชนในถิ่นนั้นๆได้ด้วย
@@ -243,7 +245,7 @@ if ($result6->num_rows > 0) {
                                 </p>
                             </div>
                         </div>
-                        <div style="z-index: 1;" class="col-lg-5 col-md-5">
+                        <div style="z-index: 1;" class="col-lg-5 col-md-5 col-sm-12 ">
                             <br><br><br>
                             <div style="background: none; border:none;" class="card">
                                 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -278,7 +280,8 @@ if ($result6->num_rows > 0) {
         </div>
     </div>
 </section>
-<div class="container">
+
+<div class="container d-none d-lg-block">
     <div class="row">
         <div class="col-8">
             
@@ -289,13 +292,122 @@ if ($result6->num_rows > 0) {
         </div>
     </div>
 </div>
+
+<!-- แสดงเฉพาะมือถือ -->
+<div class="col-lg-4 col-md-4 d-block d-md-none">
+    <div class="section-tittle mb-30">
+        <h2 style="text-shadow: 1px 1px #FF0000 " class="text-white">โฮมสเตย์</h2>
+    </div>
+</div>
+<div class="recent-articles d-block d-md-none">
+    <div class="container">
+       <div class="recent-wrapper">
+        <hr>
+            <!-- section Tittle -->
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 ">
+                    <div class="section-tittle mb-30">
+                        <h3 style="text-shadow: 1px 1px #FF0000 " class="text-white">บรรยากาศโฮมสเตย์</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 ">
+                    <div class="recent-active dot-style d-flex dot-style">
+                        <div class="single-recent mb-100">
+                            <div class="what-img">
+                                <img height="200" style="padding: 10px; border-radius: 20px;z-index: 5;" src="{{ url('storage')}}/{{ $photo_1 }}" alt="">
+                            </div>
+                            <div style="border-radius: 15px;z-index: 0; background-color: #fff">
+                                <h4 style="padding: 15px;">"บรรยากาศ<b style="color: #ed7236"> ภายนอก </b>โฮมสเตย์"</h4>
+                            </div>
+                        </div>
+                        <div class="single-recent mb-100">
+                            <div class="what-img">
+                                <img height="200" style="padding: 10px; border-radius: 20px;z-index: 5;" src="{{ url('storage')}}/{{ $photo_2 }}" alt="">
+                            </div>
+                            <div style="border-radius: 15px;z-index: 0; background-color: #fff">
+                                <h4 style="padding: 15px;">"บรรยากาศ<b style="color: #ed7236"> ภายนอก </b>โฮมสเตย์"</h4>
+                            </div>
+                        </div>
+                        <div class="single-recent mb-100">
+                            <div class="what-img">
+                                <img height="200" style="padding: 10px; border-radius: 20px;z-index: 5;" src="{{ url('storage')}}/{{ $photo_3 }}" alt="">
+                            </div>
+                            <div style="border-radius: 15px;z-index: 0; background-color: #fff">
+                                <h4 style="padding: 15px;">"บรรยากาศ<b style="color: #ed7236"> ภายนอก </b>โฮมสเตย์"</h4>
+                            </div>
+                        </div>
+                        <div class="single-recent mb-100">
+                            <div class="what-img">
+                                <img height="200" style="padding: 10px; border-radius: 20px;z-index: 5;" src="{{ url('storage')}}/{{ $photo_4 }}" alt="">
+                            </div>
+                            <div style="border-radius: 15px;z-index: 0; background-color: #fff">
+                                <h4 style="padding: 15px;">"บรรยากาศ<b style="color: #ed7236"> ภายใน </b>โฮมสเตย์"</h4>
+                            </div>
+                        </div>
+                        <div class="single-recent mb-100">
+                            <div class="what-img">
+                                <img height="200" style="padding: 10px; border-radius: 20px;z-index: 5;" src="{{ url('storage')}}/{{ $photo_5 }}" alt="">
+                            </div>
+                            <div style="border-radius: 15px;z-index: 0; background-color: #fff">
+                                <h4 style="padding: 15px;">"บรรยากาศ<b style="color: #ed7236"> ภายใน </b>โฮมสเตย์"</h4>
+                            </div>
+                        </div>
+                        <div class="single-recent mb-100">
+                            <div class="what-img">
+                                <img height="200" style="padding: 10px; border-radius: 20px;z-index: 5;" src="{{ url('storage')}}/{{ $photo_6 }}" alt="">
+                            </div>
+                            <div style="border-radius: 15px;z-index: 0; background-color: #fff">
+                                <h4 style="padding: 15px;">"บรรยากาศ<b style="color: #ed7236"> ภายใน </b>โฮมสเตย์"</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+</div>
+<section class="whats-news-area pt-50 pb-20 d-block d-md-none">
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-12">
+            <div class="row d-flex justify-content-between">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <div style="background: #bbf1d7; border:none;" class="card ">
+                                <p style="color: #000; font-size: 17px; padding: 30px;">
+                                    โฮมสเตย์ ความหมายคือ เป็นรูปแบบที่พักประเภทหนึ่งของการท่องเที่ยวแบบชนบท (Rural Tourism) และ การท่องเที่ยวเชิงนิเวศ บ้านพักที่อยู่ในชุมชนชนบทที่มีประชาชนเป็นเจ้าของบ้าน และประชาชนสมาชิกในครัวเรือนซึ่งอาศัยอยู่ประจำ และบ้านนั้นเป็นสมาชิกในรูปแบบของกลุ่ม ชมรม หรือว่าสหกรณ์ที่ร่วมจัดกันเป็นโฮมสเตย์ในชุมชน โดยนักท่องเที่ยวสามารถเข้าพักร่วมกับเจ้าของบ้าน และผู้เป็นเจ้าของบ้านเองก็มีความยินดีในการบริการ รับรองเรื่องห้องพัก อาหาร และกับนักท่องเที่ยว และเต็มใจ ที่จะรับนักท่องเที่ยวพร้อมทั้งถ่ายทอดประเพณีวัฒนธรรมอันดีงาม ของท้องถิ่นแก่นักท่องเที่ยวและพานักท่องเที่ยวเที่ยวชมแหล่งท่องเที่ยวและทำกิจกรรมต่าง ๆ เช่นเล่นน้าตก ขี่จักรยาน นั่งเรือเดินป่าศึกษาธรรมชาติและได้เรียนรู้วิถีชีวิตของชุมชนในถิ่นนั้นๆได้ด้วย
+
+                                    ซึ่งข้อสำพื้นฐานของ Homestay นั้นถือว่า ถือว่า ผู้มาพักเป็นแขกของบ้าน มิใช่นักท่องเที่ยว ดังนั้นหากใครที่ไปพักค้างแรมที่พักแบบ โฮมสเตย์ จะถือว่าเป็นแขกของบ้านพักนั้นๆ
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+<div class="container d-block d-md-none">
+    <div class="row">
+        <div class="col-12">
+            <br><br>
+            @include('contact')
+        </div>
+    </div>
+</div>
+
 <br>
 <hr>
+<!-- คนดูแล -->
     @if(Auth::check())
         @if(Auth::user()->profile->role == "คนดูแล" )
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 col-sm-12 ">
                         <div class="card">
                             <h3 class="card-header">โฮมสเตย์</h3>
                             <div class="card-body">
