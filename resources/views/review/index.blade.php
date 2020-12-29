@@ -106,7 +106,7 @@
                                 <br>
                                 <div class="col-md-12">
                                     @if(!empty($item->photo_1))
-                                    <img width="200" height="120" src="{{ url('storage')}}/{{ $item->photo_1 }}" alt="">
+                                    <img width="200" height="120" src="{{ asset('/img/klongarang/background.jpg') }}" alt="">
                                     @endif
                                     @if(!empty($item->photo_2))
                                     <img width="200" height="120" src="{{ url('storage')}}/{{ $item->photo_2 }}" alt="">
