@@ -8,8 +8,11 @@
                     <div class="col-lg-2"></div>
                     <div class="col-lg-8">
                         <div class="about-right">
-                            <div style="border-radius: 25px;" class="about-img bg-white">
-                                <img style="padding: 20px; border-radius: 80px;" src="{{ asset('/img/klongarang/P1010114.JPG') }}" alt="" >
+                            <div style="border-radius: 25px;" class="about-img bg-white d-none d-lg-block">
+                                <img style="padding: 20px; border-radius: 80px;" src="{{ asset('/img/klongarang/ปกโครงการ.jpg') }}" alt="" >
+                            </div>
+                            <div style="border-radius: 25px;" class="about-img bg-white d-block d-md-none">
+                                <img style="padding: 10px; border-radius: 25px;" src="{{ asset('/img/klongarang/ปกโครงการ.jpg') }}" alt="" >
                             </div>
                         </div>
                     </div>
