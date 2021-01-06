@@ -242,7 +242,7 @@ if ($result_p2->num_rows > 0) {
                         <br><br>
                         <div class="trand-right-single d-flex">
                             <div class="trand-right-img">
-                                <img width="200" height="110" src="{{ asset('/img/klongarang/P1010061.JPG') }}" alt="">
+                                <img width="200" height="110" src="{{ asset('/img/klongarang/วังรี.jpg') }}" alt="">
                             </div>
                             <div class="trand-right-cap">
                                 <h4><a href="details.html">ศึกษาดูงาน ณ บ้านวังรี</a></h4>
@@ -250,7 +250,7 @@ if ($result_p2->num_rows > 0) {
                         </div> 
                         <div class="trand-right-single d-flex">
                             <div class="trand-right-img">
-                                <img width="200" height="110" src="{{ asset('/img/klongarang/IMG20200815142423.jpg') }}" alt="">
+                                <img width="200" height="110" src="{{ asset('/img/klongarang/ประชุม.jpg') }}" alt="">
                             </div>
                             <div class="trand-right-cap">
                                 <h4><a href="details.html">ประชุมผู้นำและตัวแทนชาวบ้าน</a></h4>
