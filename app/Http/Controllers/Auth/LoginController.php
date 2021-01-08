@@ -87,6 +87,12 @@ class LoginController extends Controller
 
             $user->save();
         }
+
+        $profile = Profile::create([
+            'role' => 'guest',
+            'user_id' => $user->id,
+        ]);
+        
         //LOGIN
         Auth::login($user);
     }
