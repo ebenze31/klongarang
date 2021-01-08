@@ -66,7 +66,7 @@
                         </div>
                     </form>
                     <br>
-                    <div class="col-md-12">
+                    <div class="col-md-12 d-none d-lg-block">
                         <center>
                             <a href="{{ route('login.facebook') }}"><img width="160" height="60" src="{{ asset('/img/icon/fb.png') }}"></a>
                         </center>
