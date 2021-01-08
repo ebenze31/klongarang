@@ -52,3 +52,7 @@ Route::resource('trip', 'TripController')->except(['create' , 'edit' ]);
 Route::resource('award', 'AwardController')->except(['create' , 'edit', 'show' , 'show' ]);
 Route::resource('community', 'CommunityController')->except(['create' , 'edit' , 'show']);
 Route::resource('review', 'ReviewController');
+
+// Facebook login
+Route::get('login/facebook','Auth\LoginController@redirectToFacebook')->name('login.facebook');
+Route::get('login/facebook/callback','Auth\LoginController@handleFacebookCallback');

@@ -37,4 +37,55 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+
+    // Facebook login
+    public function redirectToFacebook()
+    {
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    // Facebook callback
+    public function handleFacebookCallback()
+    {
+        $user = Socialite::driver('facebook')->user();
+        // print_r($user);
+        $this->_registerOrLoginUser($user);
+
+        // Return home after login
+        return redirect()->route('home');
+    }
+    
+    protected function _registerOrLoginUser($data)
+    {
+        //GET USER 
+        $user = User::where('email', '=', $data->email)->first();
+
+        if (!$user) {
+            //CREATE NEW USER
+            $user = new User();
+            $user->name = $data->name;
+            $user->provider_id = $data->id;
+
+            if (!empty($data->email)) {
+                $user->username = $data->email;
+                $user->email = $data->email;
+            }
+            if (!empty($data->avatar)) {
+                $user->avatar = $data->avatar;
+            }
+
+            if (empty($data->email)) {
+                $user->username = $data->name;
+                $user->email = "";
+            }
+            if (empty($data->avatar)) {
+                $user->avatar = "";
+            }
+
+            $user->save();
+        }
+        //LOGIN
+        Auth::login($user);
+    }
 }
