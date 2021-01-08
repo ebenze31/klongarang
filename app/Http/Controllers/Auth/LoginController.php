@@ -72,7 +72,6 @@ class LoginController extends Controller
             $user->provider_id = $data->id;
 
             if (!empty($data->email)) {
-                $user->username = $data->email;
                 $user->email = $data->email;
             }
             if (!empty($data->avatar)) {
@@ -80,7 +79,6 @@ class LoginController extends Controller
             }
 
             if (empty($data->email)) {
-                $user->username = $data->name;
                 $user->email = "";
             }
             if (empty($data->avatar)) {
