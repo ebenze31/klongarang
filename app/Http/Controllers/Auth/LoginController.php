@@ -9,6 +9,7 @@ use Laravel\Socialite\Facades\Socialite;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Revolution\Line\Facades\Bot;
+use App\Profile;
 
 class LoginController extends Controller
 {
@@ -92,7 +93,7 @@ class LoginController extends Controller
             'role' => 'guest',
             'user_id' => $user->id,
         ]);
-        
+
         //LOGIN
         Auth::login($user);
     }
