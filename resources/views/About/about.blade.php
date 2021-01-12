@@ -68,13 +68,13 @@
                                         <img style="border-radius: 10px;" width="165" height="110" src="{{ asset('/img/klongarang/วังรี.jpg') }}" alt="">
                                     </a>
                                     <br><br>
-                                    <h4><a href="details.html">ศึกษาดูงาน ณ บ้านวังรี</a></h4>
+                                    <h4><a href="{{ url('/wangree') }}">ศึกษาดูงาน ณ บ้านวังรี</a></h4>
                                 </div>
                             </div> 
                             <hr>
                             <div class="trand-right-single d-flex d-lg-block">
                                 <div class="{{ url('/meeting') }}">
-                                    <a href="details.html">
+                                    <a href="{{ url('/meeting') }}">
                                         <img style="border-radius: 10px;" width="165" height="110" src="{{ asset('/img/klongarang/ประชุม.jpg') }}" alt="">
                                     </a>
                                     <br><br>
