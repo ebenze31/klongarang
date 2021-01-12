@@ -75,7 +75,7 @@
                             <div class="trand-right-single d-flex d-lg-block">
                                 <div class="{{ url('/meeting') }}">
                                     <a href="details.html">
-                                        <img style="border-radius: 10px;" width="165" height="110" src="{{ asset('/img/klongarang/IMG20200815142423.jpg') }}" alt="">
+                                        <img style="border-radius: 10px;" width="165" height="110" src="{{ asset('/img/klongarang/ประชุม.jpg') }}" alt="">
                                     </a>
                                     <br><br>
                                     <h4><a href="details.html">ประชุมผู้นำและตัวแทนชาวบ้าน</a></h4>
