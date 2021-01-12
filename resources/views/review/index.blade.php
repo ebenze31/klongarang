@@ -8,7 +8,56 @@
                     <div class="card-body">
                         <h2 style="text-shadow: 1px 1px #FF0000 " class="text-white">คะแนนความพอใจ</h2>
                         <br>
-                        <div style="color: #fdf744;">
+                        <!-- แสดงเฉพาะคอม -->
+                        <div class="row">
+                            <div class="col-9 d-none d-lg-block" style="color: #fdf744;">
+                                @switch($star)
+                                    @case ("1")
+                                        <i class="fas fa-star"></i>
+                                        @break
+                                    @case ("2")
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        @break
+                                    @case ("3")
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        @break
+                                    @case ("4") 
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        @break
+                                    @case ("5")
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        @break
+                                @endswitch
+                                @if($star == 0 )
+                                    <span>&nbsp;</span>
+                                @endif
+                                @if($star < 1 && $star > 0 )
+                                    <i class="fas fa-star-half"></i>
+                                @endif
+                                @if($star > 1 && $star < 2)
+                                    <i class="fas fa-star"></i><i class="fas fa-star-half"></i>
+                                @endif
+                                @if($star > 2 && $star < 3)
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i>
+                                @endif
+                                @if($star > 3 && $star < 4)
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i>
+                                @endif
+                                @if($star > 4 && $star < 5)
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i>
+                                @endif
+                                
+
+                                <span class="text-danger">{{number_format($star, 1, '.', '')}}/5</span> <span style="font-size: 13px;" class="text-dark">({{$total_user}} รีวิว)</span>
+                            </div>
+                            <div class="col-3 d-none d-lg-block">
+                                <a href="{{ url('/review/create') }}" class="btn-success btn-sm">
+                                แบ่งปันความประทับใจของคุณ
+                                </a>
+                            </div>
+                        </div>
+                        <!-- แสดงเฉพาะมือถือ -->
+                        <div class="col-9 d-block d-md-none" style="color: #fdf744;">
                             @switch($star)
                                 @case ("1")
                                     <i class="fas fa-star"></i>
@@ -45,12 +94,8 @@
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i>
                             @endif
                             
-
                             <span class="text-danger">{{number_format($star, 1, '.', '')}}/5</span> <span style="font-size: 13px;" class="text-dark">({{$total_user}} รีวิว)</span>
                         </div>
-                        <a href="{{ url('/review/create') }}" class="d-none btn btn-success btn-sm" title="Add New Review">
-                            <i class="fa fa-plus" aria-hidden="true"></i> Add New
-                        </a>
 
                         <form method="GET" action="{{ url('/review') }}" accept-charset="UTF-8" class="d-none form-inline my-2 my-lg-0 float-right" role="search">
                             <div class="input-group">
