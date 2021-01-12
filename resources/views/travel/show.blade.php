@@ -8,6 +8,7 @@
             <div class="container">
                <div class="weekly-wrapper">
                     <div class="row">
+                        <!-- แสดงเฉพาะคอม -->
                         <div class="col-12 news-poster d-none d-lg-block">
                             <div class="weekly-news-active dot-style d-flex dot-style">
                                 @php
@@ -42,7 +43,7 @@
                                 @endif
                             </div><br>
                         </div>
-
+                        <!-- แสดงเฉพาะมือถือ -->
                         <div id="carouselExampleIndicators" class="carousel slide d-block d-md-none" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">

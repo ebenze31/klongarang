@@ -12,14 +12,15 @@
                     </div>
                    <div class="weekly-wrapper">
                         <div class="row">
-                            <div class="col-12">
+                            @php
+                                $photo_7 = $trip->photo_7;
+                                $photo_8 = $trip->photo_8;
+                                $photo_9 = $trip->photo_9;
+                                $photo_10 = $trip->photo_10;
+                            @endphp
+                            <!-- แสดงเฉพาะคอม -->
+                            <div class="col-12 d-none d-lg-block">
                                 <div class="weekly-news-active dot-style d-flex dot-style">
-                                    @php
-                                        $photo_7 = $trip->photo_7;
-                                        $photo_8 = $trip->photo_8;
-                                        $photo_9 = $trip->photo_9;
-                                        $photo_10 = $trip->photo_10;
-                                    @endphp
                                     <div class="weekly-single">
                                         <div class="weekly-img">
                                             <img height="235" src="{{ url('storage')}}/{{ $trip->photo_1 }}" alt="">
@@ -80,6 +81,57 @@
                                     @endif
                                 </div>
                             </div>
+                            <!-- แสดงเฉพาะมือถือ -->
+                            <div id="carouselExampleIndicators" class="carousel slide d-block d-md-none" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img height="100%" width="100%" src="{{ url('storage')}}/{{ $trip->photo_1 }}" alt="">
+                                </div>
+                                <div class="carousel-item">
+                                    <img height="100%" width="100%" src="{{ url('storage')}}/{{ $trip->photo_2 }}" alt="">
+                                </div>
+                                <div class="carousel-item">
+                                    <img height="100%" width="100%" src="{{ url('storage')}}/{{ $trip->photo_3 }}" alt="">
+                                </div>
+                                <div class="carousel-item">
+                                    <img height="100%" width="100%" src="{{ url('storage')}}/{{ $trip->photo_4 }}" alt="">
+                                </div>
+                                <div class="carousel-item">
+                                    <img height="100%" width="100%" src="{{ url('storage')}}/{{ $trip->photo_5 }}" alt="">
+                                </div>
+                                <div class="carousel-item">
+                                    <img height="100%" width="100%" src="{{ url('storage')}}/{{ $trip->photo_6 }}" alt="">
+                                </div>
+                                @if (!empty($photo_7))
+                                <div class="carousel-item">
+                                    <img height="100%" width="100%" src="{{ url('storage')}}/{{ $trip->photo_7 }}" alt="">
+                                </div>
+                                @endif
+                                @if (!empty($photo_8))
+                                <div class="carousel-item">
+                                    <img height="100%" width="100%" src="{{ url('storage')}}/{{ $trip->photo_8 }}" alt="">
+                                </div>
+                                @endif
+                                @if (!empty($photo_9))
+                                <div class="carousel-item">
+                                    <img height="100%" width="100%" src="{{ url('storage')}}/{{ $trip->photo_9 }}" alt="">
+                                </div>
+                                @endif
+                                @if (!empty($photo_10))
+                                <div class="carousel-item">
+                                    <img height="100%" width="100%" src="{{ url('storage')}}/{{ $trip->photo_10 }}" alt="">
+                                </div>
+                                @endif
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                            </a>
+                        </div>
                         </div>
                    </div>
                 </div>
