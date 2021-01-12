@@ -64,8 +64,8 @@
                         <center>
                             <div class="trand-right-single d-flex d-lg-block">
                                 <div class="trand-right-img">
-                                    <a href="details.html">
-                                        <img style="border-radius: 10px;" width="165" height="110" src="{{ asset('/img/klongarang/P1010061.JPG') }}" alt="">
+                                    <a href="{{ url('/wangree') }}">
+                                        <img style="border-radius: 10px;" width="165" height="110" src="{{ asset('/img/klongarang/วังรี.jpg') }}" alt="">
                                     </a>
                                     <br><br>
                                     <h4><a href="details.html">ศึกษาดูงาน ณ บ้านวังรี</a></h4>
@@ -73,7 +73,7 @@
                             </div> 
                             <hr>
                             <div class="trand-right-single d-flex d-lg-block">
-                                <div class="trand-right-img">
+                                <div class="{{ url('/meeting') }}">
                                     <a href="details.html">
                                         <img style="border-radius: 10px;" width="165" height="110" src="{{ asset('/img/klongarang/IMG20200815142423.jpg') }}" alt="">
                                     </a>

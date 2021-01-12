@@ -245,7 +245,7 @@ if ($result_p2->num_rows > 0) {
                                 <img width="200" height="110" src="{{ asset('/img/klongarang/วังรี.jpg') }}" alt="">
                             </div>
                             <div class="trand-right-cap">
-                                <h4><a href="details.html">ศึกษาดูงาน ณ บ้านวังรี</a></h4>
+                                <h4><a href="{{ url('/wangree') }}">ศึกษาดูงาน ณ บ้านวังรี</a></h4>
                             </div>
                         </div> 
                         <div class="trand-right-single d-flex">
@@ -253,7 +253,7 @@ if ($result_p2->num_rows > 0) {
                                 <img width="200" height="110" src="{{ asset('/img/klongarang/ประชุม.jpg') }}" alt="">
                             </div>
                             <div class="trand-right-cap">
-                                <h4><a href="details.html">ประชุมผู้นำและตัวแทนชาวบ้าน</a></h4>
+                                <h4><a href="{{ url('/meeting') }}">ประชุมผู้นำและตัวแทนชาวบ้าน</a></h4>
                             </div>
                         </div>
                         <!-- สินค้า -->

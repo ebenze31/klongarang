@@ -26,6 +26,12 @@ Route::get('about', function () {
 Route::get('aboutcommu', function () {
     return view('About/aboutcommu');
 });
+Route::get('wangree', function () {
+    return view('About/wangree');
+});
+Route::get('meeting', function () {
+    return view('About/meeting');
+});
 
 
 
