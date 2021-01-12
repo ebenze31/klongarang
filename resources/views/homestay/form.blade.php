@@ -10,6 +10,16 @@
 </div>
 <div class="container">
     <div class="row">
+        <div class="col-lg-12">
+            <br>
+            <span style="color: #FF0033; font-size: 13px;"> กรุณาอัพโหลดรูปภาพที่มีขนาดต่ำกว่า 2 MB</span>
+            <a href="https://www.websiteplanet.com/th/webtools/imagecompressor/" style="font-size: 11px;" class="btn-warning btn-sm" target="bank">บีบอัดรูปภาพ</a>
+            <br><br>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
         <div class="col-lg-6">
             <h3>รูป <b style="color: #fc3f00">"ภายนอก"</b> โฮมสเตย์</h3>
             <hr>

@@ -32,7 +32,10 @@
             </div> -->
         </div>
         <div class="col-md-5">
-            <h5  class="control-label">{{ 'แบ่งปันภาพความประทับใจของคุณ' }}</h5><br><br>
+            <h5  class="control-label">{{ 'แบ่งปันภาพความประทับใจของคุณ' }}</h5><br>
+            <span style="color: #FF0033; font-size: 13px;"> กรุณาอัพโหลดรูปภาพที่มีขนาดต่ำกว่า 2 MB</span>
+            <a href="https://www.websiteplanet.com/th/webtools/imagecompressor/" style="font-size: 11px;" class="btn-warning btn-sm" target="bank">บีบอัดรูปภาพ</a>
+            <br><br>
             <div class="form-group {{ $errors->has('photo_1') ? 'has-error' : ''}}">
                 <input class="form-control" name="photo_1" type="file" id="photo_1" value="{{ isset($review->photo_1) ? $review->photo_1 : ''}}" >
                 {!! $errors->first('photo_1', '<p class="help-block">:message</p>') !!}

@@ -44,6 +44,8 @@
         </div>
         <div class="form-group {{ $errors->has('photo') ? 'has-error' : ''}}">
             <label for="photo" class="control-label">{{ 'รูปภาพ' }}</label><span style="color: #FF0033"> *</span>
+            <span style="color: #FF0033; font-size: 13px;"> กรุณาอัพโหลดรูปภาพที่มีขนาดต่ำกว่า 2 MB</span>
+            <a href="https://www.websiteplanet.com/th/webtools/imagecompressor/" style="font-size: 11px;" class="btn-warning btn-sm" target="bank">บีบอัดรูปภาพ</a>
             <input class="form-control" name="photo" type="file" id="photo" value="{{ isset($product->photo) ? $product->photo : ''}}" >
             {!! $errors->first('photo', '<p class="help-block">:message</p>') !!}
         </div>

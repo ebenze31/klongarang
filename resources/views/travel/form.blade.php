@@ -38,6 +38,8 @@
 
     <div class="col-lg-6 col-md-6">
         <p style="color: #FF0033">กรุณาเพิ่มรูปภาพอย่างน้อย 4 รูป</p>
+        <span style="color: #FF0033; font-size: 13px;"> กรุณาอัพโหลดรูปภาพที่มีขนาดต่ำกว่า 2 MB</span>
+        <a href="https://www.websiteplanet.com/th/webtools/imagecompressor/" style="font-size: 11px;" class="btn-warning btn-sm" target="bank">บีบอัดรูปภาพ</a><br><br>
         <div class="form-group {{ $errors->has('photo_1') ? 'has-error' : ''}}">
             <label for="photo_1" class="control-label">{{ 'รูปที่ 1' }}</label><span style="color: #FF0033"> *</span>
             <input class="form-control" name="photo_1" type="file" id="photo_1" value="{{ isset($travel->photo_1) ? $travel->photo_1 : ''}}"  >
@@ -63,6 +65,7 @@
             <input class="form-control" name="photo_5" type="file" id="photo_5" value="{{ isset($travel->photo_5) ? $travel->photo_5 : ''}}" >
             {!! $errors->first('photo_5', '<p class="help-block">:message</p>') !!}
         </div>
+        <br>
 
         <div class="form-group">
             <input class="btn btn-primary" type="submit" value="{{ $formMode === 'edit' ? 'แก้ไขข้อมูล' : 'เพิ่มข้อมูล' }}">
