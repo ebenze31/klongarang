@@ -11,6 +11,9 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
+            <br>
+            <span style="color: #FF0033; font-size: 13px;"> กรุณาอัพโหลดรูปภาพที่มีขนาดต่ำกว่า 2 MB</span>
+            <a href="https://www.websiteplanet.com/th/webtools/imagecompressor/" style="font-size: 11px;" class="btn-warning btn-sm" target="bank">บีบอัดรูปภาพ</a>
             <br><br>
         </div>
     </div>

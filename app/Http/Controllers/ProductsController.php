@@ -10,7 +10,6 @@ use Illuminate\Http\Request;
 
 use DB;
 use App\Models\Trip;
-use Intervention\Image\ImageManagerStatic as Image;
 
 class ProductsController extends Controller
 {
@@ -65,25 +64,9 @@ class ProductsController extends Controller
     {
         
         $requestData = $request->all();
-        
-        if ($request->hasFile('photo')) {
-            $requestData['photo'] = $request->file('photo')->store('uploads', 'public');
-
-            //RESIZE 50% FILE IF IMAGE LARGER THAN 0.5 MB
-            $image = Image::make(storage_path("app/public")."/".$requestData['photo']);
-            //watermark
-            $watermark = Image::make(public_path('watermark.png'));
-            $image->insert($watermark , 'bottom-right', 25, 25)->save();
-
-            $size = $image->filesize();  
-
-            if($size > 512000 ){
-                $image->resize(
-                    intval($image->width()/2) , 
-                    intval($image->height()/2)
-                )->save(); 
-            }
-
+                if ($request->hasFile('photo')) {
+            $requestData['photo'] = $request->file('photo')
+                ->store('uploads', 'public');
         }
 
         Product::create($requestData);

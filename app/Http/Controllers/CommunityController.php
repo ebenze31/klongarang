@@ -7,7 +7,6 @@ use App\Http\Requests;
 
 use App\Models\Community;
 use Illuminate\Http\Request;
-use Intervention\Image\ImageManagerStatic as Image;
 
 class CommunityController extends Controller
 {
@@ -86,112 +85,34 @@ class CommunityController extends Controller
     {
         
         $requestData = $request->all();
-        
-        if ($request->hasFile('president_img')) {
-            $requestData['president_img'] = $request->file('president_img')->store('uploads', 'public');
-
-            //RESIZE 50% FILE IF IMAGE LARGER THAN 0.5 MB
-            $president_img = Image::make(storage_path("app/public")."/".$requestData['president_img']);
-            //watermark
-            $watermark = Image::make(public_path('watermark.png'));
-            $president_img->insert($watermark , 'bottom-right', 25, 25)->save();
-
-            $size = $president_img->filesize();  
-
-            if($size > 512000 ){
-                $president_img->resize(
-                    intval($president_img->width()/2) , 
-                    intval($president_img->height()/2)
-                )->save(); 
-            }
+                if ($request->hasFile('president_img')) {
+            $requestData['president_img'] = $request->file('president_img')
+                ->store('uploads', 'public');
         }
-
         if ($request->hasFile('vice_President_1_img')) {
-            $requestData['vice_President_1_img'] = $request->file('vice_President_1_img')->store('uploads', 'public');
-
-            //RESIZE 50% FILE IF IMAGE LARGER THAN 0.5 MB
-            $vice_President_1_img = Image::make(storage_path("app/public")."/".$requestData['vice_President_1_img']);
-            //watermark
-            $watermark = Image::make(public_path('watermark.png'));
-            $vice_President_1_img->insert($watermark , 'bottom-right', 25, 25)->save();
-
-            $size = $vice_President_1_img->filesize();  
-
-            if($size > 512000 ){
-                $vice_President_1_img->resize(
-                    intval($vice_President_1_img->width()/2) , 
-                    intval($vice_President_1_img->height()/2)
-                )->save(); 
-            }
+            $requestData['vice_President_1_img'] = $request->file('vice_President_1_img')
+                ->store('uploads', 'public');
         }
-
         if ($request->hasFile('vice_President_2_img')) {
-            $requestData['vice_President_2_img'] = $request->file('vice_President_2_img')->store('uploads', 'public');
-
-            //RESIZE 50% FILE IF IMAGE LARGER THAN 0.5 MB
-            $vice_President_2_img = Image::make(storage_path("app/public")."/".$requestData['vice_President_2_img']);
-            //watermark
-            $watermark = Image::make(public_path('watermark.png'));
-            $vice_President_2_img->insert($watermark , 'bottom-right', 25, 25)->save();
-
-            $size = $vice_President_2_img->filesize();  
-
-            if($size > 512000 ){
-                $vice_President_2_img->resize(
-                    intval($vice_President_2_img->width()/2) , 
-                    intval($vice_President_2_img->height()/2)
-                )->save(); 
-            }
+            $requestData['vice_President_2_img'] = $request->file('vice_President_2_img')
+                ->store('uploads', 'public');
         }
-
         if ($request->hasFile('secretary_1_img')) {
-            $requestData['secretary_1_img'] = $request->file('secretary_1_img')->store('uploads', 'public');
-
-            //RESIZE 50% FILE IF IMAGE LARGER THAN 0.5 MB
-            $secretary_1_img = Image::make(storage_path("app/public")."/".$requestData['secretary_1_img']);
-            //watermark
-            $watermark = Image::make(public_path('watermark.png'));
-            $secretary_1_img->insert($watermark , 'bottom-right', 25, 25)->save();
-
-            $size = $secretary_1_img->filesize();  
-
-            if($size > 512000 ){
-                $secretary_1_img->resize(
-                    intval($secretary_1_img->width()/2) , 
-                    intval($secretary_1_img->height()/2)
-                )->save(); 
-            }
+            $requestData['secretary_1_img'] = $request->file('secretary_1_img')
+                ->store('uploads', 'public');
         }
-
         if ($request->hasFile('secretary_2_img')) {
-            $requestData['secretary_2_img'] = $request->file('secretary_2_img')->store('uploads', 'public');
-
-            //RESIZE 50% FILE IF IMAGE LARGER THAN 0.5 MB
-            $secretary_2_img = Image::make(storage_path("app/public")."/".$requestData['secretary_2_img']);
-            //watermark
-            $watermark = Image::make(public_path('watermark.png'));
-            $secretary_2_img->insert($watermark , 'bottom-right', 25, 25)->save();
-
-            $size = $secretary_2_img->filesize();  
-
-            if($size > 512000 ){
-                $secretary_2_img->resize(
-                    intval($secretary_2_img->width()/2) , 
-                    intval($secretary_2_img->height()/2)
-                )->save(); 
-            }
+            $requestData['secretary_2_img'] = $request->file('secretary_2_img')
+                ->store('uploads', 'public');
         }
-
         if ($request->hasFile('board_by_position_1_img')) {
             $requestData['board_by_position_1_img'] = $request->file('board_by_position_1_img')
                 ->store('uploads', 'public');
         }
-
         if ($request->hasFile('board_by_position_2_img')) {
             $requestData['board_by_position_2_img'] = $request->file('board_by_position_2_img')
                 ->store('uploads', 'public');
         }
-
         if ($request->hasFile('board_by_position_3_img')) {
             $requestData['board_by_position_3_img'] = $request->file('board_by_position_3_img')
                 ->store('uploads', 'public');
@@ -200,27 +121,22 @@ class CommunityController extends Controller
             $requestData['board_by_experts_1_img'] = $request->file('board_by_experts_1_img')
                 ->store('uploads', 'public');
         }
-
         if ($request->hasFile('board_by_experts_2_img')) {
             $requestData['board_by_experts_2_img'] = $request->file('board_by_experts_2_img')
                 ->store('uploads', 'public');
         }
-
         if ($request->hasFile('board_by_experts_3_img')) {
             $requestData['board_by_experts_3_img'] = $request->file('board_by_experts_3_img')
                 ->store('uploads', 'public');
         }
-
         if ($request->hasFile('board_by_experts_4_img')) {
             $requestData['board_by_experts_4_img'] = $request->file('board_by_experts_4_img')
                 ->store('uploads', 'public');
         }
-
         if ($request->hasFile('board_by_experts_5_img')) {
             $requestData['board_by_experts_5_img'] = $request->file('board_by_experts_5_img')
                 ->store('uploads', 'public');
         }
-
         if ($request->hasFile('board_by_experts_6_img')) {
             $requestData['board_by_experts_6_img'] = $request->file('board_by_experts_6_img')
                 ->store('uploads', 'public');
