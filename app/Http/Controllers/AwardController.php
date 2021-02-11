@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 
 use App\Models\Award;
+use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Http\Request;
 
 class AwardController extends Controller
@@ -54,13 +55,44 @@ class AwardController extends Controller
     {
         
         $requestData = $request->all();
-                if ($request->hasFile('photo_1')) {
-            $requestData['photo_1'] = $request->file('photo_1')
-                ->store('uploads', 'public');
+        
+        if ($request->hasFile('photo_1')) {
+            $requestData['photo_1'] = $request->file('photo_1')->store('uploads', 'public');
+
+            //RESIZE 50% FILE IF IMAGE LARGER THAN 0.5 MB
+            $image1 = Image::make(storage_path("app/public")."/".$requestData['photo_1']);
+            //watermark
+            $watermark = Image::make(public_path('watermark.png'));
+            $image1->insert($watermark , 'bottom-right', 25, 25)->save();
+
+            $size = $image1->filesize();  
+
+            if($size > 512000 ){
+                $image1->resize(
+                    intval($image1->width()/2) , 
+                    intval($image1->height()/2)
+                )->save(); 
+            }
+
         }
+
         if ($request->hasFile('photo_2')) {
-            $requestData['photo_2'] = $request->file('photo_2')
-                ->store('uploads', 'public');
+            $requestData['photo_2'] = $request->file('photo_2')->store('uploads', 'public');
+
+            //RESIZE 50% FILE IF IMAGE LARGER THAN 0.5 MB
+            $image2 = Image::make(storage_path("app/public")."/".$requestData['photo_2']);
+            //watermark
+            $watermark = Image::make(public_path('watermark.png'));
+            $image2->insert($watermark , 'bottom-right', 25, 25)->save();
+
+            $size = $image2->filesize();  
+
+            if($size > 512000 ){
+                $image2->resize(
+                    intval($image2->width()/2) , 
+                    intval($image2->height()/2)
+                )->save(); 
+            }
         }
 
         Award::create($requestData);

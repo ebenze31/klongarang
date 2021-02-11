@@ -8,6 +8,8 @@ use App\Models\Trip;
 use Illuminate\Http\Request;
 use App\Models\Advertise;
 use DB;
+use Intervention\Image\ImageManagerStatic as Image;
+
 
 class TripController extends Controller
 {
@@ -87,49 +89,215 @@ class TripController extends Controller
     {
         
         $requestData = $request->all();
-                if ($request->hasFile('cover_photo')) {
-            $requestData['cover_photo'] = $request->file('cover_photo')
-                ->store('uploads', 'public');
+        
+        if ($request->hasFile('cover_photo')) {
+            $requestData['cover_photo'] = $request->file('cover_photo')->store('uploads', 'public');
+
+            //RESIZE 50% FILE IF IMAGE LARGER THAN 0.5 MB
+            $cover_photo = Image::make(storage_path("app/public")."/".$requestData['cover_photo']);
+            //watermark
+            $watermark = Image::make(public_path('watermark.png'));
+            $cover_photo->insert($watermark , 'bottom-right', 25, 25)->save();
+
+            $size = $cover_photo->filesize();  
+
+            if($size > 512000 ){
+                $cover_photo->resize(
+                    intval($cover_photo->width()/2) , 
+                    intval($cover_photo->height()/2)
+                )->save(); 
+            }
         }
+
         if ($request->hasFile('photo_1')) {
-            $requestData['photo_1'] = $request->file('photo_1')
-                ->store('uploads', 'public');
+            $requestData['photo_1'] = $request->file('photo_1')->store('uploads', 'public');
+
+            //RESIZE 50% FILE IF IMAGE LARGER THAN 0.5 MB
+            $image1 = Image::make(storage_path("app/public")."/".$requestData['photo_1']);
+            //watermark
+            $watermark = Image::make(public_path('watermark.png'));
+            $image1->insert($watermark , 'bottom-right', 25, 25)->save();
+
+            $size = $image1->filesize();  
+
+            if($size > 512000 ){
+                $image1->resize(
+                    intval($image1->width()/2) , 
+                    intval($image1->height()/2)
+                )->save(); 
+            }
+
         }
+
         if ($request->hasFile('photo_2')) {
-            $requestData['photo_2'] = $request->file('photo_2')
-                ->store('uploads', 'public');
+            $requestData['photo_2'] = $request->file('photo_2')->store('uploads', 'public');
+
+            //RESIZE 50% FILE IF IMAGE LARGER THAN 0.5 MB
+            $image2 = Image::make(storage_path("app/public")."/".$requestData['photo_2']);
+            //watermark
+            $watermark = Image::make(public_path('watermark.png'));
+            $image2->insert($watermark , 'bottom-right', 25, 25)->save();
+
+            $size = $image2->filesize();  
+
+            if($size > 512000 ){
+                $image2->resize(
+                    intval($image2->width()/2) , 
+                    intval($image2->height()/2)
+                )->save(); 
+            }
         }
+
         if ($request->hasFile('photo_3')) {
-            $requestData['photo_3'] = $request->file('photo_3')
-                ->store('uploads', 'public');
+            $requestData['photo_3'] = $request->file('photo_3')->store('uploads', 'public');
+
+            //RESIZE 50% FILE IF IMAGE LARGER THAN 0.5 MB
+            $image3 = Image::make(storage_path("app/public")."/".$requestData['photo_3']);
+            //watermark
+            $watermark = Image::make(public_path('watermark.png'));
+            $image3->insert($watermark , 'bottom-right', 25, 25)->save();
+
+            $size = $image3->filesize();  
+
+            if($size > 512000 ){
+                $image3->resize(
+                    intval($image3->width()/2) , 
+                    intval($image3->height()/2)
+                )->save(); 
+            }
         }
+
         if ($request->hasFile('photo_4')) {
-            $requestData['photo_4'] = $request->file('photo_4')
-                ->store('uploads', 'public');
+            $requestData['photo_4'] = $request->file('photo_4')->store('uploads', 'public');
+
+            //RESIZE 50% FILE IF IMAGE LARGER THAN 0.5 MB
+            $image4 = Image::make(storage_path("app/public")."/".$requestData['photo_4']);
+            //watermark
+            $watermark = Image::make(public_path('watermark.png'));
+            $image4->insert($watermark , 'bottom-right', 25, 25)->save();
+
+            $size = $image4->filesize();  
+
+            if($size > 512000 ){
+                $image4->resize(
+                    intval($image4->width()/2) , 
+                    intval($image4->height()/2)
+                )->save(); 
+            }
         }
+
         if ($request->hasFile('photo_5')) {
-            $requestData['photo_5'] = $request->file('photo_5')
-                ->store('uploads', 'public');
+            $requestData['photo_5'] = $request->file('photo_5')->store('uploads', 'public');
+
+            //RESIZE 50% FILE IF IMAGE LARGER THAN 0.5 MB
+            $image5 = Image::make(storage_path("app/public")."/".$requestData['photo_5']);
+            //watermark
+            $watermark = Image::make(public_path('watermark.png'));
+            $image5->insert($watermark , 'bottom-right', 25, 25)->save();
+
+            $size = $image5->filesize();  
+
+            if($size > 512000 ){
+                $image5->resize(
+                    intval($image5->width()/2) , 
+                    intval($image5->height()/2)
+                )->save(); 
+            }
         }
+
         if ($request->hasFile('photo_6')) {
-            $requestData['photo_6'] = $request->file('photo_6')
-                ->store('uploads', 'public');
+            $requestData['photo_6'] = $request->file('photo_6')->store('uploads', 'public');
+
+            //RESIZE 50% FILE IF IMAGE LARGER THAN 0.5 MB
+            $image6 = Image::make(storage_path("app/public")."/".$requestData['photo_6']);
+            //watermark
+            $watermark = Image::make(public_path('watermark.png'));
+            $image6->insert($watermark , 'bottom-right', 25, 25)->save();
+
+            $size = $image6->filesize();  
+
+            if($size > 512000 ){
+                $image6->resize(
+                    intval($image6->width()/2) , 
+                    intval($image6->height()/2)
+                )->save(); 
+            }
         }
+
         if ($request->hasFile('photo_7')) {
-            $requestData['photo_7'] = $request->file('photo_7')
-                ->store('uploads', 'public');
+            $requestData['photo_7'] = $request->file('photo_7')->store('uploads', 'public');
+
+            //RESIZE 50% FILE IF IMAGE LARGER THAN 0.5 MB
+            $image7 = Image::make(storage_path("app/public")."/".$requestData['photo_7']);
+            //watermark
+            $watermark = Image::make(public_path('watermark.png'));
+            $image7->insert($watermark , 'bottom-right', 25, 25)->save();
+
+            $size = $image7->filesize();  
+
+            if($size > 512000 ){
+                $image7->resize(
+                    intval($image7->width()/2) , 
+                    intval($image7->height()/2)
+                )->save(); 
+            }
         }
+
         if ($request->hasFile('photo_8')) {
-            $requestData['photo_8'] = $request->file('photo_8')
-                ->store('uploads', 'public');
+            $requestData['photo_8'] = $request->file('photo_8')->store('uploads', 'public');
+
+            //RESIZE 50% FILE IF IMAGE LARGER THAN 0.5 MB
+            $image8 = Image::make(storage_path("app/public")."/".$requestData['photo_8']);
+            //watermark
+            $watermark = Image::make(public_path('watermark.png'));
+            $image8->insert($watermark , 'bottom-right', 25, 25)->save();
+
+            $size = $image8->filesize();  
+
+            if($size > 512000 ){
+                $image8->resize(
+                    intval($image8->width()/2) , 
+                    intval($image8->height()/2)
+                )->save(); 
+            }
         }
+
         if ($request->hasFile('photo_9')) {
-            $requestData['photo_9'] = $request->file('photo_9')
-                ->store('uploads', 'public');
+            $requestData['photo_9'] = $request->file('photo_9')->store('uploads', 'public');
+
+            //RESIZE 50% FILE IF IMAGE LARGER THAN 0.5 MB
+            $image9 = Image::make(storage_path("app/public")."/".$requestData['photo_9']);
+            //watermark
+            $watermark = Image::make(public_path('watermark.png'));
+            $image9->insert($watermark , 'bottom-right', 25, 25)->save();
+
+            $size = $image9->filesize();  
+
+            if($size > 512000 ){
+                $image9->resize(
+                    intval($image9->width()/2) , 
+                    intval($image9->height()/2)
+                )->save(); 
+            }
         }
+
         if ($request->hasFile('photo_10')) {
-            $requestData['photo_10'] = $request->file('photo_10')
-                ->store('uploads', 'public');
+            $requestData['photo_10'] = $request->file('photo_10')->store('uploads', 'public');
+
+            //RESIZE 50% FILE IF IMAGE LARGER THAN 0.5 MB
+            $image10 = Image::make(storage_path("app/public")."/".$requestData['photo_10']);
+            //watermark
+            $watermark = Image::make(public_path('watermark.png'));
+            $image10->insert($watermark , 'bottom-right', 25, 25)->save();
+
+            $size = $image10->filesize();  
+
+            if($size > 512000 ){
+                $image10->resize(
+                    intval($image10->width()/2) , 
+                    intval($image10->height()/2)
+                )->save(); 
+            }
         }
 
         Trip::create($requestData);
