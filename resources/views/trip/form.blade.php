@@ -116,8 +116,6 @@
 
 
     <div class="col-lg-6 col-md-6">
-        <span style="color: #FF0033; font-size: 13px;"> กรุณาอัพโหลดรูปภาพที่มีขนาดต่ำกว่า 2 MB</span>
-        <a href="https://www.websiteplanet.com/th/webtools/imagecompressor/" style="font-size: 11px;" class="btn-warning btn-sm" target="bank">บีบอัดรูปภาพ</a><br><br>
         <div class="form-group {{ $errors->has('cover_photo') ? 'has-error' : ''}}">
             <label for="cover_photo" class="control-label">{{ 'รูปปกโปรแกรมการท่องเที่ยว' }}</label><span style="color: #FF0033;font-size: 13px;"> *</span>
             <input class="form-control" name="cover_photo" type="file" id="cover_photo" value="{{ isset($trip->cover_photo) ? $trip->cover_photo : ''}}" >
