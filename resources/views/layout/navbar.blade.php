@@ -45,7 +45,6 @@
                                                     <li><a href="http://line.me/ti/p/~0623894316" target="_blank"><i style="color: #00CC33;" class="fab fa-line"></i> : คุณบอล</a></li>
                                                     <li><a href="tel:0861219718" target="_blank"><i style="color: #0099FF;" class="fas fa-phone-volume"></i> : 0861-219718</a></li>
                                                     <li><a href="tel:0623894316" target="_blank"><i style="color: #FF0033;" class="fas fa-phone-volume"></i> : 062-3894316</a></li>
-                                                    <li><a href="{{ url('/register') }}" target="_blank"> สมัครสมาชิก</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
